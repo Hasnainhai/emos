@@ -1,7 +1,10 @@
 
-import 'package:emos/routes/routes_name.dart';
+
 import 'package:flutter/material.dart';
 import 'routes/routes.dart';
+
+import 'routes/routes.dart';
+import 'routes/routes_name.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-      initialRoute: RouteName.loginView,
+      initialRoute: RouteName.splashScreen,
     );
   }
 }

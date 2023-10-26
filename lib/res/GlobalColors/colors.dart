@@ -7,4 +7,5 @@ class AppColor {
   static const Color simpleBgTextColor = Color(0xffFFFFFF);
   static const Color whiteColor = Color(0xffFFFFFF);
   static const Color bgFillColor = Color(0xff2AA39C);
+  static const Color grayColor = Colors.grey;
 }
