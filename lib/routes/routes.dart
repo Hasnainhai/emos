@@ -1,4 +1,5 @@
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,10 @@ class Routes {
       case RouteName.onBoarding1:
         return MaterialPageRoute(
           builder: (BuildContext context) => const OnBoardingScreen1(),
+        );
+      case RouteName.loginView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LoginView(),
         );
       default:
         return MaterialPageRoute(
