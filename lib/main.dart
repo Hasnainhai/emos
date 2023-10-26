@@ -1,4 +1,5 @@
 import 'package:emos/res/routes/routes.dart';
+import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'components/backgroundColor/bgColor.dart';
@@ -15,10 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
       // initialRoute: null,
-      home: const OnBoardingScreen1(),
+      home: const SplashScreen(),
     );
   }
 }
