@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,7 +13,7 @@ void initState() {
 }
 
 void startTimer() {
-  Timer(Duration(seconds: 6), () {});
+  Timer(const Duration(seconds: 6), () {});
 }
 
 class _SplashScreenState extends State<SplashScreen> {
