@@ -5,4 +5,5 @@ class AppColor {
   static const Color linearBgTextColor = Color(0xff2AA39C);
   static const Color simpleBgbuttonColor = Color(0xff2AA39C);
   static const Color simpleBgTextColor = Color(0xffFFFFFF);
+  static const Color grayColor = Colors.grey;
 }
