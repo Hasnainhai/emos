@@ -14,7 +14,6 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const OnBoardingScreen1(),
         );
-
       default:
         return MaterialPageRoute(
           builder: (_) {

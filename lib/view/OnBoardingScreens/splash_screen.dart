@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,6 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     startTimer();
   }
+
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,7 @@
+
+
 import 'package:flutter/material.dart';
+import 'routes/routes.dart';
 
 import 'routes/routes.dart';
 import 'routes/routes_name.dart';
@@ -12,11 +15,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
       initialRoute: RouteName.splashScreen,
+
     );
   }
 }
