@@ -1,3 +1,3 @@
-class RouteName{
-  static const String  onBoarding1 = ('/onBoarding_screen');
+class RouteName {
+  static const String onBoarding1 = ('/onBoarding_screen');
 }
