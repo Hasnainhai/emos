@@ -6,8 +6,8 @@ import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class OnBoardingScreen1 extends StatelessWidget {
-  const OnBoardingScreen1({super.key});
+class OnBoardingScreen2 extends StatelessWidget {
+  const OnBoardingScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,10 @@ class OnBoardingScreen1 extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(
-                'images/image1.png',
+                'images/image2.png',
               ),
               Text(
-                "Easy Appointment",
+                "Covid-19 Prevention",
                 style: GoogleFonts.getFont(
                   "Roboto",
                   textStyle: const TextStyle(
@@ -34,7 +34,7 @@ class OnBoardingScreen1 extends StatelessWidget {
               ),
               const VerticalSpeacing(8),
               Text(
-                "Experience Medilab's quick and convenient\n booking service",
+                "Follow up the Covid-19 epidemic in the world and the development of vaccines",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
                   "Roboto",
@@ -54,7 +54,7 @@ class OnBoardingScreen1 extends StatelessWidget {
                     width: 10,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppColor.simpleBgTextColor,
+                      color: AppColor.grayColor,
                     ),
                   ),
                   const SizedBox(
@@ -65,7 +65,7 @@ class OnBoardingScreen1 extends StatelessWidget {
                     width: 10,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppColor.grayColor,
+                      color: AppColor.simpleBgTextColor,
                     ),
                   ),
                   const SizedBox(
@@ -87,7 +87,7 @@ class OnBoardingScreen1 extends StatelessWidget {
                   onpress: () {
                     Navigator.pushNamed(
                       context,
-                      RouteName.onBoarding2,
+                      RouteName.onBoarding3,
                     );
                   },
                   bgColor: AppColor.linearBgbuttonColor,

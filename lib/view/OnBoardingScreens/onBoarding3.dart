@@ -6,8 +6,8 @@ import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class OnBoardingScreen1 extends StatelessWidget {
-  const OnBoardingScreen1({super.key});
+class OnBoardingScreen3 extends StatelessWidget {
+  const OnBoardingScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,10 @@ class OnBoardingScreen1 extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(
-                'images/image1.png',
+                'images/image3.png',
               ),
               Text(
-                "Easy Appointment",
+                "Buy Medicine Online",
                 style: GoogleFonts.getFont(
                   "Roboto",
                   textStyle: const TextStyle(
@@ -34,7 +34,7 @@ class OnBoardingScreen1 extends StatelessWidget {
               ),
               const VerticalSpeacing(8),
               Text(
-                "Experience Medilab's quick and convenient\n booking service",
+                "Medilab's diversified online drug store system with excellent service quality",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
                   "Roboto",
@@ -54,29 +54,29 @@ class OnBoardingScreen1 extends StatelessWidget {
                     width: 10,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
+                      color: AppColor.grayColor,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Container(
+                    height: 10,
+                    width: 10,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColor.grayColor,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Container(
+                    height: 10,
+                    width: 10,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
                       color: AppColor.simpleBgTextColor,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColor.grayColor,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColor.grayColor,
                     ),
                   ),
                 ],
