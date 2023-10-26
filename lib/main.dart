@@ -1,6 +1,9 @@
 import 'package:emos/res/routes/routes.dart';
 import 'package:flutter/material.dart';
 
+import 'components/backgroundColor/bgColor.dart';
+import 'view/OnBoardingScreens/onBoarding1.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-      initialRoute: null,
+      // initialRoute: null,
+      home: const OnBoardingScreen1(),
     );
   }
 }
