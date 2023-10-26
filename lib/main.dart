@@ -1,5 +1,4 @@
 
-import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'routes/routes.dart';
@@ -18,10 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-
-
       initialRoute: RouteName.onBoarding1,
-      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
