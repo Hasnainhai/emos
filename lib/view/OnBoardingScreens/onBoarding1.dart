@@ -8,14 +8,22 @@ class OnBoardingScreen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: GradientBackground(
-          child: Center(
-              child: RoundedButton(
-                  title: 'Login',
-                  onpress: () {},
-                  bgColor: AppColor.linearBgbuttonColor,
-                  titleColor: AppColor.linearBgTextColor))),
+    return SafeArea(
+      child: Material(
+        child: GradientBackground(
+            child: Column(
+          children: [
+            Image.asset(
+              'images/image1.png',
+            ),
+            RoundedButton(
+                title: 'Login',
+                onpress: () {},
+                bgColor: AppColor.linearBgbuttonColor,
+                titleColor: AppColor.linearBgTextColor),
+          ],
+        )),
+      ),
     );
   }
 }
