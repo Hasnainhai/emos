@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../res/GlobalColors/colors.dart';
 
@@ -37,9 +38,13 @@ class RoundedButton extends StatelessWidget {
                 )
               : Text(
                   title,
-                  style: TextStyle(
-                    color: titleColor,
-                    fontWeight: FontWeight.w600,
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: titleColor,
+                    ),
                   ),
                 ),
         ),
