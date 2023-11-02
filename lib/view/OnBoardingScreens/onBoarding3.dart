@@ -90,7 +90,7 @@ class OnBoardingScreen3 extends StatelessWidget {
                   onpress: () {
                     Navigator.pushNamed(
                       context,
-                      RouteName.onBoarding2,
+                      RouteName.forgetpasswordscreen,
                     );
                   },
                   bgColor: AppColor.linearBgbuttonColor,
