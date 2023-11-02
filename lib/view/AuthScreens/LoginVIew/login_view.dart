@@ -1,5 +1,6 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/view/AuthScreens/LoginVIew/widgets/socialAccounts.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,6 @@ class LoginView extends StatelessWidget {
                   ),
                 ),
               ),
-              // const VerticalSpeacing(5.0),
               Text(
                 "Insert your email and password to login",
                 style: GoogleFonts.getFont(
@@ -63,8 +63,33 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               const VerticalSpeacing(40.0),
-              
-
+              const TextFieldCustom(
+                maxLines: 1,
+                icon: Icons.mail,
+                hintText: 'Enter your email...',
+              ),
+              const VerticalSpeacing(32.0),
+              const TextFieldCustom(
+                maxLines: 1,
+                icon: Icons.lock_outline,
+                hintText: 'Enter your password...',
+              ),
+              const VerticalSpeacing(5.0),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "Forget Password?",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor2,
+                    ),
+                  ),
+                ),
+              ),
+              const VerticalSpeacing(20.0),
               RoundedButton(
                 title: 'Login',
                 onpress: () {},
@@ -97,10 +122,10 @@ class LoginView extends StatelessWidget {
               ),
               const VerticalSpeacing(20.0),
               Align(
-                alignment: Alignment.center,
-                child: Text.rich(
-                  TextSpan(
-                      text: "Don't have account?  ",
+                  alignment: Alignment.center,
+                  child: RichText(
+                    text: TextSpan(
+                      text: "Don't have an account?  ",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
@@ -110,20 +135,33 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       children: [
-                        TextSpan(
-                          text: 'Register',
-                          style: GoogleFonts.getFont(
-                            "Roboto",
-                            textStyle: const TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w800,
-                              color: AppColor.simpleBgbuttonColor,
+                        WidgetSpan(
+                          child: Container(
+                            padding: const EdgeInsets.only(bottom: 2.0),
+                            decoration: const BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: AppColor.simpleBgbuttonColor,
+                                  width: 2.0,
+                                ),
+                              ),
+                            ),
+                            child: Text(
+                              'Register',
+                              style: GoogleFonts.getFont(
+                                "Roboto",
+                                textStyle: const TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w800,
+                                  color: AppColor.simpleBgbuttonColor,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ]),
-                ),
-              ),
+                      ],
+                    ),
+                  )),
             ],
           ),
         ),
