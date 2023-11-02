@@ -1,6 +1,7 @@
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/AuthScreens/LoginVIew/forget_password_screen.dart';
+import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
 import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
+import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
@@ -33,6 +34,10 @@ class Routes {
       case RouteName.forgetpasswordscreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ForgetPasswordScreen(),
+        );
+      case RouteName.registerView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RegisterView(),
         );
       default:
         return MaterialPageRoute(

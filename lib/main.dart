@@ -1,4 +1,5 @@
-import 'package:emos/view/AuthScreens/LoginVIew/forget_password_screen.dart';
+import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
+import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'routes/routes.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
       // initialRoute: RouteName.loginView,
-      home: const ForgetPasswordScreen(),
+      home: const RegisterView(),
     );
   }
 }
