@@ -21,7 +21,7 @@ class AppBarField extends StatelessWidget {
             color: AppColor.textColor,
           ),
         ),
-        const SizedBox(width: 92.0),
+        SizedBox(width: MediaQuery.of(context).size.width / 2 - 120),
         SizedBox(
           width: 96,
           height: 24.0,

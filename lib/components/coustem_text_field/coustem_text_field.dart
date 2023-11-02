@@ -25,7 +25,10 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: widget.keyboardType,
-      style: const TextStyle(fontSize: 15),
+      style: const TextStyle(
+        fontSize: 15,
+        color: AppColor.textColor,
+      ),
       controller: widget.controller,
       decoration: InputDecoration(
         enabledBorder: const UnderlineInputBorder(
