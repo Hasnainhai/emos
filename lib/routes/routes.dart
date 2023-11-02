@@ -24,6 +24,7 @@ class Routes {
       case RouteName.onBoarding3:
         return MaterialPageRoute(
           builder: (BuildContext context) => const OnBoardingScreen3(),
+        );
       case RouteName.loginView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const LoginView(),
