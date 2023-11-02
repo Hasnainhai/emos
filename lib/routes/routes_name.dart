@@ -4,4 +4,5 @@ class RouteName {
   static const String onBoarding2 = ('/On_Boarding2_screen');
   static const String onBoarding3 = ('/On_Boarding3_screen');
   static const String loginView = ('/login_view');
+  static const String forgetpasswordscreen = ('/forget_password_screen');
 }
