@@ -41,7 +41,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const VerticalSpeacing(30.0),
                 AppBarField(
                   ontap: () {
-                    {}
+                    Navigator.pop(context);
                   },
                 ),
                 const VerticalSpeacing(32.0),
