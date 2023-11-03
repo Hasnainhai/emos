@@ -1,7 +1,7 @@
 import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
 import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
-import 'package:emos/view/Home/DoctorViews/find_doctor_view.dart';
+import 'package:emos/view/DoctorViews/find_doctor_view.dart';
 import 'package:emos/view/InformationView/information_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-
       initialRoute: RouteName.homeView,
       // home: const RegisterView(),
     );

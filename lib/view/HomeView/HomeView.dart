@@ -117,47 +117,49 @@ class HomeView extends StatelessWidget {
 
   _builProfileContainer() {
     return Container(
-      height: top,
-      width: 350,
-      decoration: BoxDecoration(
-          color: AppColor.whiteColor,
-          borderRadius: BorderRadius.circular(12.0)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // profileCenterBtns(
-          //   ontap: () {
-          //     Navigator.pushNamed(context, RoutesName.myOrder);
-          //   },
-          //   tColor: const Color(0xff6AA9FF),
-          //   bColor: const Color(0xff005AD5),
-          //   icon: Icons.local_shipping_outlined,
-          //   title: 'My All',
-          //   subtitle: 'Order',
-          // ),
-          // profileCenterBtns(
-          //   ontap: () {
-          //     Navigator.pushNamed(context, RoutesName.promosOffer);
-          //   },
-          //   tColor: const Color(0xffFF6A9F),
-          //   bColor: const Color(0xffD50059),
-          //   icon: Icons.card_giftcard_outlined,
-          //   title: 'Offer &',
-          //   subtitle: 'Promos',
-          // ),
-          // profileCenterBtns(
-          //   ontap: () {
-          //     Navigator.pushNamed(context, RoutesName.deliveryAddress);
-          //   },
-          //   tColor: const Color(0xff6DF5FC),
-          //   bColor: const Color(0xff3CB6BB),
-          //   icon: Icons.home_outlined,
-          //   title: 'Delivery',
-          //   subtitle: 'Address',
-          // ),
-        ],
-      ),
-    );
+        height: top,
+        width: 350,
+        decoration: BoxDecoration(
+            color: AppColor.whiteColor,
+            borderRadius: BorderRadius.circular(12.0)),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  height: 100.0,
+                  width: 108.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                    ),
+
+                  ),
+                  child: Container(
+                    height: 60.0,
+                    width: 108.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(
+                          height: 32.0,
+                          width: 32.0,
+                          child: Image.asset('images/hospital.png',fit: BoxFit.contain,)),
+                       
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ));
   }
 }
