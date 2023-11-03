@@ -2,6 +2,7 @@ import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/AuthScreens/LoginVIew/widgets/socialAccounts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -92,7 +93,9 @@ class LoginView extends StatelessWidget {
               const VerticalSpeacing(20.0),
               RoundedButton(
                 title: 'Login',
-                onpress: () {},
+                onpress: () {
+                  Navigator.pushNamed(context, RouteName.homeView);
+                },
                 bgColor: AppColor.simpleBgbuttonColor,
                 titleColor: AppColor.simpleBgTextColor,
               ),
@@ -146,14 +149,20 @@ class LoginView extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            child: Text(
-                              'Register',
-                              style: GoogleFonts.getFont(
-                                "Roboto",
-                                textStyle: const TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w800,
-                                  color: AppColor.simpleBgbuttonColor,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, RouteName.registerView);
+                              },
+                              child: Text(
+                                'Register',
+                                style: GoogleFonts.getFont(
+                                  "Roboto",
+                                  textStyle: const TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w800,
+                                    color: AppColor.simpleBgbuttonColor,
+                                  ),
                                 ),
                               ),
                             ),
