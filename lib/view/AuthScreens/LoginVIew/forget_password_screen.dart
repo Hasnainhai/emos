@@ -3,6 +3,7 @@ import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/components/appBarField/appBar_field.dart';
 import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,7 +34,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+          padding: const EdgeInsets.only(left: 24.0, right: 24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -49,7 +50,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 style: GoogleFonts.getFont(
                   "Roboto",
                   textStyle: const TextStyle(
-                    fontSize: 24,
+                    fontSize: 32,
                     fontWeight: FontWeight.w600,
                     color: AppColor.textColor,
                   ),
@@ -57,7 +58,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ),
               // const VerticalSpeacing(5.0),
               Text(
-                "Enter your email addreess then we will send you a code to reset your password",
+                "Insert your email and password to login",
                 style: GoogleFonts.getFont(
                   "Roboto",
                   textStyle: const TextStyle(
@@ -69,21 +70,69 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ),
               const VerticalSpeacing(40.0),
               const TextFieldCustom(
-                maxLines: 1,
+                enablePrefixIcon: true,
                 icon: Icons.email,
+                maxLines: 1,
                 hintText: "Example@gmail.com",
               ),
-              const VerticalSpeacing(
-                16,
-              ),
+              const VerticalSpeacing(16.0),
 
               RoundedButton(
-                title: 'Send',
+                title: 'Login',
                 onpress: () {},
                 bgColor: AppColor.simpleBgbuttonColor,
                 titleColor: AppColor.simpleBgTextColor,
               ),
               const VerticalSpeacing(20.0),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "Or, login with",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor2,
+                    ),
+                  ),
+                ),
+              ),
+
+              const VerticalSpeacing(20.0),
+              Align(
+                alignment: Alignment.center,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, RouteName.registerScreen);
+                  },
+                  child: Text.rich(
+                    TextSpan(
+                        text: "Don't have account?  ",
+                        style: GoogleFonts.getFont(
+                          "Roboto",
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: AppColor.textColor2,
+                          ),
+                        ),
+                        children: [
+                          TextSpan(
+                            text: 'Register',
+                            style: GoogleFonts.getFont(
+                              "Roboto",
+                              textStyle: const TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w800,
+                                color: AppColor.simpleBgbuttonColor,
+                              ),
+                            ),
+                          ),
+                        ]),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

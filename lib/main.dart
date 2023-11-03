@@ -1,4 +1,5 @@
 import 'package:emos/view/AuthScreens/LoginVIew/forget_password_screen.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'routes/routes.dart';
