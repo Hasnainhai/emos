@@ -1,4 +1,4 @@
-import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
+import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'routes/routes.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
       // initialRoute: RouteName.loginView,
-      home: const LoginView(),
+      home: const OnBoardingScreen3(),
     );
   }
 }
