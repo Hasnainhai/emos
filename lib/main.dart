@@ -1,8 +1,4 @@
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
-import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
-import 'package:emos/view/Home/DoctorViews/find_doctor_view.dart';
-import 'package:emos/view/InformationView/information_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'routes/routes.dart';
