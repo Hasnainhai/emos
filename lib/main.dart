@@ -14,6 +14,7 @@ void main() {
     );
   });
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-      initialRoute: RouteName.loginView,
+      initialRoute: RouteName.homeView,
       // home: const RegisterView(),
     );
   }
