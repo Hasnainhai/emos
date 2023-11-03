@@ -1,7 +1,7 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
-import 'package:emos/view/Home/DoctorViews/Widgets/doctor_card.dart';
-import 'package:emos/view/Home/DoctorViews/Widgets/search_field.dart';
+import 'package:emos/view/DoctorViews/Widgets/doctor_card.dart';
+import 'package:emos/view/DoctorViews/Widgets/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
