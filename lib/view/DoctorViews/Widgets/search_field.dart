@@ -38,7 +38,7 @@ class SearchField extends StatelessWidget {
           child: TextFormField(
             controller: controller,
             decoration: InputDecoration(
-                hintText: "Search doctor ",
+                hintText: hintText,
                 hintStyle: GoogleFonts.getFont(
                   "Roboto",
                   textStyle: const TextStyle(

@@ -1,18 +1,19 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
-import 'package:emos/view/DoctorViews/Widgets/doctor_card.dart';
-import 'package:emos/view/DoctorViews/Widgets/search_field.dart';
+import 'package:emos/view/Home/DoctorViews/Widgets/doctor_card.dart';
+import 'package:emos/view/Home/DoctorViews/Widgets/search_field.dart';
+import 'package:emos/view/HosptialView/Widget/hosptial_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FindDoctorView extends StatefulWidget {
-  const FindDoctorView({super.key});
+class FindHosptialView extends StatefulWidget {
+  const FindHosptialView({super.key});
 
   @override
-  State<FindDoctorView> createState() => _FindDoctorViewState();
+  State<FindHosptialView> createState() => _FindHosptialViewState();
 }
 
-class _FindDoctorViewState extends State<FindDoctorView> {
+class _FindHosptialViewState extends State<FindHosptialView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +32,7 @@ class _FindDoctorViewState extends State<FindDoctorView> {
         ),
         backgroundColor: Colors.transparent,
         title: Text(
-          "Find Doctors",
+          "Find Hosptial",
           style: GoogleFonts.getFont(
             "Roboto",
             textStyle: const TextStyle(
@@ -49,18 +50,18 @@ class _FindDoctorViewState extends State<FindDoctorView> {
             child: Column(
               children: [
                 SearchField(
-                  hintText: "Search doctor",
+                  hintText: "Search Hosptial",
                 ),
                 VerticalSpeacing(24),
-                DoctorCard(),
+                HosptialCard(),
                 VerticalSpeacing(16),
-                DoctorCard(),
+                HosptialCard(),
                 VerticalSpeacing(16),
-                DoctorCard(),
+                HosptialCard(),
                 VerticalSpeacing(16),
-                DoctorCard(),
+                HosptialCard(),
                 VerticalSpeacing(16),
-                DoctorCard(),
+                HosptialCard(),
               ],
             ),
           ),
