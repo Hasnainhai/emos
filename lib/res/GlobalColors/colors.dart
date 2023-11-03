@@ -11,5 +11,7 @@ class AppColor {
   static const Color textColor = Color(0xff1D4877);
   static const Color textFieldColor = Color(0xffAEDEF3);
   static const Color textColor2 = Color(0xff7FBADC);
+  static const Color circularAvatarColor = Color(0xffC9F5F3);
+  static const Color blackColor = Color(0xff222222);
   static const Color hometxtColor = Color(0xffC9F5F3);
 }
