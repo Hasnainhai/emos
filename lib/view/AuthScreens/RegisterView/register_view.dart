@@ -1,3 +1,4 @@
+import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../components/RoundedButton/rounded_button.dart';
@@ -137,14 +138,20 @@ class RegisterView extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            child: Text(
-                              'Login',
-                              style: GoogleFonts.getFont(
-                                "Roboto",
-                                textStyle: const TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w800,
-                                  color: AppColor.simpleBgbuttonColor,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, RouteName.loginView);
+                              },
+                              child: Text(
+                                'Login',
+                                style: GoogleFonts.getFont(
+                                  "Roboto",
+                                  textStyle: const TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w800,
+                                    color: AppColor.simpleBgbuttonColor,
+                                  ),
                                 ),
                               ),
                             ),
