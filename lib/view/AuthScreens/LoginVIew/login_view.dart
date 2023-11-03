@@ -115,7 +115,7 @@ class LoginView extends StatelessWidget {
                 const VerticalSpeacing(20.0),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, RouteName.registerScreen);
+                    Navigator.pushNamed(context, RouteName.informationscreen);
                   },
                   child: Align(
                     alignment: Alignment.center,

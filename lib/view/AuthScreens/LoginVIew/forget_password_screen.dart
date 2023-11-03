@@ -3,7 +3,6 @@ import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/components/appBarField/appBar_field.dart';
 import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
-import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -102,35 +101,30 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               const VerticalSpeacing(20.0),
               Align(
                 alignment: Alignment.center,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, RouteName.registerScreen);
-                  },
-                  child: Text.rich(
-                    TextSpan(
-                        text: "Don't have account?  ",
-                        style: GoogleFonts.getFont(
-                          "Roboto",
-                          textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: AppColor.textColor2,
-                          ),
+                child: Text.rich(
+                  TextSpan(
+                      text: "Don't have account?  ",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor2,
                         ),
-                        children: [
-                          TextSpan(
-                            text: 'Register',
-                            style: GoogleFonts.getFont(
-                              "Roboto",
-                              textStyle: const TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w800,
-                                color: AppColor.simpleBgbuttonColor,
-                              ),
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Register',
+                          style: GoogleFonts.getFont(
+                            "Roboto",
+                            textStyle: const TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w800,
+                              color: AppColor.simpleBgbuttonColor,
                             ),
                           ),
-                        ]),
-                  ),
+                        ),
+                      ]),
                 ),
               ),
             ],
