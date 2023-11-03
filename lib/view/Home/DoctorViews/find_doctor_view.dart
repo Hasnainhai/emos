@@ -39,7 +39,7 @@ class _FindDoctorViewState extends State<FindDoctorView> {
       ),
       body: const SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
+          padding: EdgeInsets.only(left: 20, right: 20, top: 30),
           child: SingleChildScrollView(
             child: Column(
               children: [
