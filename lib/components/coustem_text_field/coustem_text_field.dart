@@ -9,13 +9,22 @@ class TextFieldCustom extends StatefulWidget {
     required int maxLines,
     this.controller,
     this.keyboardType,
-    required this.icon,
+    this.icon,
+    this.suffixIcon,
+    this.suffixFunction,
+    this.enableSuffixIcon = false,
+    this.enablePrefixIcon = false,
   }) : super(key: key);
 
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final String? hintText;
-  final IconData icon;
+  final bool enableSuffixIcon;
+  final bool enablePrefixIcon;
+  final IconData? suffixIcon;
+  final Function? suffixFunction;
+
+  final IconData? icon;
   @override
   State<TextFieldCustom> createState() => _TextFieldCustomState();
 }
@@ -37,10 +46,21 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
           ), // Change this color to set the bottom border color
         ),
         hintText: widget.hintText,
-        prefixIcon: Icon(
-          widget.icon,
-          color: AppColor.bgFillColor,
-        ),
+        suffixIcon: widget.enableSuffixIcon
+            ? InkWell(
+                onTap: widget.suffixFunction as void Function()?,
+                child: Icon(
+                  widget.suffixIcon,
+                  color: AppColor.bgFillColor,
+                ),
+              )
+            : null,
+        prefixIcon: widget.enablePrefixIcon
+            ? Icon(
+                widget.icon,
+                color: AppColor.bgFillColor,
+              )
+            : null,
         hintStyle: GoogleFonts.getFont(
           "Roboto",
           textStyle: const TextStyle(
