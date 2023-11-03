@@ -1,3 +1,4 @@
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
 import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,6 @@ import 'routes/routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
     runApp(
@@ -14,7 +14,6 @@ void main() {
     );
   });
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -24,8 +23,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-      // initialRoute: RouteName.loginView,
-      home: const RegisterView(),
+      initialRoute: RouteName.loginView,
+      // home: const RegisterView(),
     );
   }
 }
