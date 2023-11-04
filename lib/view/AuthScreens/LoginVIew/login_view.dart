@@ -31,55 +31,30 @@ class LoginView extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 24.0, right: 24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const VerticalSpeacing(30.0),
-              AppBarField(
-                ontap: () {
-                  {}
-                },
-              ),
-              const VerticalSpeacing(32.0),
-              Text(
-                "Hello!",
-                style: GoogleFonts.getFont(
-                  "Roboto",
-                  textStyle: const TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
-                    color: AppColor.textColor,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const VerticalSpeacing(30.0),
+                AppBarField(
+                  ontap: () {
+                    {}
+                  },
+                ),
+                const VerticalSpeacing(32.0),
+                Text(
+                  "Hello!",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
                   ),
                 ),
-              ),
-              Text(
-                "Insert your email and password to login",
-                style: GoogleFonts.getFont(
-                  "Roboto",
-                  textStyle: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: AppColor.textColor2,
-                  ),
-                ),
-              ),
-              const VerticalSpeacing(40.0),
-              const TextFieldCustom(
-                maxLines: 1,
-                icon: Icons.mail,
-                hintText: 'Enter your email...',
-              ),
-              const VerticalSpeacing(32.0),
-              const TextFieldCustom(
-                maxLines: 1,
-                icon: Icons.lock_outline,
-                hintText: 'Enter your password...',
-              ),
-              const VerticalSpeacing(5.0),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "Forget Password?",
+                Text(
+                  "Insert your email and password to login",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -89,46 +64,32 @@ class LoginView extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              const VerticalSpeacing(20.0),
-              RoundedButton(
-                title: 'Login',
-                onpress: () {
-                  Navigator.pushNamed(context, RouteName.homeView);
-                },
-                bgColor: AppColor.simpleBgbuttonColor,
-                titleColor: AppColor.simpleBgTextColor,
-              ),
-              const VerticalSpeacing(20.0),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Or, login with",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor2,
-                    ),
-                  ),
+                const VerticalSpeacing(40.0),
+                const TextFieldCustom(
+                  enablePrefixIcon: true,
+                  maxLines: 1,
+                  icon: Icons.mail,
+                  hintText: 'Enter your email...',
                 ),
-              ),
-              const VerticalSpeacing(20.0),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SocialAccounts(img: 'images/google.png'),
-                  SocialAccounts(img: 'images/fb.png'),
-                  SocialAccounts(img: 'images/apple.png'),
-                ],
-              ),
-              const VerticalSpeacing(20.0),
-              Align(
-                  alignment: Alignment.center,
-                  child: RichText(
-                    text: TextSpan(
-                      text: "Don't have an account?  ",
+                const VerticalSpeacing(32.0),
+                const TextFieldCustom(
+                  enablePrefixIcon: true,
+                  maxLines: 1,
+                  icon: Icons.lock_outline,
+                  hintText: 'Enter your password...',
+                ),
+                const VerticalSpeacing(5.0),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.forgetpasswordscreen,
+                      );
+                    },
+                    child: Text(
+                      "Forget Password?",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
@@ -137,41 +98,92 @@ class LoginView extends StatelessWidget {
                           color: AppColor.textColor2,
                         ),
                       ),
-                      children: [
-                        WidgetSpan(
-                          child: Container(
-                            padding: const EdgeInsets.only(bottom: 2.0),
-                            decoration: const BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(
-                                  color: AppColor.simpleBgbuttonColor,
-                                  width: 2.0,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(20.0),
+                RoundedButton(
+                  title: 'Login',
+                  onpress: () {
+                    Navigator.pushNamed(context, RouteName.homeView);
+                  },
+                  bgColor: AppColor.simpleBgbuttonColor,
+                  titleColor: AppColor.simpleBgTextColor,
+                ),
+                const VerticalSpeacing(20.0),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Or, login with",
+                    style: GoogleFonts.getFont(
+                      "Roboto",
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColor.textColor2,
+                      ),
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(20.0),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SocialAccounts(img: 'images/google.png'),
+                    SocialAccounts(img: 'images/fb.png'),
+                    SocialAccounts(img: 'images/apple.png'),
+                  ],
+                ),
+                const VerticalSpeacing(20.0),
+                Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                      text: TextSpan(
+                        text: "Don't have an account?  ",
+                        style: GoogleFonts.getFont(
+                          "Roboto",
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: AppColor.textColor2,
+                          ),
+                        ),
+                        children: [
+                          WidgetSpan(
+                            child: Container(
+                              padding: const EdgeInsets.only(bottom: 2.0),
+                              decoration: const BoxDecoration(
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: AppColor.simpleBgbuttonColor,
+                                    width: 2.0,
+                                  ),
                                 ),
                               ),
-                            ),
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.pushNamed(
-                                    context, RouteName.registerView);
-                              },
-                              child: Text(
-                                'Register',
-                                style: GoogleFonts.getFont(
-                                  "Roboto",
-                                  textStyle: const TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w800,
-                                    color: AppColor.simpleBgbuttonColor,
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, RouteName.registerView);
+                                },
+                                child: Text(
+                                  'Register',
+                                  style: GoogleFonts.getFont(
+                                    "Roboto",
+                                    textStyle: const TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w800,
+                                      color: AppColor.simpleBgbuttonColor,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )),
-            ],
+                        ],
+                      ),
+                    )),
+              ],
+            ),
           ),
         ),
       ),

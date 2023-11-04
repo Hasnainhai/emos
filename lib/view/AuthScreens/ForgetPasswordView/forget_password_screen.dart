@@ -40,7 +40,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               const VerticalSpeacing(30.0),
               AppBarField(
                 ontap: () {
-                  {}
+                  Navigator.pop(context);
                 },
               ),
               const VerticalSpeacing(32.0),
@@ -69,6 +69,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ),
               const VerticalSpeacing(40.0),
               const TextFieldCustom(
+                enablePrefixIcon: true,
                 maxLines: 1,
                 icon: Icons.email,
                 hintText: "Example@gmail.com",

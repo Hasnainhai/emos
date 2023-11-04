@@ -23,6 +23,9 @@ class OnBoardingScreen3 extends StatelessWidget {
             children: [
               Image.asset(
                 'images/image3.png',
+                height: 370,
+                width: 370,
+                fit: BoxFit.cover,
               ),
               Text(
                 "Buy Medicine Online",
@@ -90,7 +93,7 @@ class OnBoardingScreen3 extends StatelessWidget {
                   onpress: () {
                     Navigator.pushNamed(
                       context,
-                      RouteName.forgetpasswordscreen,
+                      RouteName.loginView,
                     );
                   },
                   bgColor: AppColor.linearBgbuttonColor,
