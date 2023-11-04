@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HosptialCard extends StatelessWidget {
-  const HosptialCard({super.key});
+  const HosptialCard({super.key, required this.viewFun});
+  final void Function() viewFun;
 
   @override
   Widget build(BuildContext context) {
@@ -107,24 +108,27 @@ class HosptialCard extends StatelessWidget {
                     ],
                   ),
                   const VerticalSpeacing(16),
-                  Container(
-                    width: 70,
-                    height: 28,
-                    decoration: const BoxDecoration(
-                      color: AppColor.bgFillColor,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(6),
+                  InkWell(
+                    onTap: viewFun,
+                    child: Container(
+                      width: 70,
+                      height: 28,
+                      decoration: const BoxDecoration(
+                        color: AppColor.bgFillColor,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(6),
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "view",
-                        style: GoogleFonts.getFont(
-                          "Roboto",
-                          textStyle: const TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            color: AppColor.simpleBgTextColor,
+                      child: Center(
+                        child: Text(
+                          "view",
+                          style: GoogleFonts.getFont(
+                            "Roboto",
+                            textStyle: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: AppColor.simpleBgTextColor,
+                            ),
                           ),
                         ),
                       ),

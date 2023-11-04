@@ -1,5 +1,6 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/DoctorViews/Widgets/search_field.dart';
 import 'package:emos/view/HosptialView/Widget/hosptial_card.dart';
 import 'package:flutter/material.dart';
@@ -42,25 +43,60 @@ class _FindHosptialViewState extends State<FindHosptialView> {
           ),
         ),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 20, right: 20, top: 30),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SearchField(
+                const SearchField(
                   hintText: "Search Hosptial",
                 ),
-                VerticalSpeacing(24),
-                HosptialCard(),
-                VerticalSpeacing(16),
-                HosptialCard(),
-                VerticalSpeacing(16),
-                HosptialCard(),
-                VerticalSpeacing(16),
-                HosptialCard(),
-                VerticalSpeacing(16),
-                HosptialCard(),
+                const VerticalSpeacing(24),
+                HosptialCard(
+                  viewFun: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.detailhosptialview,
+                    );
+                  },
+                ),
+                const VerticalSpeacing(16),
+                HosptialCard(
+                  viewFun: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.detailhosptialview,
+                    );
+                  },
+                ),
+                const VerticalSpeacing(16),
+                HosptialCard(
+                  viewFun: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.detailhosptialview,
+                    );
+                  },
+                ),
+                const VerticalSpeacing(16),
+                HosptialCard(
+                  viewFun: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.detailhosptialview,
+                    );
+                  },
+                ),
+                const VerticalSpeacing(16),
+                HosptialCard(
+                  viewFun: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.detailhosptialview,
+                    );
+                  },
+                ),
               ],
             ),
           ),
