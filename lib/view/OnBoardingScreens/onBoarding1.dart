@@ -22,6 +22,9 @@ class OnBoardingScreen1 extends StatelessWidget {
             children: [
               Image.asset(
                 'images/image1.png',
+                height: 370,
+                width: 370,
+                fit: BoxFit.cover,
               ),
               Text(
                 "Easy Appointment",

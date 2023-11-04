@@ -31,68 +31,30 @@ class RegisterView extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 24.0, right: 24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const VerticalSpeacing(30.0),
-              AppBarField(
-                ontap: () {
-                  {}
-                },
-              ),
-              const VerticalSpeacing(32.0),
-              Text(
-                "Register",
-                style: GoogleFonts.getFont(
-                  "Roboto",
-                  textStyle: const TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
-                    color: AppColor.textColor,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const VerticalSpeacing(30.0),
+                AppBarField(
+                  ontap: () {
+                    {}
+                  },
+                ),
+                const VerticalSpeacing(32.0),
+                Text(
+                  "Register",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
                   ),
                 ),
-              ),
-              Text(
-                "Register to continue",
-                style: GoogleFonts.getFont(
-                  "Roboto",
-                  textStyle: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: AppColor.textColor2,
-                  ),
-                ),
-              ),
-              const VerticalSpeacing(40.0),
-              const TextFieldCustom(
-                maxLines: 1,
-                icon: Icons.mail,
-                hintText: 'Enter your email...',
-              ),
-              const VerticalSpeacing(32.0),
-              const TextFieldCustom(
-                maxLines: 1,
-                icon: Icons.lock_outline,
-                hintText: 'Enter your password...',
-              ),
-              const VerticalSpeacing(32.0),
-              const TextFieldCustom(
-                maxLines: 1,
-                icon: Icons.lock_outline,
-                hintText: 'Renter your password...',
-              ),
-              const VerticalSpeacing(32.0),
-              RoundedButton(
-                title: 'Register',
-                onpress: () {},
-                bgColor: AppColor.simpleBgbuttonColor,
-                titleColor: AppColor.simpleBgTextColor,
-              ),
-              const VerticalSpeacing(20.0),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Or, register with",
+                Text(
+                  "Register to continue",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -102,65 +64,115 @@ class RegisterView extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              const VerticalSpeacing(20.0),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SocialAccounts(img: 'images/google.png'),
-                  SocialAccounts(img: 'images/fb.png'),
-                  SocialAccounts(img: 'images/apple.png'),
-                ],
-              ),
-              const VerticalSpeacing(20.0),
-              Align(
+                const VerticalSpeacing(40.0),
+                const TextFieldCustom(
+                  enablePrefixIcon: true,
+                  maxLines: 1,
+                  icon: Icons.mail,
+                  hintText: 'Enter your email...',
+                ),
+                const VerticalSpeacing(32.0),
+                const TextFieldCustom(
+                  enablePrefixIcon: true,
+                  maxLines: 1,
+                  icon: Icons.lock_outline,
+                  enableSuffixIcon: true,
+                  suffixIcon: Icons.remove_red_eye_outlined,
+                  hintText: 'Enter your password...',
+                ),
+                const VerticalSpeacing(32.0),
+                const TextFieldCustom(
+                  enablePrefixIcon: true,
+                  maxLines: 1,
+                  icon: Icons.lock_outline,
+                  hintText: 'Renter your password...',
+                ),
+                const VerticalSpeacing(32.0),
+                RoundedButton(
+                  title: 'Register',
+                  onpress: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.informationview,
+                    );
+                  },
+                  bgColor: AppColor.simpleBgbuttonColor,
+                  titleColor: AppColor.simpleBgTextColor,
+                ),
+                const VerticalSpeacing(20.0),
+                Align(
                   alignment: Alignment.center,
-                  child: RichText(
-                    text: TextSpan(
-                      text: "Already have account?  ",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.textColor2,
-                        ),
+                  child: Text(
+                    "Or, register with",
+                    style: GoogleFonts.getFont(
+                      "Roboto",
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColor.textColor2,
                       ),
-                      children: [
-                        WidgetSpan(
-                          child: Container(
-                            padding: const EdgeInsets.only(bottom: 2.0),
-                            decoration: const BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(
-                                  color: AppColor.simpleBgbuttonColor,
-                                  width: 2.0,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(20.0),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SocialAccounts(img: 'images/google.png'),
+                    SocialAccounts(img: 'images/fb.png'),
+                    SocialAccounts(img: 'images/apple.png'),
+                  ],
+                ),
+                const VerticalSpeacing(20.0),
+                Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                      text: TextSpan(
+                        text: "Already have account?  ",
+                        style: GoogleFonts.getFont(
+                          "Roboto",
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: AppColor.textColor2,
+                          ),
+                        ),
+                        children: [
+                          WidgetSpan(
+                            child: Container(
+                              padding: const EdgeInsets.only(bottom: 2.0),
+                              decoration: const BoxDecoration(
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: AppColor.simpleBgbuttonColor,
+                                    width: 2.0,
+                                  ),
                                 ),
                               ),
-                            ),
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.pushNamed(
-                                    context, RouteName.loginView);
-                              },
-                              child: Text(
-                                'Login',
-                                style: GoogleFonts.getFont(
-                                  "Roboto",
-                                  textStyle: const TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w800,
-                                    color: AppColor.simpleBgbuttonColor,
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, RouteName.loginView);
+                                },
+                                child: Text(
+                                  'Login',
+                                  style: GoogleFonts.getFont(
+                                    "Roboto",
+                                    textStyle: const TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w800,
+                                      color: AppColor.simpleBgbuttonColor,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )),
-            ],
+                        ],
+                      ),
+                    )),
+              ],
+            ),
           ),
         ),
       ),

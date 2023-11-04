@@ -22,6 +22,9 @@ class OnBoardingScreen2 extends StatelessWidget {
             children: [
               Image.asset(
                 'images/image2.png',
+                height: 370,
+                width: 370,
+                fit: BoxFit.cover,
               ),
               Text(
                 "Covid-19 Prevention",

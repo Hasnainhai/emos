@@ -9,4 +9,6 @@ class RouteName {
   static const String homeView = ('/home_view');
   static const String finddoctorview = ('/find_doctor_view');
   static const String findhosptialview = ('/find_hosptial_view');
+  static const String informationview = ('/information_view');
+  static const String detaildoctorview = ('/detail_doctor_view');
 }
