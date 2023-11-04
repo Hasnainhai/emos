@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: Routes.generateRoute,
 
       initialRoute: RouteName.finddoctorview,
+
       // home: const RegisterView(),
     );
   }
