@@ -117,49 +117,51 @@ class HomeView extends StatelessWidget {
 
   _builProfileContainer() {
     return Container(
-        height: top,
-        width: 350,
-        decoration: BoxDecoration(
-            color: AppColor.whiteColor,
-            borderRadius: BorderRadius.circular(12.0)),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: 100.0,
-                  width: 108.0,
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: AppColor.textFieldColor,
-                        width: 1.0,
-                      ),
-                      right: BorderSide(
-                        color: AppColor.textFieldColor,
-                        width: 1.0,
-                      ),
+      height: top,
+      width: 350,
+      decoration: BoxDecoration(
+          color: AppColor.whiteColor,
+          borderRadius: BorderRadius.circular(12.0)),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 100.0,
+                width: 108.0,
+                decoration: const BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
                     ),
-
-                  ),
-                  child: Container(
-                    height: 60.0,
-                    width: 108.0,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          height: 32.0,
-                          width: 32.0,
-                          child: Image.asset('images/hospital.png',fit: BoxFit.contain,)),
-                       
-                      ],
+                    right: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
                     ),
                   ),
                 ),
-              ],
-            ),
-          ],
-        ));
+                child: Container(
+                  height: 60.0,
+                  width: 108.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                          height: 32.0,
+                          width: 32.0,
+                          child: Image.asset(
+                            'images/hospital.png',
+                            fit: BoxFit.contain,
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
