@@ -1,6 +1,8 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/HomeView/widgets/symptomsWidget.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../res/GlobalColors/colors.dart';
@@ -9,13 +11,12 @@ import 'widgets/topHospitalsWidget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
-
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  final double tHeight = 274.0;
+  final double tHeight = 374.0;
   final double top = 301.0;
 
   @override
@@ -31,13 +32,20 @@ class _HomeViewState extends State<HomeView> {
             children: [
               _buildCoverBar(),
               Positioned(
-                top: 10.0,
+                top: 100.0,
                 left: 0.0,
                 child: _buildProfile(),
               ),
               Positioned(
                 top: tHeight - top / 2 - 10,
-                child: _builProfileContainer(context),
+                child: HomeContainerWidget(
+                  ontap: () {
+                    if (kDebugMode) {
+                      print('testing...');
+                    }
+                    Navigator.pushNamed(context, RouteName.chosepatiantview);
+                  },
+                ),
               ),
             ],
           ),
@@ -163,6 +171,48 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
+                const VerticalSpeacing(16.0),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SymptomsWidget(
+                      img: 'images/dental.png',
+                      title: '  Dental\nProblems',
+                    ),
+                    SymptomsWidget(
+                      img: 'images/cold.png',
+                      title: 'cold and\n   cough',
+                    ),
+                    SymptomsWidget(
+                      img: 'images/skin.png',
+                      title: '     Skin\nProblems',
+                    ),
+                    SymptomsWidget(
+                      img: 'images/menstrual.png',
+                      title: 'Menstrual\n  Problems',
+                    ),
+                  ],
+                ),
+                const VerticalSpeacing(16.0),
+                const Row(
+                  children: [
+                    SizedBox(width: 10.0),
+                    SymptomsWidget(
+                      img: 'images/hairfall.png',
+                      title: 'Hairfall',
+                    ),
+                    SizedBox(width: 20.0),
+                    SymptomsWidget(
+                      img: 'images/headache.png',
+                      title: 'Headache',
+                    ),
+                    SizedBox(width: 20.0),
+                    SymptomsWidget(
+                      img: 'images/fever.png',
+                      title: 'Fever',
+                    ),
+                  ],
+                ),
                 const VerticalSpeacing(32.0),
               ],
             ),
@@ -249,11 +299,22 @@ class _HomeViewState extends State<HomeView> {
       ],
     );
   }
+}
 
-  _builProfileContainer(BuildContext context) {
+class HomeContainerWidget extends StatefulWidget {
+  const HomeContainerWidget({super.key, required this.ontap});
+  final Function ontap;
+
+  @override
+  State<HomeContainerWidget> createState() => _HomeContainerWidgetState();
+}
+
+class _HomeContainerWidgetState extends State<HomeContainerWidget> {
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      height: top,
-      width: 350,
+      height: 301.0,
+      width: 350.0,
       decoration: BoxDecoration(
         color: AppColor.whiteColor,
         borderRadius: BorderRadius.circular(12.0),
@@ -262,30 +323,32 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Row(
             children: [
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
-                    ),
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  widget.ontap();
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/hospital.png',
-                    name: 'Hospital',
-                    ontap: () {
-                      Navigator.pushNamed(context, RouteName.chosepatiantview);
-                    },
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/hospital.png',
+                      name: 'Hospital',
+                    ),
                   ),
                 ),
               ),
@@ -304,13 +367,12 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
-                child: SizedBox(
+                child: const SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/ambulance.png',
                     name: 'Ambulance',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -331,7 +393,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/clinic.png',
                     name: 'Clinic',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -360,7 +421,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/drHome.png',
                     name: 'Dr at Home',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -385,7 +445,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/homeCare.png',
                     name: 'Home Care',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -406,7 +465,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/labotoryTest.png',
                     name: 'Laboratory\n        Test',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -435,7 +493,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/radiology.png',
                     name: 'Radiology',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -460,7 +517,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/pharmacy.png',
                     name: 'Pharmacy\n   (soon)',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -473,7 +529,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/others.png',
                     name: 'Other (soon)',
-                    ontap: () {},
                   ),
                 ),
               ),
