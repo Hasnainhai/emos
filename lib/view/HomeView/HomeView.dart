@@ -1,5 +1,7 @@
+import 'package:another_flushbar/flushbar.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,7 +17,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final double tHeight = 274.0;
+  final double tHeight = 374.0;
   final double top = 301.0;
 
   @override
@@ -31,13 +33,13 @@ class _HomeViewState extends State<HomeView> {
             children: [
               _buildCoverBar(),
               Positioned(
-                top: 10.0,
+                top: 100.0,
                 left: 0.0,
                 child: _buildProfile(),
               ),
               Positioned(
                 top: tHeight - top / 2 - 10,
-                child: _builProfileContainer(),
+                child: _builProfileContainer(context),
               ),
             ],
           ),
@@ -250,7 +252,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  _builProfileContainer() {
+  _builProfileContainer(BuildContext context) {
     return Container(
       height: top,
       width: 350,
@@ -262,17 +264,6 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Row(
             children: [
-              // InkWell(
-              //     onTap: (){
-              //     print('testing...');
-              //     Navigator.pushNamed(context, RouteName.chosepatiantview);
-              //   },
-              //   child: Container(
-              //     height: 20.0,
-              //     width: 20.0,
-              //     color: Colors.red,
-              //   ),
-              // ),
               Container(
                 height: 100.0,
                 width: 115.0,
@@ -297,32 +288,27 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, RouteName.chosepatiantview);
-                },
-                child: Container(
-                  height: 100.0,
-                  width: 115.0,
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: AppColor.textFieldColor,
-                        width: 1.0,
-                      ),
-                      right: BorderSide(
-                        color: AppColor.textFieldColor,
-                        width: 1.0,
-                      ),
+              Container(
+                height: 100.0,
+                width: 115.0,
+                decoration: const BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
+                    ),
+                    right: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
                     ),
                   ),
-                  child: SizedBox(
-                    height: 60.0,
-                    width: 108.0,
-                    child: homeFeatures(
-                      img: 'images/ambulance.png',
-                      name: 'Ambulance',
-                    ),
+                ),
+                child: const SizedBox(
+                  height: 60.0,
+                  width: 108.0,
+                  child: homeFeatures(
+                    img: 'images/ambulance.png',
+                    name: 'Ambulance',
                   ),
                 ),
               ),
