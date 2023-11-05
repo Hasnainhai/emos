@@ -6,6 +6,7 @@ import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
+import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
@@ -74,6 +75,10 @@ class Routes {
       case RouteName.chosepatiantview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChosePatiantView(),
+        );
+      case RouteName.hosptialtabbar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HosptialTabBar(),
         );
       default:
         return MaterialPageRoute(

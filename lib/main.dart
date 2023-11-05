@@ -23,10 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
 
-      initialRoute: RouteName.chosepatiantview,
+      initialRoute: RouteName.hosptialtabbar,
 
       // home: const RegisterView(),
-
     );
   }
 }
