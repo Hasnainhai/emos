@@ -1,3 +1,5 @@
+import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../res/GlobalColors/colors.dart';
@@ -10,12 +12,13 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: AppColor.linearBgTextColor,
         elevation: 0.0,
         automaticallyImplyLeading: false,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Stack(
             clipBehavior: Clip.none,
@@ -32,6 +35,121 @@ class HomeView extends StatelessWidget {
                 child: _builProfileContainer(),
               ),
             ],
+          ),
+          const VerticalSpeacing(180.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Top Specialist',
+                      style: GoogleFonts.getFont(
+                        "Poppins",
+                        textStyle: const TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'View all',
+                      style: GoogleFonts.getFont(
+                        "Poppins",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.simpleBgbuttonColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const VerticalSpeacing(16.0),
+                const SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      TopSpeacialistCardWidget(),
+                      SizedBox(width: 16.0),
+                      TopSpeacialistCardWidget(),
+                    ],
+                  ),
+                ),
+                const VerticalSpeacing(32.0),
+                Container(
+                  height: 108,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('images/banner.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(32.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Top Specialist',
+                      style: GoogleFonts.getFont(
+                        "Poppins",
+                        textStyle: const TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'View all',
+                      style: GoogleFonts.getFont(
+                        "Poppins",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.simpleBgbuttonColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const VerticalSpeacing(16.0),
+                Container(
+                  height: 227.0,
+                  width: 258.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.0),
+                    border: Border.all(
+                      width: 1,
+                      color: AppColor.textFieldColor,
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 128.0,
+                        width: 226.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.0),
+                          image: const DecorationImage(
+                            image: NetworkImage(
+                                'https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const VerticalSpeacing(16.0),
+              ],
+            ),
           ),
         ],
       ),
