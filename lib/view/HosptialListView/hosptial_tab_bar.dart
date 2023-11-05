@@ -2,7 +2,8 @@ import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
-import 'package:emos/view/HosptialListView/hosptial_list_view.dart';
+import 'package:emos/view/HosptialListView/Widgets/owner.dart';
+import 'package:emos/view/HosptialListView/Widgets/hosptial_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -102,12 +103,12 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                 ),
               ),
               const VerticalSpeacing(30.0),
-              const Expanded(
+              Expanded(
                 child: DefaultTabController(
                   length: 2,
                   child: Column(
                     children: [
-                      TabBar(
+                      const TabBar(
                         unselectedLabelColor: AppColor.textColor2,
                         labelColor: AppColor.bgFillColor,
                         indicatorColor: AppColor.textColor2,
@@ -120,9 +121,53 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                           Tab(text: 'Hospital View'),
                         ],
                       ),
+                      const VerticalSpeacing(30),
                       Expanded(
                         child: TabBarView(
-                          children: [],
+                          children: [
+                            SingleChildScrollView(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "147 Hospital Founded",
+                                    style: GoogleFonts.getFont(
+                                      "Roboto",
+                                      textStyle: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w600,
+                                        color: AppColor.textColor2,
+                                      ),
+                                    ),
+                                  ),
+                                  const VerticalSpeacing(8),
+                                  Row(
+                                    children: [
+                                      OwnerWidget(
+                                          circleColor: const Color(0xff5ABF24),
+                                          owner: "79 Government"),
+                                      OwnerWidget(
+                                          circleColor: const Color(0xffFD586B),
+                                          owner: "54 Government"),
+                                    ],
+                                  ),
+                                  const VerticalSpeacing(8),
+                                  OwnerWidget(
+                                      circleColor: const Color(0xffFEAA48),
+                                      owner: "26 Government"),
+                                  const VerticalSpeacing(20),
+                                  const HosptialDetail(),
+                                  const VerticalSpeacing(20),
+                                  const HosptialDetail(),
+                                  const VerticalSpeacing(20),
+                                  const HosptialDetail(),
+                                ],
+                              ),
+                            ),
+                            const Center(
+                              child: Text("Here is Map"),
+                            ),
+                          ],
                         ),
                       ),
                     ],
