@@ -38,9 +38,12 @@ class _HomeViewState extends State<HomeView> {
                 child: _buildProfile(),
               ),
               Positioned(
-                top: tHeight - top / 2 - 10,
-                child: _builProfileContainer(context),
-              ),
+                  top: tHeight - top / 2 - 10,
+                  child: HomeContainerWidget(
+                    ontap: () {
+                      print('testing...');
+                    },
+                  )),
             ],
           ),
           const VerticalSpeacing(180.0),
@@ -251,11 +254,22 @@ class _HomeViewState extends State<HomeView> {
       ],
     );
   }
+}
 
-  _builProfileContainer(BuildContext context) {
+class HomeContainerWidget extends StatefulWidget {
+  const HomeContainerWidget({super.key, required this.ontap});
+  final Function ontap;
+
+  @override
+  State<HomeContainerWidget> createState() => _HomeContainerWidgetState();
+}
+
+class _HomeContainerWidgetState extends State<HomeContainerWidget> {
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      height: top,
-      width: 350,
+      height: 301.0,
+      width: 350.0,
       decoration: BoxDecoration(
         color: AppColor.whiteColor,
         borderRadius: BorderRadius.circular(12.0),
@@ -264,27 +278,32 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Row(
             children: [
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
-                    ),
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  widget.ontap();
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/hospital.png',
-                    name: 'Hospital',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/hospital.png',
+                      name: 'Hospital',
+                    ),
                   ),
                 ),
               ),
