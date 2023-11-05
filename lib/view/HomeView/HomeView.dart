@@ -1,4 +1,5 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +33,7 @@ class HomeView extends StatelessWidget {
               ),
               Positioned(
                 top: tHeight - top / 2 - 10,
-                child: _builProfileContainer(),
+                child: _builProfileContainer(context),
               ),
             ],
           ),
@@ -56,14 +57,22 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      'View all',
-                      style: GoogleFonts.getFont(
-                        "Poppins",
-                        textStyle: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.simpleBgbuttonColor,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          RouteName.finddoctorview,
+                        );
+                      },
+                      child: Text(
+                        'View all',
+                        style: GoogleFonts.getFont(
+                          "Poppins",
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.simpleBgbuttonColor,
+                          ),
                         ),
                       ),
                     ),
@@ -106,14 +115,22 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      'View all',
-                      style: GoogleFonts.getFont(
-                        "Poppins",
-                        textStyle: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.simpleBgbuttonColor,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          RouteName.findhosptialview,
+                        );
+                      },
+                      child: Text(
+                        'View all',
+                        style: GoogleFonts.getFont(
+                          "Poppins",
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.simpleBgbuttonColor,
+                          ),
                         ),
                       ),
                     ),
@@ -234,13 +251,14 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  _builProfileContainer() {
+  _builProfileContainer(BuildContext context) {
     return Container(
       height: top,
       width: 350,
       decoration: BoxDecoration(
-          color: AppColor.whiteColor,
-          borderRadius: BorderRadius.circular(12.0)),
+        color: AppColor.whiteColor,
+        borderRadius: BorderRadius.circular(12.0),
+      ),
       child: Column(
         children: [
           Row(
@@ -260,12 +278,15 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/hospital.png',
                     name: 'Hospital',
+                    ontap: () {
+                      Navigator.pushNamed(context, RouteName.chosepatiantview);
+                    },
                   ),
                 ),
               ),
@@ -284,12 +305,13 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/ambulance.png',
                     name: 'Ambulance',
+                    ontap: () {},
                   ),
                 ),
               ),
@@ -304,12 +326,13 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/clinic.png',
                     name: 'Clinic',
+                    ontap: () {},
                   ),
                 ),
               ),
@@ -332,12 +355,13 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/drHome.png',
                     name: 'Dr at Home',
+                    ontap: () {},
                   ),
                 ),
               ),
@@ -356,12 +380,13 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/homeCare.png',
                     name: 'Home Care',
+                    ontap: () {},
                   ),
                 ),
               ),
@@ -376,12 +401,13 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/labotoryTest.png',
                     name: 'Laboratory\n        Test',
+                    ontap: () {},
                   ),
                 ),
               ),
@@ -404,12 +430,13 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/radiology.png',
                     name: 'Radiology',
+                    ontap: () {},
                   ),
                 ),
               ),
@@ -428,24 +455,26 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/pharmacy.png',
                     name: 'Pharmacy\n   (soon)',
+                    ontap: () {},
                   ),
                 ),
               ),
               Container(
                 height: 100.0,
                 width: 115.0,
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/others.png',
                     name: 'Other (soon)',
+                    ontap: () {},
                   ),
                 ),
               ),
