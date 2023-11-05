@@ -37,7 +37,7 @@ class _HomeViewState extends State<HomeView> {
               ),
               Positioned(
                 top: tHeight - top / 2 - 10,
-                child: _builProfileContainer(context),
+                child: _builProfileContainer(),
               ),
             ],
           ),
@@ -250,7 +250,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  _builProfileContainer(BuildContext context) {
+  _builProfileContainer() {
     return Container(
       height: top,
       width: 350,
@@ -262,6 +262,17 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Row(
             children: [
+              // InkWell(
+              //     onTap: (){
+              //     print('testing...');
+              //     Navigator.pushNamed(context, RouteName.chosepatiantview);
+              //   },
+              //   child: Container(
+              //     height: 20.0,
+              //     width: 20.0,
+              //     color: Colors.red,
+              //   ),
+              // ),
               Container(
                 height: 100.0,
                 width: 115.0,
@@ -277,40 +288,41 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
-                child: SizedBox(
+                child: const SizedBox(
                   height: 60.0,
                   width: 108.0,
                   child: homeFeatures(
                     img: 'images/hospital.png',
                     name: 'Hospital',
-                    ontap: () {
-                      Navigator.pushNamed(context, RouteName.chosepatiantview);
-                    },
                   ),
                 ),
               ),
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
-                    ),
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, RouteName.chosepatiantview);
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/ambulance.png',
-                    name: 'Ambulance',
-                    ontap: () {},
+                  child: SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/ambulance.png',
+                      name: 'Ambulance',
+                    ),
                   ),
                 ),
               ),
@@ -331,7 +343,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/clinic.png',
                     name: 'Clinic',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -360,7 +371,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/drHome.png',
                     name: 'Dr at Home',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -385,7 +395,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/homeCare.png',
                     name: 'Home Care',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -406,7 +415,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/labotoryTest.png',
                     name: 'Laboratory\n        Test',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -435,7 +443,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/radiology.png',
                     name: 'Radiology',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -460,7 +467,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/pharmacy.png',
                     name: 'Pharmacy\n   (soon)',
-                    ontap: () {},
                   ),
                 ),
               ),
@@ -473,7 +479,6 @@ class _HomeViewState extends State<HomeView> {
                   child: homeFeatures(
                     img: 'images/others.png',
                     name: 'Other (soon)',
-                    ontap: () {},
                   ),
                 ),
               ),
