@@ -592,7 +592,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         children: <Widget>[
           IconButton(
             icon: const Icon(Icons.home_rounded),
-            color: isSelected[0] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            color:
+                isSelected[0] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
               widget.onTap(0);
               setState(() {
@@ -604,7 +605,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             icon: const Icon(
               Icons.message_rounded,
             ),
-            color: isSelected[1] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            color:
+                isSelected[1] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
               widget.onTap(1);
               setState(() {
@@ -636,7 +638,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
           IconButton(
             icon: Icon(Icons.notifications_outlined),
-            color: isSelected[3] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            color:
+                isSelected[3] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
               widget.onTap(3);
               setState(() {
@@ -646,7 +649,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
           IconButton(
             icon: const Icon(Icons.menu),
-            color: isSelected[4] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            color:
+                isSelected[4] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
               widget.onTap(4);
               setState(() {
