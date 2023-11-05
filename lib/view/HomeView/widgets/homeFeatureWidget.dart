@@ -5,10 +5,9 @@ import '../../../res/GlobalColors/colors.dart';
 
 class homeFeatures extends StatelessWidget {
   const homeFeatures(
-      {super.key, required this.img, required this.name, required this.ontap});
+      {super.key, required this.img, required this.name,});
   final String img;
   final String name;
-  final Function ontap;
 
   @override
   Widget build(BuildContext context) {
