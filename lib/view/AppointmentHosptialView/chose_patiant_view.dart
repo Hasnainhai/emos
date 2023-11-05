@@ -15,6 +15,7 @@ class ChosePatiantView extends StatefulWidget {
 class _ChosePatiantViewState extends State<ChosePatiantView> {
   bool first = true;
   bool second = false;
+  double progress = 0.3; // Set the progress value here
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +72,18 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
               ),
               const VerticalSpeacing(30.0),
 
+              SizedBox(
+                width: double.infinity,
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 2,
+                  backgroundColor: AppColor.textColor2,
+                  valueColor:
+                      const AlwaysStoppedAnimation<Color>(AppColor.bgFillColor),
+                ),
+              ),
+              const VerticalSpeacing(30.0),
+
               Text(
                 "Chose Patient",
                 style: GoogleFonts.getFont(
@@ -106,8 +119,9 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                   name: 'Kaixa Pham',
                   dob: '21-09-1995',
                   person: 'Yourself',
-                  borderColor:
-                      first ? AppColor.bgFillColor : AppColor.textColor2,
+                  borderColor: first == true
+                      ? AppColor.bgFillColor
+                      : AppColor.textColor2,
                 ),
               ),
               const VerticalSpeacing(16.0),
@@ -123,7 +137,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                   dob: '12-11-1990',
                   person: 'Brother',
                   borderColor:
-                      first ? AppColor.bgFillColor : AppColor.textColor2,
+                      second ? AppColor.bgFillColor : AppColor.textColor2,
                 ),
               ),
               const VerticalSpeacing(16.0),
