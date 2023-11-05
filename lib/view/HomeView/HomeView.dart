@@ -1,5 +1,6 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/HomeView/widgets/symptomsWidget.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -169,6 +170,48 @@ class _HomeViewState extends State<HomeView> {
                       color: AppColor.textColor,
                     ),
                   ),
+                ),
+                const VerticalSpeacing(16.0),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SymptomsWidget(
+                      img: 'images/dental.png',
+                      title: '  Dental\nProblems',
+                    ),
+                    SymptomsWidget(
+                      img: 'images/cold.png',
+                      title: 'cold and\n   cough',
+                    ),
+                    SymptomsWidget(
+                      img: 'images/skin.png',
+                      title: '     Skin\nProblems',
+                    ),
+                    SymptomsWidget(
+                      img: 'images/menstrual.png',
+                      title: 'Menstrual\n  Problems',
+                    ),
+                  ],
+                ),
+                const VerticalSpeacing(16.0),
+                const Row(
+                  children: [
+                    SizedBox(width: 10.0),
+                    SymptomsWidget(
+                      img: 'images/hairfall.png',
+                      title: 'Hairfall',
+                    ),
+                    SizedBox(width: 20.0),
+                    SymptomsWidget(
+                      img: 'images/headache.png',
+                      title: 'Headache',
+                    ),
+                    SizedBox(width: 20.0),
+                    SymptomsWidget(
+                      img: 'images/fever.png',
+                      title: 'Fever',
+                    ),
+                  ],
                 ),
                 const VerticalSpeacing(32.0),
               ],
