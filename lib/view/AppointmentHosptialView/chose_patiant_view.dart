@@ -5,8 +5,8 @@ import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EmergancyView extends StatelessWidget {
-  const EmergancyView({super.key});
+class ChosePatiantView extends StatelessWidget {
+  const ChosePatiantView({super.key});
 
   @override
   Widget build(BuildContext context) {
