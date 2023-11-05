@@ -22,9 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-
-      initialRoute: RouteName.emergancyview,
-
+      initialRoute: RouteName.homeView,
       // home: const RegisterView(),
     );
   }
