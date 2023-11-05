@@ -1,8 +1,7 @@
-import 'package:another_flushbar/flushbar.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../res/GlobalColors/colors.dart';
@@ -11,7 +10,6 @@ import 'widgets/topHospitalsWidget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
-
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -38,12 +36,16 @@ class _HomeViewState extends State<HomeView> {
                 child: _buildProfile(),
               ),
               Positioned(
-                  top: tHeight - top / 2 - 10,
-                  child: HomeContainerWidget(
-                    ontap: () {
+                top: tHeight - top / 2 - 10,
+                child: HomeContainerWidget(
+                  ontap: () {
+                    if (kDebugMode) {
                       print('testing...');
-                    },
-                  )),
+                    }
+                    Navigator.pushNamed(context, RouteName.chosepatiantview);
+                  },
+                ),
+              ),
             ],
           ),
           const VerticalSpeacing(180.0),
