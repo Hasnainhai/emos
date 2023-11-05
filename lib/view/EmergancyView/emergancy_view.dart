@@ -5,9 +5,16 @@ import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EmergancyView extends StatelessWidget {
+class EmergancyView extends StatefulWidget {
   const EmergancyView({super.key});
 
+  @override
+  State<EmergancyView> createState() => _EmergancyViewState();
+}
+
+class _EmergancyViewState extends State<EmergancyView> {
+  bool first = true;
+  bool second = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,16 +94,34 @@ class EmergancyView extends StatelessWidget {
                 ),
               ),
               const VerticalSpeacing(16.0),
-              AddCard(
-                name: 'Kaixa Pham',
-                dob: '21-09-1995',
-                person: 'Yourself',
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    first = !first;
+                  });
+                },
+                child: AddCard(
+                  name: 'Kaixa Pham',
+                  dob: '21-09-1995',
+                  person: 'Yourself',
+                  borderColor:
+                      first ? AppColor.bgFillColor : AppColor.textColor2,
+                ),
               ),
               const VerticalSpeacing(16.0),
-              AddCard(
-                name: 'Stephen Chow',
-                dob: '12-11-1990',
-                person: 'Brother',
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    second = !second;
+                  });
+                },
+                child: AddCard(
+                  name: 'Stephen Chow',
+                  dob: '12-11-1990',
+                  person: 'Brother',
+                  borderColor:
+                      first ? AppColor.bgFillColor : AppColor.textColor2,
+                ),
               ),
               const VerticalSpeacing(16.0),
               RoundedButton(

@@ -4,19 +4,32 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AddCard extends StatelessWidget {
   AddCard(
-      {super.key, required this.name, required this.dob, required this.person});
+      {super.key,
+      required this.name,
+      required this.dob,
+      required this.person,
+      required this.borderColor});
   String name;
   String dob;
   String person;
+  Color borderColor;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 120,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: const Color(0xffFFFFFF),
-          border: Border.all(color: AppColor.bgFillColor)),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xff000000).withOpacity(0.1),
+            blurRadius: 20,
+            offset: const Offset(0, 6),
+          ),
+        ],
+        borderRadius: BorderRadius.circular(16),
+        color: const Color(0xffFFFFFF),
+        border: Border.all(color: borderColor),
+      ),
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0, right: 20.0),
         child: Row(

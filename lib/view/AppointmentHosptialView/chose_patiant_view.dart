@@ -5,8 +5,16 @@ import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ChosePatiantView extends StatelessWidget {
+class ChosePatiantView extends StatefulWidget {
   const ChosePatiantView({super.key});
+
+  @override
+  State<ChosePatiantView> createState() => _ChosePatiantViewState();
+}
+
+class _ChosePatiantViewState extends State<ChosePatiantView> {
+  bool first = true;
+  bool second = false;
 
   @override
   Widget build(BuildContext context) {
@@ -87,25 +95,51 @@ class ChosePatiantView extends StatelessWidget {
                 ),
               ),
               const VerticalSpeacing(16.0),
-              AddCard(
-                name: 'Kaixa Pham',
-                dob: '21-09-1995',
-                person: 'Yourself',
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    first = !first;
+                    second = false;
+                  });
+                },
+                child: AddCard(
+                  name: 'Kaixa Pham',
+                  dob: '21-09-1995',
+                  person: 'Yourself',
+                  borderColor:
+                      first ? AppColor.bgFillColor : AppColor.textColor2,
+                ),
               ),
               const VerticalSpeacing(16.0),
-              AddCard(
-                name: 'Stephen Chow',
-                dob: '12-11-1990',
-                person: 'Brother',
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    second = !second;
+                    first = false;
+                  });
+                },
+                child: AddCard(
+                  name: 'Stephen Chow',
+                  dob: '12-11-1990',
+                  person: 'Brother',
+                  borderColor:
+                      first ? AppColor.bgFillColor : AppColor.textColor2,
+                ),
               ),
               const VerticalSpeacing(16.0),
               RoundedButton(
-                title: 'Continue',
+                title: 'Add New Depedent',
                 onpress: () {},
-                bgColor: AppColor.simpleBgbuttonColor,
+                bgColor: AppColor.simpleBgTextColor,
+                titleColor: AppColor.bgFillColor,
+              ),
+              VerticalSpeacing(MediaQuery.of(context).size.height / 5),
+              RoundedButton(
+                title: "Continue",
+                onpress: () {},
+                bgColor: AppColor.bgFillColor,
                 titleColor: AppColor.simpleBgTextColor,
               ),
-              const VerticalSpeacing(20.0),
             ],
           ),
         ),
