@@ -5,20 +5,24 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../res/GlobalColors/colors.dart';
 import 'widgets/homeFeatureWidget.dart';
+import 'widgets/topHospitalsWidget.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   final double tHeight = 274.0;
   final double top = 301.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        backgroundColor: AppColor.linearBgTextColor,
-        elevation: 0.0,
-        automaticallyImplyLeading: false,
-      ),
+      // backgroundColor: Colors.white,
+      // resizeToAvoidBottomInset: false,
       body: ListView(
         children: [
           Stack(
@@ -105,7 +109,7 @@ class HomeView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Top Specialist',
+                      'Top Hospitals',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -137,34 +141,29 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
                 const VerticalSpeacing(16.0),
-                Container(
-                  height: 227.0,
-                  width: 258.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    border: Border.all(
-                      width: 1,
-                      color: AppColor.textFieldColor,
-                    ),
-                  ),
-                  child: Column(
+                const SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
                     children: [
-                      Container(
-                        height: 128.0,
-                        width: 226.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12.0),
-                          image: const DecorationImage(
-                            image: NetworkImage(
-                                'https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
+                      TopHospitalsCardWidget(),
+                      SizedBox(width: 16.0),
+                      TopHospitalsCardWidget(),
                     ],
                   ),
                 ),
-                const VerticalSpeacing(16.0),
+                const VerticalSpeacing(32.0),
+                Text(
+                  'Book a doctor appointment near you\nfor any symptoms',
+                  style: GoogleFonts.getFont(
+                    "Poppins",
+                    textStyle: const TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(32.0),
               ],
             ),
           ),

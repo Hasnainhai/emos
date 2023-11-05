@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       initialRoute: RouteName.chosepatiantview,
 
       // home: const RegisterView(),
+
     );
   }
 }
