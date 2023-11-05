@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
 
-      initialRoute: RouteName.emergancyview,
+      initialRoute: RouteName.homeView,
 
       // home: const RegisterView(),
     );
