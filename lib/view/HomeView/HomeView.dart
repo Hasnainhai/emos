@@ -326,6 +326,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
               InkWell(
                 onTap: () {
                   widget.ontap();
+                  debugPrint("Hosptial buton");
                 },
                 child: Container(
                   height: 100.0,

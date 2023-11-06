@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
 
-      initialRoute: RouteName.hosptialtabbar,
+      initialRoute: RouteName.homeView,
 
       // home: const RegisterView(),
     );
