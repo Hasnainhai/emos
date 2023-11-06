@@ -59,6 +59,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: isSelected[2] ? Colors.redAccent : Colors.red,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  offset: const Offset(0, 3),
+                  blurRadius: 6,
+                  spreadRadius: 2,
+                ),
+              ],
             ),
             child: IconButton(
               icon: Icon(
