@@ -220,16 +220,16 @@ class _HomeViewState extends State<HomeView> {
       bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: _Page,
         onTap: (index) {
-          if (index == 0) {
-            return HomeView();
-            // Handle the center button tap (index 2) for the emergency problem.
-            // You can navigate or perform the necessary action here.
-            // Example: Navigator.pushNamed(context, RouteName.emergencyScreen);
-          } else {
-            setState(() {
-              _Page = index;
-            });
-          }
+          // if (index == 0) {
+          //   return HomeView();
+          //   // Handle the center button tap (index 2) for the emergency problem.
+          //   // You can navigate or perform the necessary action here.
+          //   // Example: Navigator.pushNamed(context, RouteName.emergencyScreen);
+          // } else {
+          //   setState(() {
+          //     _Page = index;
+          //   });
+          // }
         },
       ),
     );

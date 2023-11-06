@@ -1,3 +1,4 @@
+import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 import '../../../res/GlobalColors/colors.dart';
@@ -6,9 +7,11 @@ class CustomBottomNavigationBar extends StatefulWidget {
   final int currentIndex;
   final Function(int) onTap;
 
-  CustomBottomNavigationBar({required this.currentIndex, required this.onTap});
+  const CustomBottomNavigationBar(
+      {super.key, required this.currentIndex, required this.onTap});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomBottomNavigationBarState createState() =>
       _CustomBottomNavigationBarState();
 }
@@ -84,7 +87,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.notifications_outlined),
+            icon: const Icon(Icons.notifications_outlined),
             color:
                 isSelected[3] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
@@ -92,6 +95,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               setState(() {
                 isSelected = [false, false, false, true, false];
               });
+              Navigator.pushNamed(context, RouteName.notificationView);
             },
           ),
           IconButton(
