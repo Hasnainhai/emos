@@ -36,7 +36,7 @@ class HosptialSearchView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Search  Laboratory",
+                      "Search Hosptial",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
