@@ -7,6 +7,8 @@ import 'package:emos/view/ChattingView/chatting_view.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
+import 'package:emos/view/HosptialListView/book_hosptial_apointment_view.dart';
+import 'package:emos/view/HosptialListView/hosptial_search_view.dart';
 import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
@@ -86,6 +88,14 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const NotificationsView(),
         );
+      case RouteName.hosptialsearchview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HosptialSearchView(),
+        );
+      case RouteName.bookhosptialapointmentview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const BookHosptialApointmentView(),
+
         case RouteName.chattingView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChattingView(),

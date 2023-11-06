@@ -20,8 +20,9 @@ class _FilterHosptialPopupState extends State<FilterHosptialPopup> {
   bool fourth = false;
 
   bool fifth = false;
-  bool six = true;
-  bool seven = false;
+  bool six = false;
+  bool seven = true;
+  bool eight = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,9 @@ class _FilterHosptialPopupState extends State<FilterHosptialPopup> {
             Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: const Icon(
                     Icons.arrow_back_ios_new,
                     color: AppColor.textColor,
@@ -189,13 +192,27 @@ class _FilterHosptialPopupState extends State<FilterHosptialPopup> {
                             fillColor: seven
                                 ? AppColor.bgFillColor
                                 : Colors.transparent,
-                            text: "Reimbursement",
+                            text: "Cashless",
                             textColor: seven
                                 ? AppColor.whiteColor
                                 : AppColor.bgFillColor),
                       ),
                     ],
                   ),
+                  // const VerticalSpeacing(16),
+                  // InkWell(
+                  //   onTap: () {
+                  //     setState(() {
+                  //       eight = !eight;
+                  //     });
+                  //   },
+                  //   child: HosptialFilterButton(
+                  //       fillColor:
+                  //           eight ? AppColor.bgFillColor : Colors.transparent,
+                  //       text: "Insurance",
+                  //       textColor:
+                  //           eight ? AppColor.whiteColor : AppColor.bgFillColor),
+                  // ),
                   const VerticalSpeacing(16),
                   Container(
                     height: 56,
@@ -266,7 +283,9 @@ class _FilterHosptialPopupState extends State<FilterHosptialPopup> {
                   VerticalSpeacing(MediaQuery.of(context).size.width / 3),
                   RoundedButton(
                     title: "Filter",
-                    onpress: () {},
+                    onpress: () {
+                      Navigator.pop(context);
+                    },
                     bgColor: AppColor.bgFillColor,
                     titleColor: AppColor.whiteColor,
                   ),

@@ -1,5 +1,6 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:emos/view/HosptialListView/Widgets/owner.dart';
 import 'package:emos/view/HosptialListView/Widgets/hosptial_list_view.dart';
@@ -89,10 +90,18 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                       const SizedBox(
                         width: 16,
                       ),
-                      const Icon(
-                        Icons.search,
-                        color: AppColor.textColor,
-                        size: 20,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.hosptialsearchview,
+                          );
+                        },
+                        child: const Icon(
+                          Icons.search,
+                          color: AppColor.textColor,
+                          size: 20,
+                        ),
                       ),
                     ],
                   )
@@ -163,11 +172,22 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                                       circleColor: const Color(0xffFEAA48),
                                       owner: "26 Government"),
                                   const VerticalSpeacing(20),
-                                  const HosptialDetail(),
+                                  HosptialDetail(
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
+                                  ),
                                   const VerticalSpeacing(20),
-                                  const HosptialDetail(),
+                                  HosptialDetail(
+                                    fun: () {},
+                                  ),
                                   const VerticalSpeacing(20),
-                                  const HosptialDetail(),
+                                  HosptialDetail(
+                                    fun: () {},
+                                  ),
                                 ],
                               ),
                             ),
