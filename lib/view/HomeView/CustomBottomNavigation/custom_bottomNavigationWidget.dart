@@ -6,9 +6,13 @@ import '../../../res/GlobalColors/colors.dart';
 class CustomBottomNavigationBar extends StatefulWidget {
   final int currentIndex;
   final Function(int) onTap;
+  //  final Function toggleDrawer;
 
-  const CustomBottomNavigationBar(
-      {super.key, required this.currentIndex, required this.onTap});
+  const CustomBottomNavigationBar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
   @override
   // ignore: library_private_types_in_public_api
@@ -18,9 +22,9 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   List<bool> isSelected = [
-    false,
-    false,
     true,
+    false,
+    false,
     false,
     false
   ]; // Track selected state
@@ -54,6 +58,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               setState(() {
                 isSelected = [false, true, false, false, false];
               });
+              Navigator.pushNamed(context, RouteName.chattingView);
             },
           ),
           Container(
