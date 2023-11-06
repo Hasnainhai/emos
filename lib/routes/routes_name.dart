@@ -15,4 +15,5 @@ class RouteName {
   static const String emergancyview = ('/emergancy_view');
   static const String chosepatiantview = ('/chose_patiant_view');
   static const String hosptialtabbar = ('/hosptial_tab_bar');
+  static const String notificationView = ('/notification_view');
 }

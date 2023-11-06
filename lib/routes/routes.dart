@@ -9,6 +9,7 @@ import 'package:emos/view/HomeView/HomeView.dart';
 import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
+import 'package:emos/view/NotificationsViews/notifications_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
@@ -79,6 +80,10 @@ class Routes {
       case RouteName.hosptialtabbar:
         return MaterialPageRoute(
           builder: (BuildContext context) => const HosptialTabBar(),
+        );
+      case RouteName.notificationView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const NotificationsView(),
         );
       default:
         return MaterialPageRoute(
