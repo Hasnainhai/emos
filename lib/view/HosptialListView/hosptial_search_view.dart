@@ -1,9 +1,6 @@
-import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../components/RoundedButton/rounded_button.dart';
 import '../../../components/VerticalSpacing/vertical_spacing.dart';
-import '../../../components/appBarField/appBar_field.dart';
 import '../../../components/coustem_text_field/coustem_text_field.dart';
 import '../../../res/GlobalColors/colors.dart';
 
