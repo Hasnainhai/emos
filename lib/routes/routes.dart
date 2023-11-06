@@ -95,8 +95,8 @@ class Routes {
       case RouteName.bookhosptialapointmentview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const BookHosptialApointmentView(),
-
-        case RouteName.chattingView:
+        );
+      case RouteName.chattingView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChattingView(),
         );
