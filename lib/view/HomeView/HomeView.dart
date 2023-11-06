@@ -18,7 +18,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   final double tHeight = 374.0;
   final double top = 301.0;
-  int _Page = 0;
+  // int _Page = 0;
   final iconList = <IconData>[
     Icons.home,
     Icons.search,
@@ -246,7 +246,7 @@ class _HomeViewState extends State<HomeView> {
         ],
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
-        currentIndex: _Page,
+        currentIndex: 0,
         onTap: (index) {
           // if (index == 0) {
           //   return HomeView();
