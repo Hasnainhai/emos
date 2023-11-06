@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../res/GlobalColors/colors.dart';
 import 'widgets/homeFeatureWidget.dart';
 import 'widgets/topHospitalsWidget.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -18,6 +19,14 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   final double tHeight = 374.0;
   final double top = 301.0;
+  int _Page = 0;
+  final iconList = <IconData>[
+    Icons.home,
+    Icons.search,
+    Icons.add_circle,
+    Icons.account_box,
+    Icons.brightness_7,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -218,6 +227,20 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: CustomBottomNavigationBar(
+        currentIndex: _Page,
+        onTap: (index) {
+          if (index == 2) {
+            // Handle the center button tap (index 2) for the emergency problem.
+            // You can navigate or perform the necessary action here.
+            // Example: Navigator.pushNamed(context, RouteName.emergencyScreen);
+          } else {
+            setState(() {
+              _Page = index;
+            });
+          }
+        },
       ),
     );
   }
@@ -534,6 +557,107 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 ),
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomBottomNavigationBar extends StatefulWidget {
+  final int currentIndex;
+  final Function(int) onTap;
+
+  CustomBottomNavigationBar({required this.currentIndex, required this.onTap});
+
+  @override
+  _CustomBottomNavigationBarState createState() =>
+      _CustomBottomNavigationBarState();
+}
+
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  List<bool> isSelected = [
+    false,
+    false,
+    true,
+    false,
+    false
+  ]; // Track selected state
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.home_rounded),
+            color:
+                isSelected[0] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            onPressed: () {
+              widget.onTap(0);
+              setState(() {
+                isSelected = [true, false, false, false, false];
+              });
+            },
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.message_rounded,
+            ),
+            color:
+                isSelected[1] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            onPressed: () {
+              widget.onTap(1);
+              setState(() {
+                isSelected = [false, true, false, false, false];
+              });
+            },
+          ),
+          Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isSelected[2] ? Colors.redAccent : Colors.red,
+            ),
+            child: IconButton(
+              icon: Icon(
+                Icons.wb_twilight_outlined,
+                size: 36.0,
+                color:
+                    isSelected[2] ? AppColor.bgFillColor : AppColor.whiteColor,
+              ),
+              onPressed: () {
+                widget.onTap(2);
+                setState(() {
+                  isSelected = [false, false, true, false, false];
+                });
+              },
+            ),
+          ),
+          IconButton(
+            icon: Icon(Icons.notifications_outlined),
+            color:
+                isSelected[3] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            onPressed: () {
+              widget.onTap(3);
+              setState(() {
+                isSelected = [false, false, false, true, false];
+              });
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu),
+            color:
+                isSelected[4] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            onPressed: () {
+              widget.onTap(4);
+              setState(() {
+                isSelected = [false, false, false, false, true];
+              });
+            },
           ),
         ],
       ),

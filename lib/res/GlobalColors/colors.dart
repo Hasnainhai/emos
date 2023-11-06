@@ -16,4 +16,5 @@ class AppColor {
   static const Color hometxtColor = Color(0xffC9F5F3);
   static const Color dTxtColor = Color(0xff5790B9);
   static const Color symtomsBgtColor = Color(0xffF2FFFE);
+  static const Color bottomIconColor = Color(0xff415473);
 }
