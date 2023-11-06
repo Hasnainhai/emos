@@ -6,6 +6,7 @@ import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
+import 'package:emos/view/HosptialListView/hosptial_search_view.dart';
 import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
@@ -84,6 +85,10 @@ class Routes {
       case RouteName.notificationView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const NotificationsView(),
+        );
+      case RouteName.hosptialsearchview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HosptialSearchView(),
         );
       default:
         return MaterialPageRoute(
