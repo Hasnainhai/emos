@@ -22,9 +22,9 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   List<bool> isSelected = [
-    false,
-    false,
     true,
+    false,
+    false,
     false,
     false
   ]; // Track selected state
@@ -58,6 +58,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               setState(() {
                 isSelected = [false, true, false, false, false];
               });
+              Navigator.pushNamed(context, RouteName.chattingView);
             },
           ),
           Container(
@@ -110,7 +111,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               widget.onTap(4);
               setState(() {
                 isSelected = [false, false, false, false, true];
-                // widget.toggleDrawer();
               });
             },
           ),
