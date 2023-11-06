@@ -3,13 +3,10 @@ import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HomeView/widgets/homeContainerWiget.dart';
 import 'package:emos/view/HomeView/widgets/symptomsWidget.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../res/GlobalColors/colors.dart';
-import 'widgets/homeFeatureWidget.dart';
 import 'widgets/topHospitalsWidget.dart';
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -94,13 +91,27 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
                 const VerticalSpeacing(16.0),
-                const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      TopSpeacialistCardWidget(),
-                      SizedBox(width: 16.0),
-                      TopSpeacialistCardWidget(),
+                      TopSpeacialistCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detaildoctorview,
+                          );
+                        },
+                      ),
+                      const SizedBox(width: 16.0),
+                      TopSpeacialistCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detaildoctorview,
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -152,13 +163,27 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
                 const VerticalSpeacing(16.0),
-                const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      TopHospitalsCardWidget(),
-                      SizedBox(width: 16.0),
-                      TopHospitalsCardWidget(),
+                      TopHospitalsCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                      const SizedBox(width: 16.0),
+                      TopHospitalsCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
