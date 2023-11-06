@@ -5,7 +5,7 @@ import 'package:emos/view/HomeView/widgets/symptomsWidget.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../res/GlobalColors/colors.dart';
+import '../../res/GlobalColors/colors.dart';<<<<<<< Basit-Ali
 import 'CustomBottomNavigation/custom_bottomNavigationWidget.dart';
 import 'widgets/topHospitalsWidget.dart';
 
@@ -89,13 +89,27 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
                 const VerticalSpeacing(16.0),
-                const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      TopSpeacialistCardWidget(),
-                      SizedBox(width: 16.0),
-                      TopSpeacialistCardWidget(),
+                      TopSpeacialistCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detaildoctorview,
+                          );
+                        },
+                      ),
+                      const SizedBox(width: 16.0),
+                      TopSpeacialistCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detaildoctorview,
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -147,13 +161,27 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
                 const VerticalSpeacing(16.0),
-                const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      TopHospitalsCardWidget(),
-                      SizedBox(width: 16.0),
-                      TopHospitalsCardWidget(),
+                      TopHospitalsCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                      const SizedBox(width: 16.0),
+                      TopHospitalsCardWidget(
+                        fun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),

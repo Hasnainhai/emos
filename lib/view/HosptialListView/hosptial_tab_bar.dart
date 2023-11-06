@@ -1,7 +1,6 @@
-import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
-import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
+import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:emos/view/HosptialListView/Widgets/owner.dart';
 import 'package:emos/view/HosptialListView/Widgets/hosptial_list_view.dart';
 import 'package:flutter/material.dart';
@@ -72,17 +71,25 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                       ),
                     ],
                   ),
-                  const Row(
+                  Row(
                     children: [
-                      Icon(
-                        Icons.format_list_bulleted_sharp,
-                        color: AppColor.textColor,
-                        size: 20,
+                      InkWell(
+                        onTap: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) =>
+                                  const FilterHosptialPopup());
+                        },
+                        child: const Icon(
+                          Icons.format_list_bulleted_sharp,
+                          color: AppColor.textColor,
+                          size: 20,
+                        ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 16,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.search,
                         color: AppColor.textColor,
                         size: 20,
