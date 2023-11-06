@@ -1,5 +1,6 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/HomeView/widgets/homeContainerWiget.dart';
 import 'package:emos/view/HomeView/widgets/symptomsWidget.dart';
 import 'package:emos/view/HomeView/widgets/topSpeacialistWidget.dart';
 import 'package:flutter/foundation.dart';
@@ -47,14 +48,7 @@ class _HomeViewState extends State<HomeView> {
               ),
               Positioned(
                 top: tHeight - top / 2 - 10,
-                child: HomeContainerWidget(
-                  ontap: () {
-                    if (kDebugMode) {
-                      print('testing...');
-                    }
-                    Navigator.pushNamed(context, RouteName.chosepatiantview);
-                  },
-                ),
+                child: const HomeContainerWidget(),
               ),
             ],
           ),
