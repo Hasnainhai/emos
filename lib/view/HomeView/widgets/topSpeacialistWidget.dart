@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../res/GlobalColors/colors.dart';
 
 class TopSpeacialistCardWidget extends StatelessWidget {

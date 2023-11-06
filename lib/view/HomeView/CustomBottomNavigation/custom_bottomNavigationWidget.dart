@@ -6,9 +6,13 @@ import '../../../res/GlobalColors/colors.dart';
 class CustomBottomNavigationBar extends StatefulWidget {
   final int currentIndex;
   final Function(int) onTap;
+  //  final Function toggleDrawer;
 
-  const CustomBottomNavigationBar(
-      {super.key, required this.currentIndex, required this.onTap});
+  const CustomBottomNavigationBar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
   @override
   // ignore: library_private_types_in_public_api
@@ -106,6 +110,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               widget.onTap(4);
               setState(() {
                 isSelected = [false, false, false, false, true];
+                // widget.toggleDrawer();
               });
             },
           ),
