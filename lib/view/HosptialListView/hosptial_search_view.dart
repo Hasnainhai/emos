@@ -56,7 +56,9 @@ class HosptialSearchView extends StatelessWidget {
                         ))
                   ],
                 ),
-                const VerticalSpeacing(32.0),
+                const VerticalSpeacing(
+                  32.0,
+                ),
                 const TextFieldCustom(
                   enablePrefixIcon: true,
                   maxLines: 1,

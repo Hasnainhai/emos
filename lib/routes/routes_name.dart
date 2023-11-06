@@ -17,4 +17,6 @@ class RouteName {
   static const String hosptialtabbar = ('/hosptial_tab_bar');
   static const String notificationView = ('/notification_view');
   static const String hosptialsearchview = ('/hosptial_search_view');
+  static const String bookhosptialapointmentview =
+      ('/book_hosptial_apointment_view');
 }

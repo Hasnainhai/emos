@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HosptialDetail extends StatelessWidget {
-  const HosptialDetail({super.key});
+  const HosptialDetail({super.key, required this.fun});
+  final Function() fun;
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +122,7 @@ class HosptialDetail extends StatelessWidget {
                 ),
                 child: RoundedButton(
                   title: "Book an Appointment",
-                  onpress: () {},
+                  onpress: fun,
                   bgColor: Colors.transparent,
                   titleColor: AppColor.bgFillColor,
                 ),

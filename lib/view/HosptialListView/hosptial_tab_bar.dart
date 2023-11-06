@@ -172,11 +172,22 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                                       circleColor: const Color(0xffFEAA48),
                                       owner: "26 Government"),
                                   const VerticalSpeacing(20),
-                                  const HosptialDetail(),
+                                  HosptialDetail(
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
+                                  ),
                                   const VerticalSpeacing(20),
-                                  const HosptialDetail(),
+                                  HosptialDetail(
+                                    fun: () {},
+                                  ),
                                   const VerticalSpeacing(20),
-                                  const HosptialDetail(),
+                                  HosptialDetail(
+                                    fun: () {},
+                                  ),
                                 ],
                               ),
                             ),
