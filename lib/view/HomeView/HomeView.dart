@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HomeView/widgets/homeContainerWiget.dart';
@@ -249,18 +248,7 @@ class _HomeViewState extends State<HomeView> {
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: 0,
-        onTap: (index) {
-          // if (index == 0) {
-          //   return HomeView();
-          //   // Handle the center button tap (index 2) for the emergency problem.
-          //   // You can navigate or perform the necessary action here.
-          //   // Example: Navigator.pushNamed(context, RouteName.emergencyScreen);
-          // } else {
-          //   setState(() {
-          //     _Page = index;
-          //   });
-          // }
-        },
+        onTap: (index) {},
       ),
     );
   }

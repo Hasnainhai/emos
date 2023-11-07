@@ -20,4 +20,5 @@ class RouteName {
   static const String bookhosptialapointmentview =
       ('/book_hosptial_apointment_view');
   static const String chattingView = ('/chatting_view');
+  static const String homeMenuView = ('/menu_view');
 }

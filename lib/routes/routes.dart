@@ -6,6 +6,7 @@ import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos/view/ChattingView/chatting_view.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
+import 'package:emos/view/HomeMenuView/menuView.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
 import 'package:emos/view/HosptialListView/book_hosptial_apointment_view.dart';
 import 'package:emos/view/HosptialListView/hosptial_search_view.dart';
@@ -98,6 +99,10 @@ class Routes {
       case RouteName.chattingView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChattingView(),
+        );
+      case RouteName.homeMenuView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeMenuView(),
         );
       default:
         return MaterialPageRoute(
