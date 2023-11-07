@@ -60,7 +60,11 @@ class HomeMenuView extends StatelessWidget {
               children: [
                 const VerticalSpeacing(20.0),
                 MenufeatureWidget(
-                    title: 'Profile', icon: Icons.person_outline, onTap: () {}),
+                    title: 'Profile',
+                    icon: Icons.person_outline,
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.profileView);
+                    }),
                 const VerticalSpeacing(20.0),
                 const Divider(color: AppColor.bgFillColor),
                 const VerticalSpeacing(20.0),
