@@ -1,10 +1,7 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
-import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/HosptialListView/Widgets/clander.dart';
 import 'package:emos/view/HosptialListView/Widgets/selected_hosptial_card.dart';
-import 'package:emos/view/HosptialListView/filter_hosptial.dart';
-import 'package:emos/view/HosptialListView/Widgets/owner.dart';
-import 'package:emos/view/HosptialListView/Widgets/hosptial_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +16,21 @@ class BookHosptialApointmentView extends StatefulWidget {
 class _BookHosptialApointmentViewState
     extends State<BookHosptialApointmentView> {
   double progress = 1.0; // Set the progress value here
-
+  String selectedMonth = 'January'; // Initial value
+  List<String> months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +104,58 @@ class _BookHosptialApointmentViewState
               const VerticalSpeacing(24.0),
               const Divider(
                 color: AppColor.bgFillColor,
-              )
+              ),
+              const VerticalSpeacing(24.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Schedule",
+                    style: GoogleFonts.getFont(
+                      "Roboto",
+                      textStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: AppColor.textColor,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          icon: const Icon(
+                            Icons.arrow_drop_down_sharp,
+                            color: AppColor.textColor,
+                          ),
+                          style: GoogleFonts.getFont(
+                            "Roboto",
+                            textStyle: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: AppColor.bgFillColor,
+                            ),
+                          ),
+                          value: selectedMonth,
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              selectedMonth = newValue!;
+                            });
+                          },
+                          items: months
+                              .map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text("${value}2023"),
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const Calander(),
             ],
           ),
         ),

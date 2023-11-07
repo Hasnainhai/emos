@@ -1,10 +1,13 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import '../../../../res/GlobalColors/colors.dart';
 
 class SocialAccounts extends StatelessWidget {
   const SocialAccounts({
-    super.key, required this.img,
+    super.key,
+    required this.img,
   });
   final String img;
 
