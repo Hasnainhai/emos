@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Calander extends StatefulWidget {
-  const Calander({super.key});
+  Calander({super.key, required this.day, required this.date});
+  final String day;
+  final String date;
 
   @override
   State<Calander> createState() => _CalanderState();
@@ -22,15 +24,27 @@ class _CalanderState extends State<Calander> {
         ),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Mon",
+            widget.day,
             style: GoogleFonts.getFont(
               "Roboto",
               textStyle: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
                 color: AppColor.textColor,
+              ),
+            ),
+          ),
+          Text(
+            widget.date,
+            style: GoogleFonts.getFont(
+              "Roboto",
+              textStyle: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
+                color: AppColor.bgFillColor,
               ),
             ),
           ),

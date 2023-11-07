@@ -155,7 +155,39 @@ class _BookHosptialApointmentViewState
                   ),
                 ],
               ),
-              const Calander(),
+              ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Calander(
+                    day: 'Mon',
+                    date: '1',
+                  ),
+                  Calander(
+                    day: 'Tue',
+                    date: '2',
+                  ),
+                  Calander(
+                    day: 'Wed',
+                    date: '3',
+                  ),
+                  Calander(
+                    day: 'Thu',
+                    date: '4',
+                  ),
+                  Calander(
+                    day: 'Fri',
+                    date: '5',
+                  ),
+                  Calander(
+                    day: 'Sat',
+                    date: '6',
+                  ),
+                  Calander(
+                    day: 'Sun',
+                    date: '7',
+                  ),
+                ],
+              )
             ],
           ),
         ),
