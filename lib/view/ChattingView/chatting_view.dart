@@ -1,4 +1,5 @@
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/view/ChattingView/widgets/chatWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -98,6 +99,7 @@ class ChattingView extends StatelessWidget {
             topRight: Radius.circular(50.0),
           ),
         ),
+        child: ChatScreenWidget(),
       ),
     );
   }
