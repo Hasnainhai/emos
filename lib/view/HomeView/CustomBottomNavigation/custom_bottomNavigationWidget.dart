@@ -112,6 +112,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               setState(() {
                 isSelected = [false, false, false, false, true];
               });
+              Navigator.pushNamed(context, RouteName.homeMenuView);
             },
           ),
         ],

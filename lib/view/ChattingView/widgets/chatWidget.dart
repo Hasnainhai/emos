@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../res/GlobalColors/colors.dart';
 
 class ChatScreenWidget extends StatefulWidget {
+  const ChatScreenWidget({super.key});
+
   @override
   State createState() => ChatScreenState();
 }
@@ -84,13 +86,18 @@ class ChatScreenState extends State<ChatScreenWidget> {
             child: TextField(
               controller: _textController,
               onSubmitted: _handleSubmitted,
-              decoration: InputDecoration(
-                hintText: 'Type a message...',
-              ),
+              decoration: const InputDecoration(
+                  hintText: 'Type a message...',
+                  hintStyle: TextStyle(
+                    color: AppColor.chatRecvColor,
+                  )),
             ),
           ),
           IconButton(
-            icon: Icon(Icons.send),
+            icon: const Icon(
+              Icons.send,
+              color: AppColor.bgFillColor,
+            ),
             onPressed: () {
               if (_textController.text.isNotEmpty) {
                 _handleSubmitted(_textController.text);
