@@ -33,7 +33,7 @@ class _CalanderState extends State<Calander> {
               textStyle: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
-                color: AppColor.textColor,
+                color: AppColor.bgFillColor,
               ),
             ),
           ),
@@ -44,7 +44,7 @@ class _CalanderState extends State<Calander> {
               textStyle: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: AppColor.bgFillColor,
+                color: AppColor.textColor,
               ),
             ),
           ),
