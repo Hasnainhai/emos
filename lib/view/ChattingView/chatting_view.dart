@@ -99,7 +99,7 @@ class ChattingView extends StatelessWidget {
             topRight: Radius.circular(50.0),
           ),
         ),
-        child: ChatScreenWidget(),
+        child: const ChatScreenWidget(),
       ),
     );
   }
