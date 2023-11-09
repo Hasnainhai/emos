@@ -23,4 +23,5 @@ class RouteName {
   static const String homeMenuView = ('/menu_view');
   static const String profileView = ('/profile_view');
   static const String adddependetview = ('/chose_dependet_view');
+  static const String callview = ('/call_view');
 }

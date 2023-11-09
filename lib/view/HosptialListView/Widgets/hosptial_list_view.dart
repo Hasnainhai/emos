@@ -1,6 +1,7 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HosptialListView/Widgets/owner.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -146,19 +147,27 @@ class HosptialDetail extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    height: 46,
-                    width: MediaQuery.of(context).size.width / 2 - 21,
-                    decoration: const BoxDecoration(
-                      color: Color(0xff5ABF24),
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(12),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.callview,
+                      );
+                    },
+                    child: Container(
+                      height: 46,
+                      width: MediaQuery.of(context).size.width / 2 - 21,
+                      decoration: const BoxDecoration(
+                        color: Color(0xff5ABF24),
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(12),
+                        ),
                       ),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.phone,
-                        color: AppColor.whiteColor,
+                      child: const Center(
+                        child: Icon(
+                          Icons.phone,
+                          color: AppColor.whiteColor,
+                        ),
                       ),
                     ),
                   )
