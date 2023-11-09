@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../res/GlobalColors/colors.dart';
 
 class ProfileWidgetFeatures extends StatelessWidget {
@@ -7,9 +6,11 @@ class ProfileWidgetFeatures extends StatelessWidget {
     super.key,
     required this.icon,
     required this.title,
+    required this.ontap,
   });
   final IconData icon;
   final String title;
+  final Function ontap;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,9 @@ class ProfileWidgetFeatures extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: ListTile(
-          onTap: () {},
+          onTap: () {
+            ontap();
+          },
           leading: Icon(
             icon,
             color: AppColor.textColor,
