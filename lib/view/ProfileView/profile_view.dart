@@ -66,60 +66,69 @@ class ProfileView extends StatelessWidget {
                   topRight: Radius.circular(50.0),
                 ),
               ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 16.0, right: 16.0),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      VerticalSpeacing(16.0),
-                      ProfileWidget(
+                      const VerticalSpeacing(16.0),
+                      const ProfileWidget(
                           icon: Icons.person_outline,
                           title: 'Name',
                           subtitle: 'Rani Singhs'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
-                      ProfileWidget(
+                      const VerticalSpeacing(5.0),
+                      const Divider(color: AppColor.textColor2),
+                      const ProfileWidget(
                           icon: Icons.mail_outline_rounded,
                           title: 'Email',
                           subtitle: 'Rani@gmail.com'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
-                      ProfileWidget(
+                      const VerticalSpeacing(5.0),
+                      const Divider(color: AppColor.textColor2),
+                      const ProfileWidget(
                           icon: Icons.phone_outlined,
                           title: 'Phone Number',
                           subtitle: '+1234462456754'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
-                      ProfileWidget(
+                      const VerticalSpeacing(5.0),
+                      const Divider(color: AppColor.textColor2),
+                      const ProfileWidget(
                           icon: Icons.location_on_outlined,
                           title: 'Address',
                           subtitle: '23 Karachi City, Ancholi,New Block'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
-                      ProfileWidget(
+                      const VerticalSpeacing(5.0),
+                      const Divider(color: AppColor.textColor2),
+                      const ProfileWidget(
                           icon: Icons.calendar_month_outlined,
                           title: 'Date of Birth',
                           subtitle: '10/11/1999'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
-                      ProfileWidget(
+                      const VerticalSpeacing(5.0),
+                      const Divider(color: AppColor.textColor2),
+                      const ProfileWidget(
                           icon: Icons.monitor_weight_outlined,
                           title: 'Weight',
                           subtitle: '60 Kg'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
-                      ProfileWidget(
+                      const VerticalSpeacing(5.0),
+                      const Divider(color: AppColor.textColor2),
+                      const ProfileWidget(
                           icon: Icons.height_outlined,
                           title: 'Height',
                           subtitle: '183 Cm'),
-                      VerticalSpeacing(58.0),
+                      const VerticalSpeacing(46.0),
                       ProfileWidgetFeatures(
-                          icon: Icons.coronavirus_outlined, title: 'Allergy'),
-                      VerticalSpeacing(18.0),
+                        icon: Icons.coronavirus_outlined,
+                        title: 'Allergy',
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.selectAlergyview);
+                        },
+                      ),
+                      const VerticalSpeacing(18.0),
                       ProfileWidgetFeatures(
-                          icon: Icons.history, title: 'Medical History'),
-                      VerticalSpeacing(36.0),
+                        ontap: () {},
+                        icon: Icons.history,
+                        title: 'Medical History',
+                      ),
+                      const VerticalSpeacing(36.0),
                     ],
                   ),
                 ),
