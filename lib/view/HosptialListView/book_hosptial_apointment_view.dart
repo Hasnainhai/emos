@@ -1,6 +1,7 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/view/AppointmentHosptialView/apointment_done_popup.dart';
 import 'package:emos/view/HosptialListView/Widgets/clander.dart';
 import 'package:emos/view/HosptialListView/Widgets/selected_hosptial_card.dart';
 import 'package:emos/view/HosptialListView/Widgets/time_container.dart';
@@ -582,7 +583,12 @@ class _BookHosptialApointmentViewState
                 const VerticalSpeacing(12),
                 RoundedButton(
                   title: "Continue",
-                  onpress: () {},
+                  onpress: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) =>
+                            const ApointmenDonetPopup());
+                  },
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
                 ),
