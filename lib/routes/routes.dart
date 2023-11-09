@@ -21,6 +21,7 @@ import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
+import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
 import 'package:flutter/material.dart';
 import '../view/DoctorViews/find_doctor_view.dart';
 
@@ -118,6 +119,10 @@ class Routes {
       case RouteName.callview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const CallView(),
+);
+          case RouteName.selectAlergyview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const SelectAlergyView(),
         );
       default:
         return MaterialPageRoute(
