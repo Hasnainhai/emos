@@ -144,7 +144,12 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
               const VerticalSpeacing(16.0),
               RoundedButton(
                 title: 'Add New Depedent',
-                onpress: () {},
+                onpress: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.adddependetview,
+                  );
+                },
                 bgColor: AppColor.simpleBgTextColor,
                 titleColor: AppColor.bgFillColor,
               ),
