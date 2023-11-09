@@ -1,6 +1,7 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/ProfileView/widgets/profileWidget_features.dart';
 import 'package:emos/view/ProfileView/widgets/profile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,51 +13,51 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.bgFillColor,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const VerticalSpeacing(50.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RouteName.homeView);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_ios_new,
-                    color: AppColor.whiteColor,
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.edit_outlined,
-                    color: AppColor.whiteColor,
-                  ),
-                ),
-              ],
-            ),
-            const CircleAvatar(
-              radius: 60.0,
-              backgroundImage: NetworkImage(
-                'https://www.w3schools.com/howto/img_avatar2.png',
-              ),
-            ),
-            const VerticalSpeacing(12.0),
-            Text(
-              'Rani Singh',
-              style: GoogleFonts.getFont(
-                "Poppins",
-                textStyle: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
+      body: Column(
+        children: [
+          const VerticalSpeacing(50.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteName.homeView);
+                },
+                icon: const Icon(
+                  Icons.arrow_back_ios_new,
                   color: AppColor.whiteColor,
                 ),
               ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.edit_outlined,
+                  color: AppColor.whiteColor,
+                ),
+              ),
+            ],
+          ),
+          const CircleAvatar(
+            radius: 60.0,
+            backgroundImage: NetworkImage(
+              'https://www.w3schools.com/howto/img_avatar2.png',
             ),
-            const VerticalSpeacing(20.0),
-            Container(
+          ),
+          const VerticalSpeacing(12.0),
+          Text(
+            'Rani Singh',
+            style: GoogleFonts.getFont(
+              "Poppins",
+              textStyle: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
+                color: AppColor.whiteColor,
+              ),
+            ),
+          ),
+          const VerticalSpeacing(20.0),
+          Expanded(
+            child: Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
@@ -66,7 +67,7 @@ class ProfileView extends StatelessWidget {
                 ),
               ),
               child: const Padding(
-                padding: EdgeInsets.only(left: 10.0, right: 16.0),
+                padding: EdgeInsets.only(left: 16.0, right: 16.0),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,15 +113,20 @@ class ProfileView extends StatelessWidget {
                           icon: Icons.height_outlined,
                           title: 'Height',
                           subtitle: '183 Cm'),
-                      VerticalSpeacing(5.0),
-                      Divider(color: AppColor.textColor2),
+                      VerticalSpeacing(58.0),
+                      ProfileWidgetFeatures(
+                          icon: Icons.coronavirus_outlined, title: 'Allergy'),
+                      VerticalSpeacing(18.0),
+                      ProfileWidgetFeatures(
+                          icon: Icons.history, title: 'Medical History'),
+                      VerticalSpeacing(36.0),
                     ],
                   ),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
