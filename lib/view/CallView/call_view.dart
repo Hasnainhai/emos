@@ -130,7 +130,7 @@ class _CallViewState extends State<CallView> {
                                   0xff4DDD59,
                                 )),
                             child: const Icon(
-                              Icons.call_end,
+                              Icons.call,
                               color: AppColor.whiteColor,
                             ),
                           ),
