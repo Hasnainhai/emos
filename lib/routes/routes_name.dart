@@ -21,5 +21,6 @@ class RouteName {
       ('/book_hosptial_apointment_view');
   static const String chattingView = ('/chatting_view');
   static const String homeMenuView = ('/menu_view');
-   static const String profileView = ('/profile_view');
+  static const String profileView = ('/profile_view');
+  static const String adddependetview = ('/chose_dependet_view');
 }
