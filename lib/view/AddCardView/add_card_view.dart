@@ -92,7 +92,9 @@ class AddCardView extends StatelessWidget {
                           const VerticalSpeacing(46.0),
                           RoundedButton(
                               title: 'Add card',
-                              onpress: () {},
+                              onpress: () {
+                                Navigator.pop(context);
+                              },
                               bgColor: AppColor.simpleBgbuttonColor,
                               titleColor: AppColor.simpleBgTextColor)
                         ],
@@ -120,7 +122,7 @@ class AddCardView extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(29.0),
-                  child: Image.asset('images/masterCard.png'),
+                  child: Image.asset("images/masterCard.png"),
                 ),
               ),
             ),
