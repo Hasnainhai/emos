@@ -71,7 +71,9 @@ class HomeMenuView extends StatelessWidget {
                 MenufeatureWidget(
                     title: 'Family Members',
                     icon: Icons.groups_outlined,
-                    onTap: () {}),
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.familyMembersview);
+                    }),
                 const VerticalSpeacing(20.0),
                 const Divider(color: AppColor.bgFillColor),
                 const VerticalSpeacing(20.0),

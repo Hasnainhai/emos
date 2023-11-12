@@ -2,6 +2,7 @@ import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class AddCard extends StatelessWidget {
   AddCard(
       {super.key,
@@ -27,8 +28,8 @@ class AddCard extends StatelessWidget {
           ),
         ],
         borderRadius: BorderRadius.circular(16),
-        color: const Color(0xffFFFFFF),
-        border: Border.all(color: borderColor),
+        color:  Colors.transparent,
+        border: Border.all(color: borderColor, width: 1.5),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0, right: 20.0),
