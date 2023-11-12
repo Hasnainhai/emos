@@ -5,12 +5,14 @@ import 'routes/routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
-    runApp(
-      const MyApp(),
-    );
-  });}
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
+    (_) {
+      runApp(
+        const MyApp(),
+      );
+    },
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-      initialRoute: RouteName.callview,
+      initialRoute: RouteName.addCardview,
     );
   }
 }
