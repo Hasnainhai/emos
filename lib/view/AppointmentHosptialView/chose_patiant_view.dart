@@ -150,7 +150,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                     RouteName.adddependetview,
                   );
                 },
-                bgColor: AppColor.simpleBgTextColor,
+                bgColor: Colors.transparent,
                 titleColor: AppColor.bgFillColor,
               ),
               VerticalSpeacing(MediaQuery.of(context).size.height / 5),
