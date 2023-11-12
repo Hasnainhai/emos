@@ -130,6 +130,7 @@ class Routes {
       case RouteName.addCardview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AddCardView(),
+        );
 
       case RouteName.chosepaymentmethodview:
         return MaterialPageRoute(
