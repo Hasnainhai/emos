@@ -28,4 +28,6 @@ class RouteName {
   static const String addCardview = ('/add_card_view');
   static const String chosepaymentmethodview = ('/chose_payment_method_view');
   static const String familyMembersview = ('/family_members_view');
+  static const String ratingview = ('/rating_view');
+
 }

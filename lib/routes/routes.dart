@@ -24,6 +24,7 @@ import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
+import 'package:emos/view/RatingView/rating_view.dart';
 import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
 import 'package:flutter/material.dart';
 import '../view/DoctorViews/find_doctor_view.dart';
@@ -138,6 +139,10 @@ class Routes {
       case RouteName.familyMembersview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const FamilyMembers(),
+
+      case RouteName.ratingview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RatingView(),
         );
       default:
         return MaterialPageRoute(
