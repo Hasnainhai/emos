@@ -5,8 +5,8 @@ import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PaymentCompletePopup extends StatelessWidget {
-  const PaymentCompletePopup({super.key});
+class RatingCompletePopup extends StatelessWidget {
+  const RatingCompletePopup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class PaymentCompletePopup extends StatelessWidget {
               8,
             ),
             Text(
-              "Your Payment is Successfully Done.",
+              "your review has been\n submitted successfully.",
               textAlign: TextAlign.center,
               style: GoogleFonts.getFont(
                 "Roboto",
@@ -91,17 +91,6 @@ class PaymentCompletePopup extends StatelessWidget {
             ),
             const VerticalSpeacing(
               16,
-            ),
-            RoundedButton(
-              title: "Rating",
-              onpress: () {
-                Navigator.pushNamed(
-                  context,
-                  RouteName.ratingview,
-                );
-              },
-              bgColor: Colors.transparent,
-              titleColor: AppColor.bgFillColor,
             ),
             const VerticalSpeacing(
               24,
