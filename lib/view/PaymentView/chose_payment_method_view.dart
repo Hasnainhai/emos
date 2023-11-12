@@ -1,6 +1,7 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/view/PaymentView/widgets/payment_complete_popup.dart';
 import 'package:emos/view/PaymentView/widgets/payment_method_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -152,7 +153,12 @@ class _ChosePaymentMethodViewState extends State<ChosePaymentMethodView> {
                 const VerticalSpeacing(250),
                 RoundedButton(
                   title: "Continue",
-                  onpress: () {},
+                  onpress: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) =>
+                            const PaymentCompletePopup());
+                  },
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
                 ),
