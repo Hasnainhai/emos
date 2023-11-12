@@ -1,4 +1,5 @@
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/AddCardView/add_card_view.dart';
 import 'package:emos/view/AppointmentHosptialView/add_depedent_view.dart';
 import 'package:emos/view/AppointmentHosptialView/chose_patiant_view.dart';
 import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
@@ -125,6 +126,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const SelectAlergyView(),
         );
+      case RouteName.addCardview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AddCardView(),
+
       case RouteName.chosepaymentmethodview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChosePaymentMethodView(),
