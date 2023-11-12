@@ -1,7 +1,11 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../components/RoundedButton/rounded_button.dart';
+import '../../components/cardFieldCustom/card_field_custom.dart';
 
 class AddCardView extends StatelessWidget {
   const AddCardView({super.key});
@@ -50,6 +54,50 @@ class AddCardView extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(50.0),
                       topLeft: Radius.circular(50.0),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const VerticalSpeacing(153.0),
+                          const CardFieldCustom(
+                            maxLines: 1,
+                            text: 'Card Name',
+                          ),
+                          const CardFieldCustom(
+                            maxLines: 1,
+                            text: 'Card Number',
+                          ),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: CardFieldCustom(
+                                  maxLines: 1,
+                                  text: 'Expiry Date',
+                                ),
+                              ),
+                              SizedBox(width: 20.0),
+                              Expanded(
+                                child: CardFieldCustom(
+                                  maxLines: 2,
+                                  text: 'CVV',
+                                ),
+                              ),
+                            ],
+                          ),
+                          const VerticalSpeacing(46.0),
+                          RoundedButton(
+                              title: 'Add card',
+                              onpress: () {},
+                              bgColor: AppColor.simpleBgbuttonColor,
+                              titleColor: AppColor.simpleBgTextColor)
+                        ],
+                      ),
                     ),
                   ),
                 ),
