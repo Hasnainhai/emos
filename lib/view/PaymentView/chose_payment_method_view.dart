@@ -1,6 +1,7 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/PaymentView/widgets/payment_complete_popup.dart';
 import 'package:emos/view/PaymentView/widgets/payment_method_card.dart';
 import 'package:flutter/material.dart';
@@ -146,7 +147,12 @@ class _ChosePaymentMethodViewState extends State<ChosePaymentMethodView> {
                 ),
                 RoundedButton(
                   title: "Add New Card",
-                  onpress: () {},
+                  onpress: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.addCardview,
+                    );
+                  },
                   bgColor: AppColor.whiteColor,
                   titleColor: AppColor.bgFillColor,
                 ),
