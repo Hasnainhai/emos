@@ -1,9 +1,9 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/SelectAllergyView/widgets/select_alergyWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../components/CheckBox/check_box.dart';
 import '../../components/RoundedButton/rounded_button.dart';
 
 class SelectAlergyView extends StatelessWidget {
@@ -98,32 +98,6 @@ class SelectAlergyView extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class TapAllergyWidget extends StatelessWidget {
-  const TapAllergyWidget({super.key, required this.title});
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Allergy 001',
-          style: GoogleFonts.getFont(
-            "Poppins",
-            textStyle: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-              color: AppColor.textColor,
-            ),
-          ),
-        ),
-        const MyCheckBox()
-      ],
     );
   }
 }

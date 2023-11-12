@@ -22,25 +22,26 @@ class ProfileWidgetFeatures extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: ListTile(
-          onTap: () {
-            ontap();
-          },
-          leading: Icon(
-            icon,
+        onTap: () {
+          ontap();
+        },
+        leading: Icon(
+          icon,
+          color: AppColor.textColor,
+        ),
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
             color: AppColor.textColor,
           ),
-          title: Text(
-            title,
-            style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-              color: AppColor.textColor,
-            ),
-          ),
-          trailing: const Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: AppColor.textColor,
-          )),
+        ),
+        trailing: const Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: AppColor.textColor,
+        ),
+      ),
     );
   }
 }
