@@ -21,6 +21,7 @@ import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
+import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
 import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
 import 'package:flutter/material.dart';
@@ -128,6 +129,10 @@ class Routes {
       case RouteName.addCardview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AddCardView(),
+
+      case RouteName.chosepaymentmethodview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ChosePaymentMethodView(),
         );
       default:
         return MaterialPageRoute(
