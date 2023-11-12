@@ -25,4 +25,5 @@ class RouteName {
   static const String adddependetview = ('/chose_dependet_view');
   static const String callview = ('/call_view');
   static const String selectAlergyview = ('/select_alergy_view');
+  static const String chosepaymentmethodview = ('/chose_payment_method_view');
 }
