@@ -189,10 +189,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 width: 115.0,
                 decoration: const BoxDecoration(
                   border: Border(
-                    // bottom: BorderSide(
-                    //   color: AppColor.textFieldColor,
-                    //   width: 1.0,
-                    // ),
                     right: BorderSide(
                       color: AppColor.textFieldColor,
                       width: 1.0,
@@ -213,10 +209,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 width: 115.0,
                 decoration: const BoxDecoration(
                   border: Border(
-                    // bottom: BorderSide(
-                    //   color: AppColor.textFieldColor,
-                    //   width: 1.0,
-                    // ),
                     right: BorderSide(
                       color: AppColor.textFieldColor,
                       width: 1.0,
