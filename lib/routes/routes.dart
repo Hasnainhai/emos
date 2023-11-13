@@ -18,6 +18,8 @@ import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
 import 'package:emos/view/MedicalHistory/medical_history_view.dart';
+
+import 'package:emos/view/InvoicesView/invoices_view.dart';
 import 'package:emos/view/NotificationsViews/notifications_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
@@ -27,6 +29,7 @@ import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
 import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:emos/view/RatingView/rating_view.dart';
+import 'package:emos/view/RecentOrdersView/recent_orders.dart';
 import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
 import 'package:flutter/material.dart';
 import '../view/DoctorViews/find_doctor_view.dart';
@@ -146,6 +149,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const RatingView(),
         );
+      case RouteName.recentOrdersview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RecentOrdersView(),
+        );
       case RouteName.choseserviceview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const SelectServiceView(),
@@ -153,6 +160,10 @@ class Routes {
       case RouteName.medicalhistoryview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const MedicalHistoryView(),
+):
+      case RouteName.invoicesView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const InvoicesView(),
         );
       default:
         return MaterialPageRoute(

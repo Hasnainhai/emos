@@ -97,6 +97,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
+                  print('Clinic Done....');
                 },
                 child: Container(
                   height: 100.0,
@@ -129,6 +130,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
+                  print('Dr at Home Working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -161,6 +163,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
+                  print('HomeCare working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -193,6 +196,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
+                  print('Laboratory Working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -240,6 +244,14 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                         color: AppColor.textFieldColor,
                         width: 1.0,
                       ),
+              Container(
+                height: 100.0,
+                width: 115.0,
+                decoration: const BoxDecoration(
+                  border: Border(
+                    right: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
                     ),
                   ),
                   child: const SizedBox(
@@ -257,10 +269,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 width: 115.0,
                 decoration: const BoxDecoration(
                   border: Border(
-                    // bottom: BorderSide(
-                    //   color: AppColor.textFieldColor,
-                    //   width: 1.0,
-                    // ),
                     right: BorderSide(
                       color: AppColor.textFieldColor,
                       width: 1.0,
