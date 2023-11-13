@@ -30,4 +30,6 @@ class RouteName {
   static const String familyMembersview = ('/family_members_view');
   static const String ratingview = ('/rating_view');
   static const String recentOrdersview = ('/recent_orders_view');
+  static const String choseserviceview = ('/chose_service_view');
+
 }

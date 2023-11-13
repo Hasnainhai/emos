@@ -24,6 +24,7 @@ import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
+import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:emos/view/RatingView/rating_view.dart';
 import 'package:emos/view/RecentOrdersView/recent_orders.dart';
 import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
@@ -148,6 +149,10 @@ class Routes {
       case RouteName.recentOrdersview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RecentOrdersView(),
+);
+      case RouteName.choseserviceview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const SelectServiceView(),
         );
       default:
         return MaterialPageRoute(
