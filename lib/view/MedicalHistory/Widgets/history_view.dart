@@ -1,4 +1,5 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos/download_popup.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,14 +41,21 @@ class HistoryCard extends StatelessWidget {
         const VerticalSpeacing(
           10,
         ),
-        Text(
-          "Generalised muscle pain",
-          style: GoogleFonts.getFont(
-            "Roboto",
-            textStyle: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: AppColor.textColor,
+        InkWell(
+          onTap: () {
+            showDialog(
+                context: context,
+                builder: (BuildContext context) => const DownloadPopup());
+          },
+          child: Text(
+            "Generalised muscle pain",
+            style: GoogleFonts.getFont(
+              "Roboto",
+              textStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: AppColor.textColor,
+              ),
             ),
           ),
         ),
