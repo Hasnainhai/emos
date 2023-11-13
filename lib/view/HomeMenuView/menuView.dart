@@ -98,7 +98,9 @@ class HomeMenuView extends StatelessWidget {
                 MenufeatureWidget(
                     title: 'Invoices',
                     icon: Icons.receipt_long_outlined,
-                    onTap: () {}),
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.invoicesView);
+                    }),
                 const VerticalSpeacing(20.0),
               ],
             ),
