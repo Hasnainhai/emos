@@ -80,14 +80,18 @@ class HomeMenuView extends StatelessWidget {
                 MenufeatureWidget(
                     title: 'Recent Orders',
                     icon: Icons.recent_actors_outlined,
-                    onTap: () {}),
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.recentOrdersview);
+                    }),
                 const VerticalSpeacing(20.0),
                 const Divider(color: AppColor.bgFillColor),
                 const VerticalSpeacing(20.0),
                 MenufeatureWidget(
                     title: 'Support',
                     icon: Icons.help_center_outlined,
-                    onTap: () {}),
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.chattingView);
+                    }),
                 const VerticalSpeacing(20.0),
                 const Divider(color: AppColor.bgFillColor),
                 const VerticalSpeacing(20.0),
