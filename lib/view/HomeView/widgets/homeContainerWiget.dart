@@ -57,12 +57,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 ),
               ),
               InkWell(
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    RouteName.choseserviceview,
-                  );
-                },
+                onTap: () {},
                 child: Container(
                   height: 100.0,
                   width: 115.0,
@@ -184,27 +179,36 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
           ),
           Row(
             children: [
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    // bottom: BorderSide(
-                    //   color: AppColor.textFieldColor,
-                    //   width: 1.0,
-                    // ),
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  debugPrint("Click the Radiology");
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.choseserviceview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      // bottom: BorderSide(
+                      //   color: AppColor.textFieldColor,
+                      //   width: 1.0,
+                      // ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/radiology.png',
-                    name: 'Radiology',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/radiology.png',
+                      name: 'Radiology',
+                    ),
                   ),
                 ),
               ),
