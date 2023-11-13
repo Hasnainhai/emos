@@ -1,4 +1,5 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
+import 'package:emos/download_popup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -112,32 +113,57 @@ class _InvoicesViewState extends State<InvoicesView>
                               title: 'Clinic Name',
                               price: '\$500',
                               payment: 'Payment at clinic',
-                              ontap: () {},
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
                             ),
                             InvoicesCardWidget(
                               img: 'images/drHome.png',
                               title: 'Dr Name',
                               price: '\$300',
                               payment: 'Master Card',
-                              ontap: () {},
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
                             ),
                             InvoicesCardWidget(
                               img: 'images/homeCare.png',
                               title: 'Home Care Name',
                               price: '\$100',
                               payment: 'Debet Card',
-                              ontap: () {},
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
                             ),
                             InvoicesCardWidget(
                               img: 'images/clinic.png',
                               title: 'Clinic Name',
                               price: '\$500',
                               payment: 'Payment at clinic',
-                              ontap: () {},
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
                             ),
                             RoundedButton(
                               title: 'Load More',
-                              onpress: () {},
+                              onpress: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
                               bgColor: Colors.transparent,
                               titleColor: AppColor.linearBgTextColor,
                             ),
@@ -157,32 +183,57 @@ class _InvoicesViewState extends State<InvoicesView>
                             title: 'Clinic Name',
                             price: '\$500',
                             payment: 'Payment at clinic',
-                            ontap: () {},
+                            ontap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      const DownloadPopup());
+                            },
                           ),
                           InvoicesCardWidget(
                             img: 'images/clinic.png',
                             title: 'Clinic Name',
                             price: '\$500',
                             payment: 'Payment at clinic',
-                            ontap: () {},
+                            ontap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      const DownloadPopup());
+                            },
                           ),
                           InvoicesCardWidget(
                             img: 'images/clinic.png',
                             title: 'Clinic Name',
                             price: '\$500',
                             payment: 'Payment at clinic',
-                            ontap: () {},
+                            ontap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      const DownloadPopup());
+                            },
                           ),
                           InvoicesCardWidget(
                             img: 'images/clinic.png',
                             title: 'Clinic Name',
                             price: '\$500',
                             payment: 'Payment at clinic',
-                            ontap: () {},
+                            ontap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      const DownloadPopup());
+                            },
                           ),
                           RoundedButton(
                             title: 'Load More',
-                            onpress: () {},
+                            onpress: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      const DownloadPopup());
+                            },
                             bgColor: Colors.transparent,
                             titleColor: AppColor.linearBgTextColor,
                           ),
@@ -193,7 +244,7 @@ class _InvoicesViewState extends State<InvoicesView>
                     // Content for 'Dr Home'
                     // Replace with your widget for 'Dr Home'
                     Padding(
-                      padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                       child: Column(
                         children: [
                           InvoicesCardWidget(

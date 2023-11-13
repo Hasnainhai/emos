@@ -160,7 +160,7 @@ class Routes {
       case RouteName.medicalhistoryview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const MedicalHistoryView(),
-):
+        );
       case RouteName.invoicesView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const InvoicesView(),

@@ -42,11 +42,7 @@ class HistoryCard extends StatelessWidget {
           10,
         ),
         InkWell(
-          onTap: () {
-            showDialog(
-                context: context,
-                builder: (BuildContext context) => const DownloadPopup());
-          },
+          onTap: () {},
           child: Text(
             "Generalised muscle pain",
             style: GoogleFonts.getFont(
