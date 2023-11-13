@@ -9,6 +9,7 @@ import 'package:emos/view/CallView/call_view.dart';
 import 'package:emos/view/ChattingView/chatting_view.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
+import 'package:emos/view/FamilyView/family_view.dart';
 import 'package:emos/view/HomeMenuView/menuView.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
 import 'package:emos/view/HosptialListView/book_hosptial_apointment_view.dart';
@@ -132,11 +133,14 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const AddCardView(),
         );
-
       case RouteName.chosepaymentmethodview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChosePaymentMethodView(),
         );
+      case RouteName.familyMembersview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const FamilyMembers(),
+
       case RouteName.ratingview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RatingView(),
