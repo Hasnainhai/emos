@@ -124,7 +124,10 @@ class ProfileView extends StatelessWidget {
                       ),
                       const VerticalSpeacing(18.0),
                       ProfileWidgetFeatures(
-                        ontap: () {},
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.medicalhistoryview);
+                        },
                         icon: Icons.history,
                         title: 'Medical History',
                       ),
