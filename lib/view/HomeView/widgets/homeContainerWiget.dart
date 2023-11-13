@@ -28,7 +28,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, RouteName.chosepatiantview);
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   // widget.ontap();
                 },
                 child: Container(
@@ -57,7 +60,12 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
                 child: Container(
                   height: 100.0,
                   width: 115.0,
@@ -83,23 +91,31 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   ),
                 ),
               ),
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/clinic.png',
-                    name: 'Clinic',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/clinic.png',
+                      name: 'Clinic',
+                    ),
                   ),
                 ),
               ),
@@ -107,71 +123,95 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
           ),
           Row(
             children: [
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
-                    ),
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/drHome.png',
-                    name: 'Dr at Home',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/drHome.png',
+                      name: 'Dr at Home',
+                    ),
                   ),
                 ),
               ),
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
-                    ),
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/homeCare.png',
-                    name: 'Home Care',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/homeCare.png',
+                      name: 'Home Care',
+                    ),
                   ),
                 ),
               ),
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/labotoryTest.png',
-                    name: 'Laboratory\n        Test',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/labotoryTest.png',
+                      name: 'Laboratory\n        Test',
+                    ),
                   ),
                 ),
               ),
@@ -193,7 +233,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   decoration: const BoxDecoration(
                     border: Border(
                       // bottom: BorderSide(
-                      //   color: AppColor.textFieldColor,
+                      //   color: AppColor.textFieldColor,u
                       //   width: 1.0,
                       // ),
                       right: BorderSide(

@@ -17,6 +17,7 @@ import 'package:emos/view/HosptialListView/hosptial_search_view.dart';
 import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
+import 'package:emos/view/MedicalHistory/medical_history_view.dart';
 import 'package:emos/view/NotificationsViews/notifications_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
@@ -140,7 +141,7 @@ class Routes {
       case RouteName.familyMembersview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const FamilyMembers(),
-
+        );
       case RouteName.ratingview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RatingView(),
@@ -148,6 +149,10 @@ class Routes {
       case RouteName.choseserviceview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const SelectServiceView(),
+        );
+      case RouteName.medicalhistoryview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const MedicalHistoryView(),
         );
       default:
         return MaterialPageRoute(
