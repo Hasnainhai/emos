@@ -7,7 +7,11 @@ import '../../../res/GlobalColors/colors.dart';
 class RecentOrdersWidget extends StatelessWidget {
   const RecentOrdersWidget({
     super.key,
+    required this.btnBgColor,
+    required this.btnTxt,
   });
+  final Color btnBgColor;
+  final String btnTxt;
 
   @override
   Widget build(BuildContext context) {
@@ -65,11 +69,11 @@ class RecentOrdersWidget extends StatelessWidget {
               width: 87.0,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12.0),
-                  color: AppColor.bgFillColor),
-              child: const Center(
+                  color: btnBgColor),
+              child: Center(
                 child: Text(
-                  'Confirmed',
-                  style: TextStyle(color: AppColor.whiteColor),
+                  btnTxt,
+                  style: const TextStyle(color: AppColor.whiteColor),
                 ),
               ),
             ),
