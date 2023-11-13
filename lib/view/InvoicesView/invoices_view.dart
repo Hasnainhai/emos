@@ -234,8 +234,8 @@ class _InvoicesViewState extends State<InvoicesView>
                       ),
                     ),
 
-                    // Content for 'Cancel'
-                    // Replace with your widget for 'Cancel'
+                    // Content for 'HomeCare'
+                    // Replace with your widget for 'HomeCare'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                       child: Column(
