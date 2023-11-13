@@ -28,7 +28,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, RouteName.chosepatiantview);
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   // widget.ontap();
                 },
                 child: Container(
@@ -60,7 +63,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.choseserviceview,
+                    RouteName.chosepatiantview,
                   );
                 },
                 child: Container(
@@ -90,6 +93,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
               ),
               InkWell(
                 onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   print('Clinic Done....');
                 },
                 child: Container(
@@ -119,6 +126,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
             children: [
               InkWell(
                 onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   print('Dr at Home Working...');
                 },
                 child: Container(
@@ -148,6 +159,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
               ),
               InkWell(
                 onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   print('HomeCare working...');
                 },
                 child: Container(
@@ -177,6 +192,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
               ),
               InkWell(
                 onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   print('Laboratory Working...');
                 },
                 child: Container(
@@ -204,6 +223,27 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
           ),
           Row(
             children: [
+              InkWell(
+                onTap: () {
+                  debugPrint("Click the Radiology");
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.choseserviceview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      // bottom: BorderSide(
+                      //   color: AppColor.textFieldColor,u
+                      //   width: 1.0,
+                      // ),
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
               Container(
                 height: 100.0,
                 width: 115.0,
@@ -214,13 +254,13 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                       width: 1.0,
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/radiology.png',
-                    name: 'Radiology',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/radiology.png',
+                      name: 'Radiology',
+                    ),
                   ),
                 ),
               ),

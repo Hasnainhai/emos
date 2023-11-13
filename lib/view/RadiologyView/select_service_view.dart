@@ -2,7 +2,6 @@ import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/AppointmentHosptialView/chose_patiant_view.dart';
 import 'package:emos/view/HosptialListView/Widgets/filter_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
