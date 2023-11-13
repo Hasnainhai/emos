@@ -2,7 +2,6 @@ import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../res/GlobalColors/colors.dart';
 import '../../routes/routes_name.dart';
 import 'widgets/recent_orders_widgets.dart';
@@ -107,15 +106,24 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
-                            RecentOrdersWidget(),
-                            RecentOrdersWidget(),
-                            RecentOrdersWidget(),
-                            RecentOrdersWidget(),
+                            const RecentOrdersWidget(
+                                btnBgColor: Color(0xff4DDD59),
+                                btnTxt: 'Confirmed'),
+                            const RecentOrdersWidget(
+                                btnBgColor: Color(0xffFEAA48),
+                                btnTxt: 'Pending'),
+                            const RecentOrdersWidget(
+                                btnBgColor: Color(0xffFD586B),
+                                btnTxt: 'Cancel'),
+                            const RecentOrdersWidget(
+                                btnBgColor: Color(0xff4DDD59),
+                                btnTxt: 'Confirmed'),
                             RoundedButton(
-                                title: 'Load More',
-                                onpress: () {},
-                                bgColor: Colors.transparent,
-                                titleColor: AppColor.linearBgTextColor)
+                              title: 'Load More',
+                              onpress: () {},
+                              bgColor: Colors.transparent,
+                              titleColor: AppColor.linearBgTextColor,
+                            ),
                           ],
                         ),
                       ),
@@ -125,10 +133,27 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                     // Replace with your widget for 'Confirmed'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: Container(
-                        child: const Center(
-                          child: Text('Confirmed....'),
-                        ),
+                      child: Column(
+                        children: [
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xff4DDD59),
+                              btnTxt: 'Confirmed'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xff4DDD59),
+                              btnTxt: 'Confirmed'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xff4DDD59),
+                              btnTxt: 'Confirmed'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xff4DDD59),
+                              btnTxt: 'Confirmed'),
+                          RoundedButton(
+                            title: 'Load More',
+                            onpress: () {},
+                            bgColor: Colors.transparent,
+                            titleColor: AppColor.linearBgTextColor,
+                          ),
+                        ],
                       ),
                     ),
 
@@ -136,10 +161,23 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                     // Replace with your widget for 'Pending'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: Container(
-                        child: const Center(
-                          child: Text('Pending....'),
-                        ),
+                      child: Column(
+                        children: [
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFEAA48), btnTxt: 'Pending'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFEAA48), btnTxt: 'Pending'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFEAA48), btnTxt: 'Pending'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFEAA48), btnTxt: 'Pending'),
+                          RoundedButton(
+                            title: 'Load More',
+                            onpress: () {},
+                            bgColor: Colors.transparent,
+                            titleColor: AppColor.linearBgTextColor,
+                          ),
+                        ],
                       ),
                     ),
 
@@ -147,10 +185,23 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                     // Replace with your widget for 'Cancel'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: Container(
-                        child: const Center(
-                          child: Text('Cancel....'),
-                        ),
+                      child: Column(
+                        children: [
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFD586B), btnTxt: 'Cancel'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFD586B), btnTxt: 'Cancel'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFD586B), btnTxt: 'Cancel'),
+                          const RecentOrdersWidget(
+                              btnBgColor: Color(0xffFD586B), btnTxt: 'Cancel'),
+                          RoundedButton(
+                            title: 'Load More',
+                            onpress: () {},
+                            bgColor: Colors.transparent,
+                            titleColor: AppColor.linearBgTextColor,
+                          ),
+                        ],
                       ),
                     ),
                   ],
