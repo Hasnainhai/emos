@@ -1,6 +1,7 @@
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -259,7 +260,9 @@ class DetailDoctorView extends StatelessWidget {
                         const VerticalSpeacing(50),
                         RoundedButton(
                           title: "Back To Home",
-                          onpress: () {},
+                          onpress: () {
+                            Navigator.pushNamed(context, RouteName.homeView);
+                          },
                           bgColor: AppColor.bgFillColor,
                           titleColor: AppColor.linearBgbuttonColor,
                         )

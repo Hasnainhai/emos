@@ -33,5 +33,6 @@ class RouteName {
   static const String choseserviceview = ('/chose_service_view');
   static const String medicalhistoryview = ('/medical_history_view');
   static const String invoicesView = ('/invoices_view');
+  static const String mapView = ('/map_view');
 
 }
