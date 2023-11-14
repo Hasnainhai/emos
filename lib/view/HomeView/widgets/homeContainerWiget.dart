@@ -227,6 +227,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
+                  print('Radiology Done....');
                 },
                 child: Container(
                   height: 100.0,
