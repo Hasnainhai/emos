@@ -33,6 +33,15 @@ class RouteName {
   static const String choseserviceview = ('/chose_service_view');
   static const String medicalhistoryview = ('/medical_history_view');
   static const String invoicesView = ('/invoices_view');
+  static const String radiologytabbar = ('/radiology_tabbar_view');
+  static const String choseclinicpatientview = ('/chose_clinic_patient_view');
+  static const String clinictabbar = ('/clinic_tabbar_view');
+  static const String drtabbar = ('/dr_tabbar_view');
+
   static const String mapView = ('/map_view');
 
+  static const String drchosepatientview = ('/dr_chose_patient_view');
+  static const String homecaretabbar = ('/home_care_tabbar_view');
+  static const String chosehomecarepatientview =
+      ('/chose_home_care_patient_view');
 }

@@ -1,10 +1,12 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../res/GlobalColors/colors.dart';
 
-class homeFeatures extends StatelessWidget {
-  const homeFeatures({
+class HomeFeatures extends StatelessWidget {
+  const HomeFeatures({
     super.key,
     required this.img,
     required this.name,

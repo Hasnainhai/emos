@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:emos/view/HomeView/widgets/homeFeatureWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +54,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/hospital.png',
                       name: 'Hospital',
                     ),
@@ -84,7 +86,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/ambulance.png',
                       name: 'Ambulance',
                     ),
@@ -95,9 +97,8 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.choseclinicpatientview,
                   );
-                  print('Clinic Done....');
                 },
                 child: Container(
                   height: 100.0,
@@ -113,7 +114,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/clinic.png',
                       name: 'Clinic',
                     ),
@@ -128,9 +129,8 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.drchosepatientview,
                   );
-                  print('Dr at Home Working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -150,7 +150,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/drHome.png',
                       name: 'Dr at Home',
                     ),
@@ -161,9 +161,8 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.chosehomecarepatientview,
                   );
-                  print('HomeCare working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -183,7 +182,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/homeCare.png',
                       name: 'Home Care',
                     ),
@@ -196,7 +195,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
-                  print('Laboratory Working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -212,7 +210,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/labotoryTest.png',
                       name: 'Laboratory\n        Test',
                     ),
@@ -245,7 +243,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/radiology.png',
                       name: 'Radiology',
                     ),
@@ -258,7 +256,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
-                  print('Pharmacy (soon) Done...');
                 },
                 child: Container(
                   height: 100.0,
@@ -274,7 +271,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   child: const SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/pharmacy.png',
                       name: 'Pharmacy\n   (soon)',
                     ),
@@ -287,15 +284,14 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
-                  print('Other (soon) Done...');
                 },
-                child: Container(
+                child: const SizedBox(
                   height: 100.0,
                   width: 115.0,
-                  child: const SizedBox(
+                  child: SizedBox(
                     height: 60.0,
                     width: 108.0,
-                    child: homeFeatures(
+                    child: HomeFeatures(
                       img: 'images/others.png',
                       name: 'Other (soon)',
                     ),

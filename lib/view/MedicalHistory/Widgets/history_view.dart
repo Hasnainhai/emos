@@ -1,5 +1,4 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
-import 'package:emos/download_popup.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
