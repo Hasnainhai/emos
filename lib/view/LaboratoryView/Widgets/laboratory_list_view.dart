@@ -31,14 +31,15 @@ class LaboratoryListView extends StatelessWidget {
                     height: 72,
                     width: 72,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        8,
-                      ),
-                      image: const DecorationImage(
-                        image: AssetImage(
-                          "images/booking.jpg",
+                        borderRadius: BorderRadius.circular(
+                          8,
                         ),
-                        fit: BoxFit.cover,
+                        color: AppColor.textFieldColor),
+                    child: Center(
+                      child: Image.asset(
+                        "images/labotoryTest.png",
+                        height: 50,
+                        width: 50,
                       ),
                     ),
                   ),
@@ -46,7 +47,7 @@ class LaboratoryListView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Jonhs Hokins Clinic",
+                        "Jonhs Hokins Laboratory",
                         style: GoogleFonts.getFont(
                           "Roboto",
                           textStyle: const TextStyle(
