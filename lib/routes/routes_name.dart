@@ -43,4 +43,5 @@ class RouteName {
   static const String drchosepatientview = ('/dr_chose_patient_view');
   static const String homecaretabbar = ('/home_care_tabbar_view');
   static const String chosehomecarepatientview =
+      ('/chose_home_care_patient_view');
 }
