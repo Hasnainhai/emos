@@ -224,7 +224,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
               InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, RouteName.callview);
-                  print('Radiology working...');
                 },
                 child: Container(
                   height: 100.0,

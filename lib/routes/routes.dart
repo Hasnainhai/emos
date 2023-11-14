@@ -13,6 +13,7 @@ import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/DrAtHomeView/dr_chose_patient_view.dart';
 import 'package:emos/view/DrAtHomeView/dr_tabbar.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
+import 'package:emos/view/FamilyView/cardInfo.dart';
 import 'package:emos/view/FamilyView/family_view.dart';
 import 'package:emos/view/HomeCare/chose_patient_homecare_.dart';
 import 'package:emos/view/HomeCare/home_care_tabbar.dart';
@@ -218,6 +219,10 @@ class Routes {
       case RouteName.choselaboratorytestview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChoseLaboratoryTestView(),
+        );
+          case RouteName.cardInfotview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const CardInfoView(),
         );
       default:
         return MaterialPageRoute(
