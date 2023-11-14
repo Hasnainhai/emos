@@ -1,7 +1,7 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/ClinicView/Widgets/clinic_list_view.dart';
+import 'package:emos/view/HomeCare/Widgets/home_care_list_view.dart';
 import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:emos/view/HosptialListView/Widgets/owner.dart';
 import 'package:flutter/material.dart';
@@ -145,34 +145,7 @@ class _HomeCareTabBarState extends State<HomeCareTabBar> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "147 Hospital Founded",
-                                    style: GoogleFonts.getFont(
-                                      "Roboto",
-                                      textStyle: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        color: AppColor.textColor2,
-                                      ),
-                                    ),
-                                  ),
-                                  const VerticalSpeacing(8),
-                                  Row(
-                                    children: [
-                                      OwnerWidget(
-                                          circleColor: const Color(0xff5ABF24),
-                                          owner: "79 Government"),
-                                      OwnerWidget(
-                                          circleColor: const Color(0xffFD586B),
-                                          owner: "54 Government"),
-                                    ],
-                                  ),
-                                  const VerticalSpeacing(8),
-                                  OwnerWidget(
-                                      circleColor: const Color(0xffFEAA48),
-                                      owner: "26 Government"),
-                                  const VerticalSpeacing(20),
-                                  ClinicListView(
+                                  HomeCareListView(
                                     fun: () {
                                       Navigator.pushNamed(
                                         context,
@@ -181,11 +154,11 @@ class _HomeCareTabBarState extends State<HomeCareTabBar> {
                                     },
                                   ),
                                   const VerticalSpeacing(20),
-                                  ClinicListView(
+                                  HomeCareListView(
                                     fun: () {},
                                   ),
                                   const VerticalSpeacing(20),
-                                  ClinicListView(
+                                  HomeCareListView(
                                     fun: () {},
                                   ),
                                 ],
