@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Calander extends StatefulWidget {
-  Calander({super.key, required this.day, required this.date});
+  const Calander({super.key, required this.day, required this.date});
   final String day;
   final String date;
 

@@ -29,7 +29,7 @@ class _CallViewState extends State<CallView> {
         ),
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
             ),

@@ -4,7 +4,6 @@ import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/ClinicView/Widgets/clinic_list_view.dart';
 import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:emos/view/HosptialListView/Widgets/owner.dart';
-import 'package:emos/view/HosptialListView/Widgets/hosptial_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

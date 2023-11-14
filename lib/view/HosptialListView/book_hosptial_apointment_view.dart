@@ -172,7 +172,7 @@ class _BookHosptialApointmentViewState
                     ),
                   ],
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
@@ -180,210 +180,210 @@ class _BookHosptialApointmentViewState
                         day: 'Mon',
                         date: '1',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Tue',
                         date: '2',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Wed',
                         date: '3',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Thu',
                         date: '4',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Fri',
                         date: '5',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sat',
                         date: '6',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sun',
                         date: '7',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Mon',
                         date: '8',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Tue',
                         date: '9',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Wed',
                         date: '10',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Thu',
                         date: '11',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Fri',
                         date: '12',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sat',
                         date: '13',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sun',
                         date: '14',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Mon',
                         date: '15',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Tue',
                         date: '16',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Wed',
                         date: '17',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Thu',
                         date: '18',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Fri',
                         date: '19',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sat',
                         date: '20',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sun',
                         date: '21',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Mon',
                         date: '22',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Tue',
                         date: '23',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Wed',
                         date: '24',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Thu',
                         date: '25',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Fri',
                         date: '26',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sat',
                         date: '27',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Sun',
                         date: '28',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Mon',
                         date: '29',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
                         day: 'Tue',
                         date: '30',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 14,
                       ),
                       Calander(
