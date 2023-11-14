@@ -89,10 +89,13 @@ class SelectAlergyView extends StatelessWidget {
                 const Divider(color: AppColor.textColor2),
                 const VerticalSpeacing(30.0),
                 RoundedButton(
-                    title: 'Update',
-                    onpress: () {},
-                    bgColor: AppColor.bgFillColor,
-                    titleColor: AppColor.whiteColor),
+                  title: 'Update',
+                  onpress: () {
+                    Navigator.pop(context);
+                  },
+                  bgColor: AppColor.bgFillColor,
+                  titleColor: AppColor.whiteColor,
+                ),
               ],
             ),
           ),

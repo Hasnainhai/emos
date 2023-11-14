@@ -63,7 +63,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.mapView,
                   );
                 },
                 child: Container(
@@ -223,23 +223,28 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
           ),
           Row(
             children: [
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  print('Radiology Done...');
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
                     ),
                   ),
-                ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/radiology.png',
-                    name: 'Radiology',
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/radiology.png',
+                      name: 'Radiology',
+                    ),
                   ),
                 ),
               ),
