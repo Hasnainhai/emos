@@ -25,7 +25,6 @@ import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
 import 'package:emos/view/InformationView/information_screen.dart';
 import 'package:emos/view/MedicalHistory/medical_history_view.dart';
-
 import 'package:emos/view/InvoicesView/invoices_view.dart';
 import 'package:emos/view/NotificationsViews/notifications_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
@@ -206,7 +205,6 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const HomeCareTabBar(),
         );
-
       case RouteName.mapView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const MapConfigView(),
