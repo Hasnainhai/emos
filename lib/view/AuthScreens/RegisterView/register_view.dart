@@ -38,7 +38,12 @@ class RegisterView extends StatelessWidget {
                 const VerticalSpeacing(30.0),
                 AppBarField(
                   ontap: () {
-                    {}
+                    {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.homeView,
+                      );
+                    }
                   },
                 ),
                 const VerticalSpeacing(32.0),
