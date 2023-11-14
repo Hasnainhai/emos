@@ -225,6 +225,10 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
             children: [
               InkWell(
                 onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
                   print('Radiology Done...');
                 },
                 child: Container(
@@ -248,35 +252,53 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   ),
                 ),
               ),
-              Container(
-                height: 100.0,
-                width: 115.0,
-                decoration: const BoxDecoration(
-                  border: Border(
-                    right: BorderSide(
-                      color: AppColor.textFieldColor,
-                      width: 1.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                  print('Pharmacy (soon) Done...');
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/pharmacy.png',
+                      name: 'Pharmacy\n   (soon)',
                     ),
                   ),
                 ),
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/pharmacy.png',
-                    name: 'Pharmacy\n   (soon)',
-                  ),
-                ),
               ),
-              Container(
-                height: 100.0,
-                width: 115.0,
-                child: const SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: homeFeatures(
-                    img: 'images/others.png',
-                    name: 'Other (soon)',
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                  print('Other (soon) Done...');
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: homeFeatures(
+                      img: 'images/others.png',
+                      name: 'Other (soon)',
+                    ),
                   ),
                 ),
               ),
