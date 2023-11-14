@@ -8,8 +8,9 @@ import '../../../routes/routes_name.dart';
 
 class HomeContainerWidget extends StatefulWidget {
   const HomeContainerWidget({
-    super.key,
+    super.key, required this.ontapRadiology,
   });
+  final Function ontapRadiology;
   @override
   State<HomeContainerWidget> createState() => _HomeContainerWidgetState();
 }
@@ -221,13 +222,9 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
           ),
           Row(
             children: [
-              InkWell(
+              GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    RouteName.chosepatiantview,
-                  );
-                  print('Radiology Done....');
+                 widget.ontapRadiology;
                 },
                 child: Container(
                   height: 100.0,
