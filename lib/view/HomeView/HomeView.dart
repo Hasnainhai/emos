@@ -44,7 +44,12 @@ class _HomeViewState extends State<HomeView> {
               ),
               Positioned(
                 top: tHeight - top / 2 - 10,
-                child: const HomeContainerWidget(),
+                child: HomeContainerWidget(
+                  ontapRadiology: () {
+                    Navigator.pushNamed(context, RouteName.chosepatiantview);
+                    print('Working on Radiology...');
+                  },
+                ),
               ),
             ],
           ),
