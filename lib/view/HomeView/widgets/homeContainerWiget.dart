@@ -95,7 +95,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.choseclinicpatientview,
                   );
                   print('Clinic Done....');
                 },
@@ -128,7 +128,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.drchosepatientview,
                   );
                   print('Dr at Home Working...');
                 },
@@ -161,9 +161,8 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.chosehomecarepatientview,
                   );
-                  print('HomeCare working...');
                 },
                 child: Container(
                   height: 100.0,

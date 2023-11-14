@@ -3,6 +3,7 @@ import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/components/appBarField/appBar_field.dart';
 import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -167,7 +168,12 @@ class _InformationScreenState extends State<InformationScreen> {
                 ),
                 RoundedButton(
                   title: 'Register',
-                  onpress: () {},
+                  onpress: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.homeView,
+                    );
+                  },
                   bgColor: AppColor.simpleBgbuttonColor,
                   titleColor: AppColor.simpleBgTextColor,
                 ),
