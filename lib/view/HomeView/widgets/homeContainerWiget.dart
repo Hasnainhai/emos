@@ -9,9 +9,7 @@ import '../../../routes/routes_name.dart';
 class HomeContainerWidget extends StatefulWidget {
   const HomeContainerWidget({
     super.key,
-    required this.ontapRadiology,
   });
-  final Function ontapRadiology;
   @override
   State<HomeContainerWidget> createState() => _HomeContainerWidgetState();
 }
@@ -36,7 +34,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     context,
                     RouteName.chosepatiantview,
                   );
-                  // widget.ontap();
                 },
                 child: Container(
                   height: 100.0,
@@ -226,7 +223,8 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
             children: [
               InkWell(
                 onTap: () {
-                  widget.ontapRadiology;
+                  Navigator.pushNamed(context, RouteName.callview);
+                  print('Radiology working...');
                 },
                 child: Container(
                   height: 100.0,
@@ -249,54 +247,54 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   ),
                 ),
               ),
-              // InkWell(
-              //   onTap: () {
-              //     Navigator.pushNamed(
-              //       context,
-              //       RouteName.chosepatiantview,
-              //     );
-              //   },
-              //   child: Container(
-              //     height: 100.0,
-              //     width: 115.0,
-              //     decoration: const BoxDecoration(
-              //       border: Border(
-              //         right: BorderSide(
-              //           color: AppColor.textFieldColor,
-              //           width: 1.0,
-              //         ),
-              //       ),
-              //     ),
-              //     child: const SizedBox(
-              //       height: 60.0,
-              //       width: 108.0,
-              //       child: HomeFeatures(
-              //         img: 'images/pharmacy.png',
-              //         name: 'Pharmacy\n   (soon)',
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // InkWell(
-              //   onTap: () {
-              //     Navigator.pushNamed(
-              //       context,
-              //       RouteName.chosepatiantview,
-              //     );
-              //   },
-              //   child: const SizedBox(
-              //     height: 100.0,
-              //     width: 115.0,
-              //     child: SizedBox(
-              //       height: 60.0,
-              //       width: 108.0,
-              //       child: HomeFeatures(
-              //         img: 'images/others.png',
-              //         name: 'Other (soon)',
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      right: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: HomeFeatures(
+                      img: 'images/pharmacy.png',
+                      name: 'Pharmacy\n   (soon)',
+                    ),
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.chosepatiantview,
+                  );
+                },
+                child: const SizedBox(
+                  height: 100.0,
+                  width: 115.0,
+                  child: SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: HomeFeatures(
+                      img: 'images/others.png',
+                      name: 'Other (soon)',
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ],
