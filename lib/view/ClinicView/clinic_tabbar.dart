@@ -135,7 +135,7 @@ class _ClinicTabBarState extends State<ClinicTabBar> {
                         ),
                         tabs: [
                           Tab(text: 'List View'),
-                          Tab(text: 'Hospital View'),
+                          Tab(text: 'Clinic View'),
                         ],
                       ),
                       const VerticalSpeacing(30),
@@ -147,7 +147,7 @@ class _ClinicTabBarState extends State<ClinicTabBar> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "147 Hospital Founded",
+                                    "147 Clinics Founded",
                                     style: GoogleFonts.getFont(
                                       "Roboto",
                                       textStyle: const TextStyle(
@@ -163,6 +163,7 @@ class _ClinicTabBarState extends State<ClinicTabBar> {
                                       OwnerWidget(
                                           circleColor: const Color(0xff5ABF24),
                                           owner: "79 Government"),
+                                      const SizedBox(width: 8),
                                       OwnerWidget(
                                           circleColor: const Color(0xffFD586B),
                                           owner: "54 Government"),
@@ -171,7 +172,7 @@ class _ClinicTabBarState extends State<ClinicTabBar> {
                                   const VerticalSpeacing(8),
                                   OwnerWidget(
                                       circleColor: const Color(0xffFEAA48),
-                                      owner: "26 Government"),
+                                      owner: "26 Private"),
                                   const VerticalSpeacing(20),
                                   ClinicListView(
                                     fun: () {
