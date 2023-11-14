@@ -1,11 +1,11 @@
-import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DrListView extends StatelessWidget {
-  const DrListView({super.key, required this.fun});
+class LaboratoryListView extends StatelessWidget {
+  const LaboratoryListView({super.key, required this.fun});
   final Function() fun;
 
   @override
@@ -13,7 +13,7 @@ class DrListView extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: (MediaQuery.of(context).size.height / 2),
+          height: (MediaQuery.of(context).size.height / 3) - 2.4,
           width: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
@@ -36,7 +36,7 @@ class DrListView extends StatelessWidget {
                       ),
                       image: const DecorationImage(
                         image: AssetImage(
-                          "images/doctor.jpg",
+                          "images/booking.jpg",
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -100,144 +100,6 @@ class DrListView extends StatelessWidget {
                 padding: const EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 20,
-                ),
-                child: RoundedButton(
-                  title: "Book an Appointment",
-                  onpress: fun,
-                  bgColor: Colors.transparent,
-                  titleColor: AppColor.bgFillColor,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  top: 12,
-                ),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.language,
-                      color: AppColor.textFieldColor,
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    Text(
-                      "Languages:",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.textColor,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "English, Hindi",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: AppColor.bgFillColor,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  top: 12,
-                ),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.person,
-                      color: AppColor.textFieldColor,
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    Text(
-                      "Degrees:",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.textColor,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "Master’s degree, Endocrinology",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: AppColor.bgFillColor,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const Divider(
-                color: AppColor.textFieldColor,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  top: 12,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.work_outline_outlined,
-                          color: AppColor.textFieldColor,
-                        ),
-                        const SizedBox(
-                          width: 8,
-                        ),
-                        Text(
-                          "Work Experience",
-                          style: GoogleFonts.getFont(
-                            "Roboto",
-                            textStyle: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: AppColor.textColor,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const Icon(
-                      Icons.navigate_next,
-                      color: AppColor.textColor2,
-                    )
-                  ],
-                ),
-              ),
-              const VerticalSpeacing(8),
-              const Divider(
-                color: AppColor.textFieldColor,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
                   top: 12,
                 ),
                 child: Row(
@@ -289,7 +151,136 @@ class DrListView extends StatelessWidget {
                   ],
                 ),
               ),
-              const VerticalSpeacing(8),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 12,
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.location_on_outlined,
+                      color: AppColor.textFieldColor,
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "Distance:",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "2 Km from your location",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: AppColor.bgFillColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 12,
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.home_filled,
+                      color: AppColor.textFieldColor,
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "Collect home sample:",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "YES",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: AppColor.bgFillColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const VerticalSpeacing(20),
+              Row(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.mapView);
+                    },
+                    child: Container(
+                      height: 46,
+                      width: MediaQuery.of(context).size.width / 2 - 21,
+                      decoration: const BoxDecoration(
+                        color: Color(0xff5790B9),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(12),
+                        ),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.send,
+                          color: AppColor.whiteColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.callview,
+                      );
+                    },
+                    child: Container(
+                      height: 46,
+                      width: MediaQuery.of(context).size.width / 2 - 21,
+                      decoration: const BoxDecoration(
+                        color: Color(0xff5ABF24),
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(12),
+                        ),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.phone,
+                          color: AppColor.whiteColor,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),

@@ -195,7 +195,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    RouteName.chosepatiantview,
+                    RouteName.choselaboratorytestview,
                   );
                 },
                 child: Container(

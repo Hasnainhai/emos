@@ -96,17 +96,22 @@ class _CallViewState extends State<CallView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 60,
-                            width: 60,
-                            decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(
-                                  0xffFD586B,
-                                )),
-                            child: const Icon(
-                              Icons.call_end,
-                              color: AppColor.whiteColor,
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Container(
+                              height: 60,
+                              width: 60,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(
+                                    0xffFD586B,
+                                  )),
+                              child: const Icon(
+                                Icons.call_end,
+                                color: AppColor.whiteColor,
+                              ),
                             ),
                           ),
                           Container(

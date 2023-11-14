@@ -177,7 +177,7 @@ class HosptialDetail extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),
