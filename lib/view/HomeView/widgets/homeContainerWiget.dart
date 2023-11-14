@@ -247,51 +247,35 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   ),
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    RouteName.chosepatiantview,
-                  );
-                },
-                child: Container(
-                  height: 100.0,
-                  width: 115.0,
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        color: AppColor.textFieldColor,
-                        width: 1.0,
-                      ),
-                    ),
-                  ),
-                  child: const SizedBox(
-                    height: 60.0,
-                    width: 108.0,
-                    child: HomeFeatures(
-                      img: 'images/pharmacy.png',
-                      name: 'Pharmacy\n   (soon)',
+              Container(
+                height: 100.0,
+                width: 115.0,
+                decoration: const BoxDecoration(
+                  border: Border(
+                    right: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
                     ),
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    RouteName.chosepatiantview,
-                  );
-                },
                 child: const SizedBox(
-                  height: 100.0,
-                  width: 115.0,
-                  child: SizedBox(
-                    height: 60.0,
-                    width: 108.0,
-                    child: HomeFeatures(
-                      img: 'images/others.png',
-                      name: 'Other (soon)',
-                    ),
+                  height: 60.0,
+                  width: 108.0,
+                  child: HomeFeatures(
+                    img: 'images/pharmacy.png',
+                    name: 'Pharmacy\n   (soon)',
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 100.0,
+                width: 115.0,
+                child: SizedBox(
+                  height: 60.0,
+                  width: 108.0,
+                  child: HomeFeatures(
+                    img: 'images/others.png',
+                    name: 'Other (soon)',
                   ),
                 ),
               ),
