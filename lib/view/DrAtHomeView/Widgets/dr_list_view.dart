@@ -46,7 +46,7 @@ class DrListView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Jonhs Hokins Clinic",
+                        "Jonhs Hokins",
                         style: GoogleFonts.getFont(
                           "Roboto",
                           textStyle: const TextStyle(

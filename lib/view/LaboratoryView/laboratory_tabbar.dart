@@ -59,7 +59,7 @@ class _LaboratoryViewState extends State<LaboratoryTabBar> {
                         width: 16,
                       ),
                       Text(
-                        "Step 2 of 3: Choose Clinic",
+                        "Step 2 of 3: Choose Laboratory",
                         style: GoogleFonts.getFont(
                           "Roboto",
                           textStyle: const TextStyle(
@@ -133,7 +133,7 @@ class _LaboratoryViewState extends State<LaboratoryTabBar> {
                         ),
                         tabs: [
                           Tab(text: 'List View'),
-                          Tab(text: 'Clinic View'),
+                          Tab(text: 'Laboratory View'),
                         ],
                       ),
                       const VerticalSpeacing(30),
