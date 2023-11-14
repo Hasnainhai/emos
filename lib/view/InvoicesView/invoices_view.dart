@@ -175,68 +175,70 @@ class _InvoicesViewState extends State<InvoicesView>
                     // Replace with your widget for 'Clinic'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: Column(
-                        children: [
-                          InvoicesCardWidget(
-                            img: 'images/clinic.png',
-                            title: 'Clinic Name',
-                            price: '\$500',
-                            payment: 'Payment at clinic',
-                            ontap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      const DownloadPopup());
-                            },
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/clinic.png',
-                            title: 'Clinic Name',
-                            price: '\$500',
-                            payment: 'Payment at clinic',
-                            ontap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      const DownloadPopup());
-                            },
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/clinic.png',
-                            title: 'Clinic Name',
-                            price: '\$500',
-                            payment: 'Payment at clinic',
-                            ontap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      const DownloadPopup());
-                            },
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/clinic.png',
-                            title: 'Clinic Name',
-                            price: '\$500',
-                            payment: 'Payment at clinic',
-                            ontap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      const DownloadPopup());
-                            },
-                          ),
-                          RoundedButton(
-                            title: 'Load More',
-                            onpress: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      const DownloadPopup());
-                            },
-                            bgColor: Colors.transparent,
-                            titleColor: AppColor.linearBgTextColor,
-                          ),
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            InvoicesCardWidget(
+                              img: 'images/clinic.png',
+                              title: 'Clinic Name',
+                              price: '\$500',
+                              payment: 'Payment at clinic',
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/clinic.png',
+                              title: 'Clinic Name',
+                              price: '\$500',
+                              payment: 'Payment at clinic',
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/clinic.png',
+                              title: 'Clinic Name',
+                              price: '\$500',
+                              payment: 'Payment at clinic',
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/clinic.png',
+                              title: 'Clinic Name',
+                              price: '\$500',
+                              payment: 'Payment at clinic',
+                              ontap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
+                            ),
+                            RoundedButton(
+                              title: 'Load More',
+                              onpress: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        const DownloadPopup());
+                              },
+                              bgColor: Colors.transparent,
+                              titleColor: AppColor.linearBgTextColor,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
@@ -244,43 +246,45 @@ class _InvoicesViewState extends State<InvoicesView>
                     // Replace with your widget for 'Dr Home'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: Column(
-                        children: [
-                          InvoicesCardWidget(
-                            img: 'images/drHome.png',
-                            title: 'Dr Name',
-                            price: '\$300',
-                            payment: 'Master Card',
-                            ontap: () {},
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/drHome.png',
-                            title: 'Dr Name',
-                            price: '\$300',
-                            payment: 'Master Card',
-                            ontap: () {},
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/drHome.png',
-                            title: 'Dr Name',
-                            price: '\$300',
-                            payment: 'Master Card',
-                            ontap: () {},
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/drHome.png',
-                            title: 'Dr Name',
-                            price: '\$300',
-                            payment: 'Master Card',
-                            ontap: () {},
-                          ),
-                          RoundedButton(
-                            title: 'Load More',
-                            onpress: () {},
-                            bgColor: Colors.transparent,
-                            titleColor: AppColor.linearBgTextColor,
-                          ),
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            InvoicesCardWidget(
+                              img: 'images/drHome.png',
+                              title: 'Dr Name',
+                              price: '\$300',
+                              payment: 'Master Card',
+                              ontap: () {},
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/drHome.png',
+                              title: 'Dr Name',
+                              price: '\$300',
+                              payment: 'Master Card',
+                              ontap: () {},
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/drHome.png',
+                              title: 'Dr Name',
+                              price: '\$300',
+                              payment: 'Master Card',
+                              ontap: () {},
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/drHome.png',
+                              title: 'Dr Name',
+                              price: '\$300',
+                              payment: 'Master Card',
+                              ontap: () {},
+                            ),
+                            RoundedButton(
+                              title: 'Load More',
+                              onpress: () {},
+                              bgColor: Colors.transparent,
+                              titleColor: AppColor.linearBgTextColor,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
@@ -288,43 +292,45 @@ class _InvoicesViewState extends State<InvoicesView>
                     // Replace with your widget for 'HomeCare'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: Column(
-                        children: [
-                          InvoicesCardWidget(
-                            img: 'images/homeCare.png',
-                            title: 'Home Care Name',
-                            price: '\$100',
-                            payment: 'Debet Card',
-                            ontap: () {},
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/homeCare.png',
-                            title: 'Home Care Name',
-                            price: '\$100',
-                            payment: 'Debet Card',
-                            ontap: () {},
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/homeCare.png',
-                            title: 'Home Care Name',
-                            price: '\$100',
-                            payment: 'Debet Card',
-                            ontap: () {},
-                          ),
-                          InvoicesCardWidget(
-                            img: 'images/homeCare.png',
-                            title: 'Home Care Name',
-                            price: '\$100',
-                            payment: 'Debet Card',
-                            ontap: () {},
-                          ),
-                          RoundedButton(
-                            title: 'Load More',
-                            onpress: () {},
-                            bgColor: Colors.transparent,
-                            titleColor: AppColor.linearBgTextColor,
-                          ),
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            InvoicesCardWidget(
+                              img: 'images/homeCare.png',
+                              title: 'Home Care Name',
+                              price: '\$100',
+                              payment: 'Debet Card',
+                              ontap: () {},
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/homeCare.png',
+                              title: 'Home Care Name',
+                              price: '\$100',
+                              payment: 'Debet Card',
+                              ontap: () {},
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/homeCare.png',
+                              title: 'Home Care Name',
+                              price: '\$100',
+                              payment: 'Debet Card',
+                              ontap: () {},
+                            ),
+                            InvoicesCardWidget(
+                              img: 'images/homeCare.png',
+                              title: 'Home Care Name',
+                              price: '\$100',
+                              payment: 'Debet Card',
+                              ontap: () {},
+                            ),
+                            RoundedButton(
+                              title: 'Load More',
+                              onpress: () {},
+                              bgColor: Colors.transparent,
+                              titleColor: AppColor.linearBgTextColor,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
