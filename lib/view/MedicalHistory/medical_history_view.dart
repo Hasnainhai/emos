@@ -59,23 +59,23 @@ class MedicalHistoryView extends StatelessWidget {
                   const VerticalSpeacing(
                     60,
                   ),
-                  HistoryCard(),
+                  const HistoryCard(),
                   const VerticalSpeacing(
                     20,
                   ),
-                  HistoryCard(),
+                  const HistoryCard(),
                   const VerticalSpeacing(
                     20,
                   ),
-                  HistoryCard(),
+                  const HistoryCard(),
                   const VerticalSpeacing(
                     20,
                   ),
-                  HistoryCard(),
+                  const HistoryCard(),
                   const VerticalSpeacing(
                     20,
                   ),
-                  HistoryCard(),
+                  const HistoryCard(),
                 ],
               ),
             ),

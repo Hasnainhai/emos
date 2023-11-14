@@ -174,7 +174,7 @@ class _InvoicesViewState extends State<InvoicesView>
                     // Content for 'Clinic'
                     // Replace with your widget for 'Clinic'
                     Padding(
-                      padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                       child: Column(
                         children: [
                           InvoicesCardWidget(
