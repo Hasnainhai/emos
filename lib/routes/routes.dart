@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/AddCardView/add_card_view.dart';
 import 'package:emos/view/AppointmentHosptialView/add_depedent_view.dart';
@@ -40,6 +42,7 @@ import 'package:emos/view/RatingView/rating_view.dart';
 import 'package:emos/view/RecentOrdersView/recent_orders.dart';
 import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
 import 'package:flutter/material.dart';
+import '../MapVIew/map_view.dart';
 import '../view/DoctorViews/find_doctor_view.dart';
 
 class Routes {
@@ -206,6 +209,10 @@ class Routes {
           builder: (BuildContext context) => const HomeCareTabBar(),
         );
 
+      case RouteName.mapView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const MapConfigView(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) {

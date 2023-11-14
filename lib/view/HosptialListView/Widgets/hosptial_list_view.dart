@@ -131,19 +131,24 @@ class HosptialDetail extends StatelessWidget {
               const VerticalSpeacing(20),
               Row(
                 children: [
-                  Container(
-                    height: 46,
-                    width: MediaQuery.of(context).size.width / 2 - 21,
-                    decoration: const BoxDecoration(
-                      color: Color(0xff5790B9),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(12),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.mapView);
+                    },
+                    child: Container(
+                      height: 46,
+                      width: MediaQuery.of(context).size.width / 2 - 21,
+                      decoration: const BoxDecoration(
+                        color: Color(0xff5790B9),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(12),
+                        ),
                       ),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.send,
-                        color: AppColor.whiteColor,
+                      child: const Center(
+                        child: Icon(
+                          Icons.send,
+                          color: AppColor.whiteColor,
+                        ),
                       ),
                     ),
                   ),

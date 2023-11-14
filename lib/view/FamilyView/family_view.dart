@@ -66,7 +66,9 @@ class FamilyMembers extends StatelessWidget {
                   const VerticalSpeacing(46.0),
                   RoundedButton(
                     title: 'Add New Dependent',
-                    onpress: () {},
+                    onpress: () {
+                      Navigator.pushNamed(context, RouteName.adddependetview);
+                    },
                     bgColor: Colors.transparent,
                     titleColor: AppColor.linearBgTextColor,
                   )

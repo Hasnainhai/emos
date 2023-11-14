@@ -38,8 +38,9 @@ class RouteName {
   static const String clinictabbar = ('/clinic_tabbar_view');
   static const String drtabbar = ('/dr_tabbar_view');
 
+  static const String mapView = ('/map_view');
+
   static const String drchosepatientview = ('/dr_chose_patient_view');
   static const String homecaretabbar = ('/home_care_tabbar_view');
   static const String chosehomecarepatientview =
-      ('/chose_home_care_patient_view');
 }
