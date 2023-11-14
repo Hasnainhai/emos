@@ -7,9 +7,15 @@ import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos/view/CallView/call_view.dart';
 import 'package:emos/view/ChattingView/chatting_view.dart';
+import 'package:emos/view/ClinicView/chose_clinic_patient_view.dart';
+import 'package:emos/view/ClinicView/clinic_tabbar.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
+import 'package:emos/view/DrAtHomeView/dr_chose_patient_view.dart';
+import 'package:emos/view/DrAtHomeView/dr_tabbar.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
 import 'package:emos/view/FamilyView/family_view.dart';
+import 'package:emos/view/HomeCare/chose_patient_homecare_.dart';
+import 'package:emos/view/HomeCare/home_care_tabbar.dart';
 import 'package:emos/view/HomeMenuView/menuView.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
 import 'package:emos/view/HosptialListView/book_hosptial_apointment_view.dart';
@@ -17,6 +23,7 @@ import 'package:emos/view/HosptialListView/hosptial_search_view.dart';
 import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
+import 'package:emos/view/InformationView/information_screen.dart';
 import 'package:emos/view/MedicalHistory/medical_history_view.dart';
 
 import 'package:emos/view/InvoicesView/invoices_view.dart';
@@ -27,6 +34,7 @@ import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
+import 'package:emos/view/RadiologyView/radiology_tabbar.dart';
 import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:emos/view/RatingView/rating_view.dart';
 import 'package:emos/view/RecentOrdersView/recent_orders.dart';
@@ -56,6 +64,10 @@ class Routes {
       case RouteName.loginView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const LoginView(),
+        );
+      case RouteName.informationview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const InformationScreen(),
         );
       case RouteName.forgetpasswordscreen:
         return MaterialPageRoute(
@@ -165,6 +177,35 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const InvoicesView(),
         );
+      case RouteName.radiologytabbar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyTabBar(),
+        );
+      case RouteName.choseclinicpatientview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ChoseClinicPatientView(),
+        );
+      case RouteName.clinictabbar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ClinicTabBar(),
+        );
+      case RouteName.drchosepatientview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const DrChosePatientView(),
+        );
+      case RouteName.drtabbar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const DrTabBarView(),
+        );
+      case RouteName.chosehomecarepatientview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ChoseHomeCarePatientView(),
+        );
+      case RouteName.homecaretabbar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareTabBar(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) {
