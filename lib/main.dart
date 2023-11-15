@@ -8,14 +8,14 @@ void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
     (_) {
       runApp(
-        const MyApp(),
+         MyApp(),
       );
     },
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
