@@ -47,9 +47,7 @@ class DownloadPopup extends StatelessWidget {
                   Icons.mail_outline,
                   color: AppColor.textColor,
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
+                const SizedBox(width: 10),
                 Text(
                   "Share Via Email",
                   style: GoogleFonts.getFont(
