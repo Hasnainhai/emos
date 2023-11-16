@@ -31,7 +31,7 @@ class DownloadPopup extends StatelessWidget {
                     textStyle: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                      color: AppColor.textColor
                     ),
                   ),
                 ),
@@ -39,7 +39,7 @@ class DownloadPopup extends StatelessWidget {
             ),
             const VerticalSpeacing(20),
             const Divider(
-              color: AppColor.textFieldColor,
+              color: AppColor.textFieldColor
             ),
             Row(
               children: [
