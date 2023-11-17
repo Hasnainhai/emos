@@ -221,28 +221,23 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, RouteName.callview);
-                },
-                child: Container(
-                  height: 100.0,
-                  width: 115.0,
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        color: AppColor.textFieldColor,
-                        width: 1.0,
-                      ),
+              Container(
+                height: 100.0,
+                width: 115.0,
+                decoration: const BoxDecoration(
+                  border: Border(
+                    right: BorderSide(
+                      color: AppColor.textFieldColor,
+                      width: 1.0,
                     ),
                   ),
-                  child: const SizedBox(
-                    height: 60.0,
-                    width: 108.0,
-                    child: HomeFeatures(
-                      img: 'images/radiology.png',
-                      name: 'Radiology',
-                    ),
+                ),
+                child: const SizedBox(
+                  height: 60.0,
+                  width: 108.0,
+                  child: HomeFeatures(
+                    img: 'images/radiology.png',
+                    name: 'Radiology',
                   ),
                 ),
               ),
