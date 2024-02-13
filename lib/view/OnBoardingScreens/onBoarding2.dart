@@ -18,85 +18,90 @@ class OnBoardingScreen2 extends StatelessWidget {
         child: GradientBackground(
             child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
-          child: Column(
+          child: ListView(
             children: [
-              Image.asset(
-                'images/image2.png',
-                height: 370,
-                width: 370,
-                fit: BoxFit.cover,
-              ),
-              Text(
-                "Covid-19 Prevention",
-                style: GoogleFonts.getFont(
-                  "Roboto",
-                  textStyle: const TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w900,
-                    color: AppColor.simpleBgTextColor,
-                  ),
-                ),
-              ),
-              const VerticalSpeacing(8),
-              Text(
-                "Follow up the Covid-19 epidemic in the world and the development of vaccines",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.getFont(
-                  "Roboto",
-                  textStyle: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: AppColor.simpleBgTextColor,
-                  ),
-                ),
-              ),
-              const VerticalSpeacing(32),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Column(
                 children: [
-                  Container(
-                    height: 10,
-                    width: 10,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColor.grayColor,
+                  Image.asset(
+                    'images/image2.png',
+                    height: 370,
+                    width: 370,
+                    fit: BoxFit.cover,
+                  ),
+                  Text(
+                    "Covid-19 Prevention",
+                    style: GoogleFonts.getFont(
+                      "Roboto",
+                      textStyle: const TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w900,
+                        color: AppColor.simpleBgTextColor,
+                      ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColor.simpleBgTextColor,
+                  const VerticalSpeacing(8),
+                  Text(
+                    "Follow up the Covid-19 epidemic in the world and the development of vaccines",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      "Roboto",
+                      textStyle: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                        color: AppColor.simpleBgTextColor,
+                      ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 8,
+                  const VerticalSpeacing(32),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.grayColor,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.simpleBgTextColor,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.grayColor,
+                        ),
+                      ),
+                    ],
                   ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColor.grayColor,
-                    ),
-                  ),
+                  const VerticalSpeacing(140),
+                  RoundedButton(
+                      title: 'Get Started',
+                      onpress: () {
+                        Navigator.pushNamed(
+                          context,
+                          RouteName.onBoarding3,
+                        );
+                      },
+                      bgColor: AppColor.linearBgbuttonColor,
+                      titleColor: AppColor.linearBgTextColor),
+                  const VerticalSpeacing(40),
                 ],
               ),
-              const VerticalSpeacing(140),
-              RoundedButton(
-                  title: 'Get Started',
-                  onpress: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.onBoarding3,
-                    );
-                  },
-                  bgColor: AppColor.linearBgbuttonColor,
-                  titleColor: AppColor.linearBgTextColor),
             ],
           ),
         )),

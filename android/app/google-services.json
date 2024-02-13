@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840638710221",
+    "project_id": "emos-fe671",
+    "storage_bucket": "emos-fe671.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840638710221:android:db818b178dc062f5788484",
+        "android_client_info": {
+          "package_name": "com.example.emos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHShSXsCiFlV1KKOLCmTKMIao_Dkp6zDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
