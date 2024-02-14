@@ -1,8 +1,8 @@
 // ignore_for_file: use_build_context_synchronously
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emos/components/loading_manager.dart';
 import 'package:emos/routes/routes_name.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../components/RoundedButton/rounded_button.dart';
@@ -38,11 +38,13 @@ class _RegisterViewState extends State<RegisterView> {
 
   bool _isLoading = false;
   void _submitFormOnRegister() async {
+    // Form validation... (same as before)
     final isValid = _formKey.currentState!.validate();
-    setState(() {
-      _isLoading = true;
-    });
+
     if (isValid) {
+      setState(() {
+        _isLoading = true;
+      });
       _formKey.currentState!.save();
       if (passwordController.text != confirmPasswordController.text) {
         Utils.toastMessage('Passwords do not match');
@@ -56,15 +58,18 @@ class _RegisterViewState extends State<RegisterView> {
           email: emailController.text.toLowerCase().trim(),
           password: passwordController.text.trim(),
         );
+
+        // Choose either Firestore or RTDB:
         final User? user = authInstance.currentUser;
         final uid = user!.uid;
-        await FirebaseFirestore.instance.collection('users').doc(uid).set({
+
+        await FirebaseDatabase.instance.ref().child('users').child(uid).set({
           'id': uid,
           'email': emailController.text.toLowerCase(),
-          'createdAt': Timestamp.now(),
+          'createdAt': ServerValue.timestamp, // Use server-side timestamp
         });
 
-        Navigator.pushNamed(context, RouteName.homeMenuView);
+        Navigator.pushNamed(context, RouteName.homeView);
         Utils.toastMessage('Successfully Registered');
       } on FirebaseException catch (e) {
         Utils.flushBarErrorMessage('${e.message}', context);
