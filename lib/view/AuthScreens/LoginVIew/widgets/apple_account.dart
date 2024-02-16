@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../res/GlobalColors/colors.dart';
 
-class SocialAccounts extends StatelessWidget {
-  const SocialAccounts({
+class AppleAccount extends StatelessWidget {
+  const AppleAccount({
     super.key,
     required this.img,
   });

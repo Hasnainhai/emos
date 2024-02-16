@@ -1,6 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 import 'package:emos/components/loading_manager.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/widgets/apple_account.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/widgets/facebook_account.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/widgets/google_account.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +14,6 @@ import '../../../components/appBarField/appBar_field.dart';
 import '../../../components/coustem_text_field/coustem_text_field.dart';
 import '../../../res/GlobalColors/colors.dart';
 import '../../../utils/utils.dart';
-import '../LoginVIew/widgets/socialAccounts.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -194,9 +196,9 @@ class _RegisterViewState extends State<RegisterView> {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SocialAccounts(img: 'images/google.png'),
-                        SocialAccounts(img: 'images/fb.png'),
-                        SocialAccounts(img: 'images/apple.png'),
+                        GoogleAccount(img: 'images/google.png'),
+                        FacebookAccount(img: 'images/fb.png'),
+                        AppleAccount(img: 'images/apple.png'),
                       ],
                     ),
                     const VerticalSpeacing(20.0),

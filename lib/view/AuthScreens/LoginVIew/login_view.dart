@@ -6,7 +6,9 @@ import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/components/loading_manager.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/AuthScreens/LoginVIew/widgets/socialAccounts.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/widgets/apple_account.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/widgets/facebook_account.dart';
+import 'package:emos/view/AuthScreens/LoginVIew/widgets/google_account.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -189,9 +191,9 @@ class _LoginViewState extends State<LoginView> {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SocialAccounts(img: 'images/google.png'),
-                        SocialAccounts(img: 'images/fb.png'),
-                        SocialAccounts(img: 'images/apple.png'),
+                        GoogleAccount(img: 'images/google.png'),
+                        FacebookAccount(img: 'images/fb.png'),
+                        AppleAccount(img: 'images/apple.png'),
                       ],
                     ),
                     const VerticalSpeacing(20.0),
