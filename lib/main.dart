@@ -6,7 +6,14 @@ import 'routes/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+   Firebase.initializeApp(
+      options: const FirebaseOptions(
+    apiKey: 'AIzaSyBHShSXsCiFlV1KKOLCmTKMIao_Dkp6zDY',
+    appId: '1:840638710221:android:db818b178dc062f5788484',
+    messagingSenderId: '840638710221',
+    projectId: 'emos-fe671',
+    databaseURL: 'LyzMbogfVNQRuumkB4aWEhxI08MRCOhXsA8GXIsi',
+  ));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
     (_) {
       runApp(
