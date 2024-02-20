@@ -3,7 +3,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emos/view/HomeView/HomeView.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -58,24 +57,24 @@ class _GoogleAccountState extends State<GoogleAccount> {
   }
 
   Future<void> _setupUserData(User user) async {
-    final uid = user.uid;
+    // final uid = user.uid;
 
     // realtime database
-    await FirebaseDatabase.instance.ref().child('users').child(uid).set({
-      'createdAt': FieldValue.serverTimestamp(),
-      'email': user.email,
-      'id': user.uid,
-      'name': user.displayName,
-      'profilePic': user.photoURL,
-    });
-    // firestore database
-    // await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+    // await FirebaseDatabase.instance.ref().child('users').child(uid).set({
     //   'createdAt': FieldValue.serverTimestamp(),
     //   'email': user.email,
     //   'id': user.uid,
     //   'name': user.displayName,
     //   'profilePic': user.photoURL,
     // });
+    // firestore database
+    await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+      'createdAt': FieldValue.serverTimestamp(),
+      'email': user.email,
+      'id': user.uid,
+      'name': user.displayName,
+      'profilePic': user.photoURL,
+    });
   }
 
   void _showSuccessMessage(BuildContext context) {
