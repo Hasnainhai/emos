@@ -127,10 +127,8 @@ class _HomeCareTabBarState extends State<HomeCareTabBar> {
                         unselectedLabelColor: AppColor.textColor2,
                         labelColor: AppColor.bgFillColor,
                         indicatorColor: AppColor.textColor2,
-                        indicatorPadding: EdgeInsets.only(
-                          left: 60,
-                          right: 60,
-                        ),
+                        indicatorPadding: EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5.0),
                         tabs: [
                           Tab(text: 'List View'),
                           Tab(text: 'Home Care View'),
