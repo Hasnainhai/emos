@@ -38,136 +38,135 @@ class _ChoseClinicPatientViewState extends State<ChoseClinicPatientView> {
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const VerticalSpeacing(30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const VerticalSpeacing(30.0),
 
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Icon(
-                        Icons.arrow_back_ios_new,
-                        color: AppColor.textColor,
-                        size: 18,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Text(
-                      "Step 1 of 3: Choose Patient",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.bgFillColor,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const VerticalSpeacing(30.0),
-
-                SizedBox(
-                  width: double.infinity,
-                  child: LinearProgressIndicator(
-                    value: progress,
-                    minHeight: 2,
-                    backgroundColor: AppColor.textColor2,
-                    valueColor: const AlwaysStoppedAnimation<Color>(
-                        AppColor.bgFillColor),
-                  ),
-                ),
-                const VerticalSpeacing(30.0),
-
-                Text(
-                  "Chose Patient",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
+              Row(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Icon(
+                      Icons.arrow_back_ios_new,
                       color: AppColor.textColor,
+                      size: 18,
                     ),
                   ),
-                ),
-                // const VerticalSpeacing(5.0),
-                Text(
-                  "Selection of family members",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: AppColor.bgFillColor,
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Text(
+                    "Step 1 of 3: Choose Patient",
+                    style: GoogleFonts.getFont(
+                      "Roboto",
+                      textStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: AppColor.bgFillColor,
+                      ),
                     ),
                   ),
+                ],
+              ),
+              const VerticalSpeacing(30.0),
+
+              SizedBox(
+                width: double.infinity,
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 2,
+                  backgroundColor: AppColor.textColor2,
+                  valueColor:
+                      const AlwaysStoppedAnimation<Color>(AppColor.bgFillColor),
                 ),
-                const VerticalSpeacing(16.0),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      first = !first;
-                      second = false;
-                    });
-                  },
-                  child: AddCard(
-                    name: 'Kaixa Pham',
-                    dob: '21-09-1995',
-                    person: 'Yourself',
-                    borderColor: first == true
-                        ? AppColor.bgFillColor
-                        : AppColor.textColor2,
+              ),
+              const VerticalSpeacing(30.0),
+
+              Text(
+                "Chose Patient",
+                style: GoogleFonts.getFont(
+                  "Roboto",
+                  textStyle: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: AppColor.textColor,
                   ),
                 ),
-                const VerticalSpeacing(16.0),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      second = !second;
-                      first = false;
-                    });
-                  },
-                  child: AddCard(
-                    name: 'Stephen Chow',
-                    dob: '12-11-1990',
-                    person: 'Brother',
-                    borderColor:
-                        second ? AppColor.bgFillColor : AppColor.textColor2,
+              ),
+              // const VerticalSpeacing(5.0),
+              Text(
+                "Selection of family members",
+                style: GoogleFonts.getFont(
+                  "Roboto",
+                  textStyle: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: AppColor.bgFillColor,
                   ),
                 ),
-                const VerticalSpeacing(16.0),
-                RoundedButton(
-                  title: 'Add New Depedent',
-                  onpress: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.adddependetview,
-                    );
-                  },
-                  bgColor: Colors.transparent,
-                  titleColor: AppColor.bgFillColor,
+              ),
+              const VerticalSpeacing(16.0),
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    first = !first;
+                    second = false;
+                  });
+                },
+                child: AddCard(
+                  name: 'Kaixa Pham',
+                  dob: '21-09-1995',
+                  person: 'Yourself',
+                  borderColor: first == true
+                      ? AppColor.bgFillColor
+                      : AppColor.textColor2,
                 ),
-                VerticalSpeacing(MediaQuery.of(context).size.height / 5.5),
-                RoundedButton(
-                  title: "Continue",
-                  onpress: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.clinictabbar,
-                    );
-                  },
-                  bgColor: AppColor.bgFillColor,
-                  titleColor: AppColor.simpleBgTextColor,
+              ),
+              const VerticalSpeacing(16.0),
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    second = !second;
+                    first = false;
+                  });
+                },
+                child: AddCard(
+                  name: 'Stephen Chow',
+                  dob: '12-11-1990',
+                  person: 'Brother',
+                  borderColor:
+                      second ? AppColor.bgFillColor : AppColor.textColor2,
                 ),
-              ],
-            ),
+              ),
+              const VerticalSpeacing(16.0),
+              RoundedButton(
+                title: 'Add New Depedent',
+                onpress: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.adddependetview,
+                  );
+                },
+                bgColor: Colors.transparent,
+                titleColor: AppColor.bgFillColor,
+              ),
+              const Spacer(),
+              RoundedButton(
+                title: "Continue",
+                onpress: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteName.clinictabbar,
+                  );
+                },
+                bgColor: AppColor.bgFillColor,
+                titleColor: AppColor.simpleBgTextColor,
+              ),
+              const VerticalSpeacing(12),
+            ],
           ),
         ),
       ),

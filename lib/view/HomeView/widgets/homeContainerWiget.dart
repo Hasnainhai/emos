@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:emos/view/HomeView/widgets/homeFeatureWidget.dart';
+import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../res/GlobalColors/colors.dart';
@@ -18,7 +19,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 301.0,
+      height: 320.0,
       width: 350.0,
       decoration: BoxDecoration(
         color: AppColor.whiteColor,
@@ -232,12 +233,21 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                     ),
                   ),
                 ),
-                child: const SizedBox(
+                child: SizedBox(
                   height: 60.0,
                   width: 108.0,
-                  child: HomeFeatures(
-                    img: 'images/radiology.png',
-                    name: 'Radiology',
+                  child: InkWell(
+                    onTap: () {
+                      debugPrint("Press Radiology");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (c) => SelectServiceView()));
+                    },
+                    child: const HomeFeatures(
+                      img: 'images/radiology.png',
+                      name: 'Radiology',
+                    ),
                   ),
                 ),
               ),
@@ -261,15 +271,28 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 100.0,
-                width: 115.0,
-                child: SizedBox(
-                  height: 60.0,
-                  width: 108.0,
-                  child: HomeFeatures(
-                    img: 'images/others.png',
-                    name: 'Other (soon)',
+              InkWell(
+                onTap: () {
+                  print("this is other button");
+                },
+                child: Container(
+                  height: 100.0,
+                  width: 115.0,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: AppColor.textFieldColor,
+                        width: 1.0,
+                      ),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    height: 60.0,
+                    width: 108.0,
+                    child: HomeFeatures(
+                      img: 'images/others.png',
+                      name: 'Other (soon)',
+                    ),
                   ),
                 ),
               ),

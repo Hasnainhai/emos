@@ -153,7 +153,7 @@ class _DrChosePatientViewState extends State<DrChosePatientView> {
                 bgColor: Colors.transparent,
                 titleColor: AppColor.bgFillColor,
               ),
-              VerticalSpeacing(MediaQuery.of(context).size.height / 5.5),
+              const Spacer(),
               RoundedButton(
                 title: "Continue",
                 onpress: () {
@@ -165,6 +165,7 @@ class _DrChosePatientViewState extends State<DrChosePatientView> {
                 bgColor: AppColor.bgFillColor,
                 titleColor: AppColor.simpleBgTextColor,
               ),
+              const VerticalSpeacing(12),
             ],
           ),
         ),

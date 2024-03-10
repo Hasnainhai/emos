@@ -128,7 +128,7 @@ class HosptialDetail extends StatelessWidget {
                   titleColor: AppColor.bgFillColor,
                 ),
               ),
-              const VerticalSpeacing(20),
+              const Spacer(),
               Row(
                 children: [
                   InkWell(
