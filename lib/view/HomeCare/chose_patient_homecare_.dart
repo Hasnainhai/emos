@@ -154,7 +154,7 @@ class _ChoseHomeCarePatientViewState extends State<ChoseHomeCarePatientView> {
                 bgColor: Colors.transparent,
                 titleColor: AppColor.bgFillColor,
               ),
-              VerticalSpeacing(MediaQuery.of(context).size.height / 5.5),
+              const Spacer(),
               RoundedButton(
                 title: "Continue",
                 onpress: () {
@@ -166,6 +166,7 @@ class _ChoseHomeCarePatientViewState extends State<ChoseHomeCarePatientView> {
                 bgColor: AppColor.bgFillColor,
                 titleColor: AppColor.simpleBgTextColor,
               ),
+              const VerticalSpeacing(12),
             ],
           ),
         ),
