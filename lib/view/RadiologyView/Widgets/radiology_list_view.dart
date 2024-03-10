@@ -15,7 +15,7 @@ class RadiologyView extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: (MediaQuery.of(context).size.height / 1.83) + 1.8,
+          height: (MediaQuery.of(context).size.height / 1.83) + 16,
           width: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
@@ -128,7 +128,7 @@ class RadiologyView extends StatelessWidget {
                   titleColor: AppColor.bgFillColor,
                 ),
               ),
-              const VerticalSpeacing(20),
+              const Spacer(),
               Row(
                 children: [
                   Container(

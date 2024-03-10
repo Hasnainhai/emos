@@ -128,10 +128,8 @@ class _RadiologyTabBarState extends State<RadiologyTabBar> {
                         unselectedLabelColor: AppColor.textColor2,
                         labelColor: AppColor.bgFillColor,
                         indicatorColor: AppColor.textColor2,
-                        indicatorPadding: EdgeInsets.only(
-                          left: 60,
-                          right: 60,
-                        ),
+                        indicatorPadding:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                         tabs: [
                           Tab(text: 'List View'),
                           Tab(text: 'Hospital View'),
@@ -173,15 +171,30 @@ class _RadiologyTabBarState extends State<RadiologyTabBar> {
                                       owner: "26 Government"),
                                   const VerticalSpeacing(20),
                                   RadiologyView(
-                                    fun: () {},
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
                                   ),
                                   const VerticalSpeacing(20),
                                   RadiologyView(
-                                    fun: () {},
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
                                   ),
                                   const VerticalSpeacing(20),
                                   RadiologyView(
-                                    fun: () {},
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
                                   ),
                                 ],
                               ),

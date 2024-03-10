@@ -17,7 +17,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final double tHeight = 374.0;
+  final double tHeight = 390.0;
   final double top = 301.0;
   // int _Page = 0;
   final iconList = <IconData>[
@@ -38,17 +38,17 @@ class _HomeViewState extends State<HomeView> {
             children: [
               _buildCoverBar(),
               Positioned(
-                top: 100.0,
+                top: MediaQuery.of(context).size.height / 30,
                 left: 0.0,
                 child: _buildProfile(),
               ),
               Positioned(
-                top: tHeight - top / 2 - 10,
+                top: tHeight - top / 1.2,
                 child: const HomeContainerWidget(),
               ),
             ],
           ),
-          const VerticalSpeacing(180.0),
+          const VerticalSpeacing(60.0),
           Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 20.0),
             child: Column(
@@ -255,7 +255,7 @@ class _HomeViewState extends State<HomeView> {
 
   _buildCoverBar() {
     return Container(
-      height: tHeight,
+      height: 390,
       width: double.infinity,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
