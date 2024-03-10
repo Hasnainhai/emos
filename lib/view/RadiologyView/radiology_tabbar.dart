@@ -132,7 +132,7 @@ class _RadiologyTabBarState extends State<RadiologyTabBar> {
                             EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                         tabs: [
                           Tab(text: 'List View'),
-                          Tab(text: 'Hospital View'),
+                          Tab(text: 'Radiology View'),
                         ],
                       ),
                       const VerticalSpeacing(30),
