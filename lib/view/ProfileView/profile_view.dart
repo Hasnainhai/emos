@@ -131,6 +131,15 @@ class ProfileView extends StatelessWidget {
                         icon: Icons.history,
                         title: 'Medical History',
                       ),
+                      const VerticalSpeacing(18.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.myBookingsView);
+                        },
+                        icon: Icons.book_online_outlined,
+                        title: 'My Bookings',
+                      ),
                       const VerticalSpeacing(36.0),
                     ],
                   ),
