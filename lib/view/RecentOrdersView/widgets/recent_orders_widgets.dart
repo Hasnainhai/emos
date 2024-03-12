@@ -31,11 +31,13 @@ class RecentOrdersWidget extends StatelessWidget {
                 height: 56.0,
                 width: 56.0,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    color: AppColor.bgFillColor,
-                    image: const DecorationImage(
-                        image: AssetImage('images/doctor.jpg'),
-                        fit: BoxFit.fill)),
+                  borderRadius: BorderRadius.circular(12.0),
+                  color: AppColor.bgFillColor,
+                  image: const DecorationImage(
+                    image: AssetImage('images/doctor.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
               title: Text(
                 'Sushan Sing',
