@@ -134,7 +134,7 @@ class ProfileView extends StatelessWidget {
                       ProfileWidgetFeatures(
                         ontap: () {
                           Navigator.pushNamed(
-                              context, RouteName.myBookingsView);
+                              context, RouteName.recentOrdersview);
                         },
                         icon: Icons.book_online_outlined,
                         title: 'My Bookings',

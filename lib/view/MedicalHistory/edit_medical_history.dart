@@ -1,6 +1,5 @@
+import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
-import 'package:emos/components/cardFieldCustom/card_field_custom.dart';
-import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,6 +25,7 @@ class EditMedicalHistory extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 20.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const VerticalSpeacing(40.0),
                 Row(
@@ -57,11 +57,89 @@ class EditMedicalHistory extends StatelessWidget {
                   ],
                 ),
                 const VerticalSpeacing(30.0),
-                const CardFieldCustom(maxLines: 0, text: 'Title'),
+                Text(
+                  'Date',
+                  textAlign: TextAlign.start,
+                  style: GoogleFonts.getFont(
+                    "Gothic A1",
+                    textStyle: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: AppColor.blackColor,
+                    ),
+                  ),
+                ),
+                const TextField(
+                  keyboardType: TextInputType.datetime,
+                  style: TextStyle(fontSize: 15),
+                  decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.calendar_month_outlined),
+                    hintText: 'Please enter date',
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: AppColor.bgFillColor,
+                      ),
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(10.0),
+                Text(
+                  'Title',
+                  textAlign: TextAlign.start,
+                  style: GoogleFonts.getFont(
+                    "Gothic A1",
+                    textStyle: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: AppColor.blackColor,
+                    ),
+                  ),
+                ),
+                const TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  style: TextStyle(fontSize: 15),
+                  decoration: InputDecoration(
+                    hintText: 'Please enter the title',
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: AppColor.bgFillColor,
+                      ),
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(10.0),
+                Text(
+                  'Description',
+                  textAlign: TextAlign.start,
+                  style: GoogleFonts.getFont(
+                    "Gothic A1",
+                    textStyle: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: AppColor.blackColor,
+                    ),
+                  ),
+                ),
                 const VerticalSpeacing(16.0),
-                const CardFieldCustom(maxLines: 5, text: 'Date of Check'),
-                const VerticalSpeacing(16.0),
-                const CardFieldCustom(maxLines: 0, text: 'Discription'),
+                const TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  style: TextStyle(fontSize: 15),
+                  decoration: InputDecoration(
+                    hintText: 'Please enter description',
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: AppColor.bgFillColor,
+                      ),
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(46.0),
+                RoundedButton(
+                  title: 'Save',
+                  onpress: () {},
+                  bgColor: AppColor.bgFillColor,
+                  titleColor: AppColor.whiteColor,
+                ),
               ],
             ),
           ),
