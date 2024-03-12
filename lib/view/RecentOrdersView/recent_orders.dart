@@ -59,7 +59,7 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                   ),
                   const SizedBox(width: 10.0),
                   Text(
-                    'Recent Orders',
+                    'My Orders',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -77,7 +77,7 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                 controller: _tabController,
 
                 tabs: const [
-                  Tab(text: 'All Orders'),
+                  Tab(text: 'All Appointments'),
                   Tab(text: 'Confirmed'),
                   Tab(text: 'Pending'),
                   Tab(text: 'Cancel'),
@@ -99,10 +99,8 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                 child: TabBarView(
                   controller: _tabController,
                   children: [
-                    // Content for 'All Orders'
-                    // Replace with your widget for 'All Orders'
                     Padding(
-                      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
