@@ -59,7 +59,7 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                   ),
                   const SizedBox(width: 10.0),
                   Text(
-                    'My Bookings',
+                    'Recent Orders',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -77,7 +77,7 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                 controller: _tabController,
 
                 tabs: const [
-                  Tab(text: 'All Appointments'),
+                  Tab(text: 'All Orders'),
                   Tab(text: 'Confirmed'),
                   Tab(text: 'Pending'),
                   Tab(text: 'Cancel'),
