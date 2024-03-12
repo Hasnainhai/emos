@@ -1,5 +1,6 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
+import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/MedicalHistory/Widgets/history_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,6 +53,20 @@ class MedicalHistoryView extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                             color: AppColor.textColor,
                           ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.editMedicalHistory);
+                        },
+                        child: const Icon(
+                          Icons.edit_outlined,
+                          color: AppColor.textColor,
+                          size: 20,
                         ),
                       ),
                     ],

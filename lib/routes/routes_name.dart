@@ -46,4 +46,5 @@ class RouteName {
   static const String choselaboratorytestview = ('/chose_laboratory_test_view');
   static const String cardInfotview = ('/card_info_view');
   static const String myBookingsView = ('/my_bookings_view');
+  static const String editMedicalHistory = ('/edit_medical_history');
 }
