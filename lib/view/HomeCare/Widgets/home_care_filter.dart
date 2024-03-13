@@ -48,7 +48,7 @@ class _HomeCareFilterState extends State<HomeCareFilter> {
                   width: MediaQuery.of(context).size.width / 5,
                 ),
                 Text(
-                  'Filter DR at Home',
+                  'Filter Home Care',
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
