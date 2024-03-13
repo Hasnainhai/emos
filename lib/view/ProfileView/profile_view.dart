@@ -8,7 +8,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -130,6 +129,15 @@ class ProfileView extends StatelessWidget {
                         },
                         icon: Icons.history,
                         title: 'Medical History',
+                      ),
+                      const VerticalSpeacing(18.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.recentOrdersview);
+                        },
+                        icon: Icons.book_online_outlined,
+                        title: 'My Bookings',
                       ),
                       const VerticalSpeacing(36.0),
                     ],

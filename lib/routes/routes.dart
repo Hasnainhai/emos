@@ -29,6 +29,7 @@ import 'package:emos/view/InformationView/information_screen.dart';
 import 'package:emos/view/LaboratoryView/Widgets/laboratory_filter.dart';
 import 'package:emos/view/LaboratoryView/chose_laboratory_test.dart';
 import 'package:emos/view/LaboratoryView/laboratory_tabbar.dart';
+import 'package:emos/view/MedicalHistory/edit_medical_history.dart';
 import 'package:emos/view/MedicalHistory/medical_history_view.dart';
 import 'package:emos/view/InvoicesView/invoices_view.dart';
 import 'package:emos/view/NotificationsViews/notifications_view.dart';
@@ -233,6 +234,10 @@ class Routes {
       case RouteName.drAtHomeFilterView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const DrAtHomeFilter(),
+          );
+      case RouteName.editMedicalHistory:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const EditMedicalHistory(),
         );
       default:
         return MaterialPageRoute(
