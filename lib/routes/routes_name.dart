@@ -49,4 +49,5 @@ class RouteName {
   static const String drAtHomeFilterView = ('/dr_at_home_filter_view');
   static const String myBookingsView = ('/my_bookings_view');
   static const String editMedicalHistory = ('/edit_medical_history');
+  static const String homeCareFilterView = ('/home_care_filter_view');
 }

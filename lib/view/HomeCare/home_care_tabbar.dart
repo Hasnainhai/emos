@@ -1,8 +1,8 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/HomeCare/Widgets/home_care_filter.dart';
 import 'package:emos/view/HomeCare/Widgets/home_care_list_view.dart';
-import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -78,7 +78,7 @@ class _HomeCareTabBarState extends State<HomeCareTabBar> {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) =>
-                                  const FilterHosptialPopup());
+                                  const HomeCareFilter());
                         },
                         child: const Icon(
                           Icons.format_list_bulleted_sharp,

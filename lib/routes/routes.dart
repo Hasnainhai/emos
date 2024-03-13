@@ -16,6 +16,7 @@ import 'package:emos/view/DrAtHomeView/dr_tabbar.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
 import 'package:emos/view/FamilyView/cardInfo.dart';
 import 'package:emos/view/FamilyView/family_view.dart';
+import 'package:emos/view/HomeCare/Widgets/home_care_filter.dart';
 import 'package:emos/view/HomeCare/chose_patient_homecare_.dart';
 import 'package:emos/view/HomeCare/home_care_tabbar.dart';
 import 'package:emos/view/HomeMenuView/menuView.dart';
@@ -234,10 +235,14 @@ class Routes {
       case RouteName.drAtHomeFilterView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const DrAtHomeFilter(),
-          );
+        );
       case RouteName.editMedicalHistory:
         return MaterialPageRoute(
           builder: (BuildContext context) => const EditMedicalHistory(),
+        );
+      case RouteName.homeCareFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareFilter(),
         );
       default:
         return MaterialPageRoute(
