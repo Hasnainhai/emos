@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, use_build_context_synchronously
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -50,10 +50,8 @@ class _FacebookAccountState extends State<FacebookAccount> {
       }
     } on FirebaseAuthException catch (e) {
       _handleFirebaseAuthException(e, context);
-      print('FirebaseAuthException: $e');
     } catch (e) {
       _handleGenericError(e, context);
-      print('Error: $e');
     }
   }
 

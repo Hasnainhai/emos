@@ -7,14 +7,14 @@ import 'package:emos/view/HosptialListView/Widgets/filter_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DrAtHomeFilter extends StatefulWidget {
-  const DrAtHomeFilter({super.key});
+class HomeCareFilter extends StatefulWidget {
+  const HomeCareFilter({super.key});
 
   @override
-  State<DrAtHomeFilter> createState() => _DrAtHomeFilterState();
+  State<HomeCareFilter> createState() => _HomeCareFilterState();
 }
 
-class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
+class _HomeCareFilterState extends State<HomeCareFilter> {
   bool first = true;
   bool second = false;
   bool third = false;
@@ -48,7 +48,7 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                   width: MediaQuery.of(context).size.width / 5,
                 ),
                 Text(
-                  'Filter DR at Home',
+                  'Filter Home Care',
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(

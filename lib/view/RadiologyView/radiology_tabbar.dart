@@ -3,6 +3,7 @@ import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:emos/view/HosptialListView/Widgets/owner.dart';
+import 'package:emos/view/RadiologyView/Widgets/radiology_filter.dart';
 import 'package:emos/view/RadiologyView/Widgets/radiology_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -79,7 +80,7 @@ class _RadiologyTabBarState extends State<RadiologyTabBar> {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) =>
-                                  const FilterHosptialPopup());
+                                  const RadiologyFilter());
                         },
                         child: const Icon(
                           Icons.format_list_bulleted_sharp,

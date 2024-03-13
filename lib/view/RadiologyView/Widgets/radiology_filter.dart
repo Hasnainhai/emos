@@ -7,14 +7,14 @@ import 'package:emos/view/HosptialListView/Widgets/filter_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DrAtHomeFilter extends StatefulWidget {
-  const DrAtHomeFilter({super.key});
+class RadiologyFilter extends StatefulWidget {
+  const RadiologyFilter({super.key});
 
   @override
-  State<DrAtHomeFilter> createState() => _DrAtHomeFilterState();
+  State<RadiologyFilter> createState() => _RadiologyFilterState();
 }
 
-class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
+class _RadiologyFilterState extends State<RadiologyFilter> {
   bool first = true;
   bool second = false;
   bool third = false;
@@ -48,7 +48,7 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                   width: MediaQuery.of(context).size.width / 5,
                 ),
                 Text(
-                  'Filter DR at Home',
+                  'Filter Radiology',
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -66,7 +66,7 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Filter by Specialist',
+                    'Filter by Tests',
                     style: GoogleFonts.getFont(
                       "Roboto",
                       textStyle: const TextStyle(
@@ -90,7 +90,7 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                             fillColor: first
                                 ? AppColor.bgFillColor
                                 : Colors.transparent,
-                            text: "Endocrinology",
+                            text: "X-Ray",
                             textColor: first
                                 ? AppColor.whiteColor
                                 : AppColor.bgFillColor),
@@ -105,7 +105,7 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                             fillColor: second
                                 ? AppColor.bgFillColor
                                 : Colors.transparent,
-                            text: "Neurologist",
+                            text: "CT-Scan",
                             textColor: second
                                 ? AppColor.whiteColor
                                 : AppColor.bgFillColor),
@@ -126,7 +126,7 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                             fillColor: third
                                 ? AppColor.bgFillColor
                                 : Colors.transparent,
-                            text: "Dermatologist",
+                            text: "MRI",
                             textColor: third
                                 ? AppColor.whiteColor
                                 : AppColor.bgFillColor),
@@ -141,79 +141,8 @@ class _DrAtHomeFilterState extends State<DrAtHomeFilter> {
                             fillColor: fourth
                                 ? AppColor.bgFillColor
                                 : Colors.transparent,
-                            text: "Pediatrician",
+                            text: "2D-Echo",
                             textColor: fourth
-                                ? AppColor.whiteColor
-                                : AppColor.bgFillColor),
-                      ),
-                    ],
-                  ),
-                  const VerticalSpeacing(16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            fifth = !fifth;
-                          });
-                        },
-                        child: HosptialFilterButton(
-                            fillColor: fifth
-                                ? AppColor.bgFillColor
-                                : Colors.transparent,
-                            text: "Psychiatrist",
-                            textColor: fifth
-                                ? AppColor.whiteColor
-                                : AppColor.bgFillColor),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            fifth = !fifth;
-                          });
-                        },
-                        child: HosptialFilterButton(
-                            fillColor:
-                                six ? AppColor.bgFillColor : Colors.transparent,
-                            text: "Gastroenterology",
-                            textColor: six
-                                ? AppColor.whiteColor
-                                : AppColor.bgFillColor),
-                      ),
-                    ],
-                  ),
-                  const VerticalSpeacing(16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            seven = !seven;
-                          });
-                        },
-                        child: HosptialFilterButton(
-                            fillColor: seven
-                                ? AppColor.bgFillColor
-                                : Colors.transparent,
-                            text: "Cardiologist",
-                            textColor: seven
-                                ? AppColor.whiteColor
-                                : AppColor.bgFillColor),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            eight = !eight;
-                          });
-                        },
-                        child: HosptialFilterButton(
-                            fillColor: eight
-                                ? AppColor.bgFillColor
-                                : Colors.transparent,
-                            text: "Ophthalmologist",
-                            textColor: eight
                                 ? AppColor.whiteColor
                                 : AppColor.bgFillColor),
                       ),
