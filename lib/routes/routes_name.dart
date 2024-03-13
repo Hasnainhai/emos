@@ -45,4 +45,5 @@ class RouteName {
   static const String laboratorytabbar = ('/laboratory_tabbar_view');
   static const String choselaboratorytestview = ('/chose_laboratory_test_view');
   static const String cardInfotview = ('/card_info_view');
+  static const String laboratoryFilterView = ('/laboratory_filter_view');
 }

@@ -25,6 +25,7 @@ import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
 import 'package:emos/view/InformationView/information_screen.dart';
+import 'package:emos/view/LaboratoryView/Widgets/laboratory_filter.dart';
 import 'package:emos/view/LaboratoryView/chose_laboratory_test.dart';
 import 'package:emos/view/LaboratoryView/laboratory_tabbar.dart';
 import 'package:emos/view/MedicalHistory/medical_history_view.dart';
@@ -220,9 +221,13 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChoseLaboratoryTestView(),
         );
-          case RouteName.cardInfotview:
+      case RouteName.cardInfotview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const CardInfoView(),
+        );
+      case RouteName.laboratoryFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LaboratoryFilter(),
         );
       default:
         return MaterialPageRoute(
