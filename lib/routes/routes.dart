@@ -7,6 +7,7 @@ import 'package:emos/view/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos/view/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos/view/CallView/call_view.dart';
 import 'package:emos/view/ChattingView/chatting_view.dart';
+import 'package:emos/view/ClinicView/Widgets/clinic_filter_view.dart';
 import 'package:emos/view/ClinicView/chose_clinic_patient_view.dart';
 import 'package:emos/view/ClinicView/clinic_tabbar.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
@@ -40,6 +41,7 @@ import 'package:emos/view/OnBoardingScreens/onBoarding3.dart';
 import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
+import 'package:emos/view/RadiologyView/Widgets/radiology_filter.dart';
 import 'package:emos/view/RadiologyView/radiology_tabbar.dart';
 import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:emos/view/RatingView/rating_view.dart';
@@ -243,6 +245,14 @@ class Routes {
       case RouteName.homeCareFilterView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const HomeCareFilter(),
+        );
+      case RouteName.clinicFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ClinicFilter(),
+        );
+      case RouteName.radiologyFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyFilter(),
         );
       default:
         return MaterialPageRoute(

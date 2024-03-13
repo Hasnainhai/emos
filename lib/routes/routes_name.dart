@@ -50,4 +50,6 @@ class RouteName {
   static const String myBookingsView = ('/my_bookings_view');
   static const String editMedicalHistory = ('/edit_medical_history');
   static const String homeCareFilterView = ('/home_care_filter_view');
+  static const String clinicFilterView = ('/Clinic_filter_view');
+  static const String radiologyFilterView = ('/Radiology_filter_view');
 }
