@@ -10,6 +10,7 @@ import 'package:emos/view/ChattingView/chatting_view.dart';
 import 'package:emos/view/ClinicView/chose_clinic_patient_view.dart';
 import 'package:emos/view/ClinicView/clinic_tabbar.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
+import 'package:emos/view/DrAtHomeView/Widgets/dr-at-home-filter.dart';
 import 'package:emos/view/DrAtHomeView/dr_chose_patient_view.dart';
 import 'package:emos/view/DrAtHomeView/dr_tabbar.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
@@ -228,6 +229,10 @@ class Routes {
       case RouteName.laboratoryFilterView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const LaboratoryFilter(),
+        );
+      case RouteName.drAtHomeFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const DrAtHomeFilter(),
         );
       default:
         return MaterialPageRoute(
