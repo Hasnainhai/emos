@@ -1,6 +1,7 @@
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/view/DrAtHomeView/Widgets/dr-at-home-filter.dart';
 import 'package:emos/view/DrAtHomeView/Widgets/dr_list_view.dart';
 import 'package:emos/view/HosptialListView/filter_hosptial.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,7 @@ class _ClinicTabBarState extends State<DrTabBarView> {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) =>
-                                  const FilterHosptialPopup());
+                                  const DrAtHomeFilter());
                         },
                         child: const Icon(
                           Icons.format_list_bulleted_sharp,

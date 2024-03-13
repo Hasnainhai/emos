@@ -10,6 +10,7 @@ import 'package:emos/view/ChattingView/chatting_view.dart';
 import 'package:emos/view/ClinicView/chose_clinic_patient_view.dart';
 import 'package:emos/view/ClinicView/clinic_tabbar.dart';
 import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
+import 'package:emos/view/DrAtHomeView/Widgets/dr-at-home-filter.dart';
 import 'package:emos/view/DrAtHomeView/dr_chose_patient_view.dart';
 import 'package:emos/view/DrAtHomeView/dr_tabbar.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
@@ -25,6 +26,7 @@ import 'package:emos/view/HosptialListView/hosptial_tab_bar.dart';
 import 'package:emos/view/HosptialView/detail_hosptial_view.dart';
 import 'package:emos/view/HosptialView/find_hosptial.dart';
 import 'package:emos/view/InformationView/information_screen.dart';
+import 'package:emos/view/LaboratoryView/Widgets/laboratory_filter.dart';
 import 'package:emos/view/LaboratoryView/chose_laboratory_test.dart';
 import 'package:emos/view/LaboratoryView/laboratory_tabbar.dart';
 import 'package:emos/view/MedicalHistory/edit_medical_history.dart';
@@ -225,6 +227,14 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const CardInfoView(),
         );
+      case RouteName.laboratoryFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LaboratoryFilter(),
+        );
+      case RouteName.drAtHomeFilterView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const DrAtHomeFilter(),
+          );
       case RouteName.editMedicalHistory:
         return MaterialPageRoute(
           builder: (BuildContext context) => const EditMedicalHistory(),

@@ -2,6 +2,7 @@ import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/HosptialListView/filter_hosptial.dart';
+import 'package:emos/view/LaboratoryView/Widgets/laboratory_filter.dart';
 import 'package:emos/view/LaboratoryView/Widgets/laboratory_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -78,7 +79,7 @@ class _LaboratoryViewState extends State<LaboratoryTabBar> {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) =>
-                                  const FilterHosptialPopup());
+                                  const LaboratoryFilter());
                         },
                         child: const Icon(
                           Icons.format_list_bulleted_sharp,
