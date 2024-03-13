@@ -120,7 +120,7 @@ class RecentOrdersWidget extends StatelessWidget {
                     ),
                   ),
                 ])),
-            VerticalSpeacing(16.0),
+            const VerticalSpeacing(16.0),
           ],
         ),
       ),

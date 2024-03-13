@@ -242,7 +242,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (c) => SelectServiceView()));
+                              builder: (c) => const SelectServiceView()));
                     },
                     child: const HomeFeatures(
                       img: 'images/radiology.png',
@@ -272,9 +272,7 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                 ),
               ),
               InkWell(
-                onTap: () {
-                  print("this is other button");
-                },
+                onTap: () {},
                 child: Container(
                   height: 100.0,
                   width: 115.0,
