@@ -30,7 +30,6 @@ import 'package:emos/view/LaboratoryView/laboratory_tabbar.dart';
 import 'package:emos/view/MedicalHistory/edit_medical_history.dart';
 import 'package:emos/view/MedicalHistory/medical_history_view.dart';
 import 'package:emos/view/InvoicesView/invoices_view.dart';
-import 'package:emos/view/MyBookings/my_bookings.dart';
 import 'package:emos/view/NotificationsViews/notifications_view.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding1.dart';
 import 'package:emos/view/OnBoardingScreens/onBoarding2.dart';
@@ -225,10 +224,6 @@ class Routes {
       case RouteName.cardInfotview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const CardInfoView(),
-        );
-      case RouteName.myBookingsView:
-        return MaterialPageRoute(
-          builder: (BuildContext context) => const MyBookingsView(),
         );
       case RouteName.editMedicalHistory:
         return MaterialPageRoute(
