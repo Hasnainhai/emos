@@ -189,11 +189,10 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     const VerticalSpeacing(20.0),
                     const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         GoogleAccount(img: 'images/google.png'),
                         FacebookAccount(img: 'images/fb.png'),
-                        AppleAccount(img: 'images/apple.png'),
                       ],
                     ),
                     const VerticalSpeacing(20.0),

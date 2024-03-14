@@ -2,6 +2,7 @@ import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
+import 'package:emos/utils/utils.dart';
 import 'package:emos/view/HosptialListView/Widgets/clander.dart';
 import 'package:emos/view/HosptialListView/Widgets/selected_hosptial_card.dart';
 import 'package:emos/view/HosptialListView/Widgets/time_container.dart';
@@ -584,14 +585,7 @@ class _BookHosptialApointmentViewState
                 RoundedButton(
                   title: "Continue",
                   onpress: () {
-                    // showDialog(
-                    //     context: context,
-                    //     builder: (BuildContext context) =>
-                    //         const ApointmenDonetPopup());
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.chosepaymentmethodview,
-                    );
+                    _showRequestPopup(context);
                   },
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
@@ -601,6 +595,38 @@ class _BookHosptialApointmentViewState
           ),
         ),
       ),
+    );
+  }
+
+  void _showRequestPopup(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Request has been placed'),
+          content: const Text('Would you like to view your booking?'),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RoundedButton(
+                  title: 'View Booking',
+                  onpress: () {
+                    Navigator.pushNamed(context, RouteName.recentOrdersview);
+                  },
+                  bgColor: AppColor.bgFillColor,
+                  titleColor: AppColor.whiteColor),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RoundedButton(
+                  title: 'Cancel',
+                  onpress: () {},
+                  bgColor: AppColor.bgFillColor,
+                  titleColor: AppColor.whiteColor),
+            ),
+          ],
+        );
+      },
     );
   }
 }

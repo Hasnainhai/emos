@@ -78,7 +78,7 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
 
                 tabs: const [
                   Tab(text: 'All Appointments'),
-                  Tab(text: 'Confirmed'),
+                  Tab(text: 'Payment'),
                   Tab(text: 'Pending'),
                   Tab(text: 'Cancel'),
                 ],
@@ -104,9 +104,15 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
-                            const RecentOrdersWidget(
-                                btnBgColor: Color(0xff4DDD59),
-                                btnTxt: 'Confirmed'),
+                            InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, RouteName.chosepaymentmethodview);
+                              },
+                              child: const RecentOrdersWidget(
+                                  btnBgColor: Color(0xff4DDD59),
+                                  btnTxt: 'Payment'),
+                            ),
                             const RecentOrdersWidget(
                                 btnBgColor: Color(0xffFEAA48),
                                 btnTxt: 'Pending'),
@@ -136,16 +142,16 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                           children: [
                             const RecentOrdersWidget(
                                 btnBgColor: Color(0xff4DDD59),
-                                btnTxt: 'Confirmed'),
+                                btnTxt: 'Payment'),
                             const RecentOrdersWidget(
                                 btnBgColor: Color(0xff4DDD59),
-                                btnTxt: 'Confirmed'),
+                                btnTxt: 'Payment'),
                             const RecentOrdersWidget(
                                 btnBgColor: Color(0xff4DDD59),
-                                btnTxt: 'Confirmed'),
+                                btnTxt: 'Payment'),
                             const RecentOrdersWidget(
                                 btnBgColor: Color(0xff4DDD59),
-                                btnTxt: 'Confirmed'),
+                                btnTxt: 'Payment'),
                             RoundedButton(
                               title: 'Load More',
                               onpress: () {},
