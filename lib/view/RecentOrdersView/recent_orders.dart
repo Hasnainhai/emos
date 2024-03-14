@@ -133,8 +133,8 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                       ),
                     ),
 
-                    // Content for 'Confirmed'
-                    // Replace with your widget for 'Confirmed'
+                    // Content for 'Payment'
+                    // Replace with your widget for 'Payment'
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                       child: SingleChildScrollView(

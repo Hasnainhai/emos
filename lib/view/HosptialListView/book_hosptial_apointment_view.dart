@@ -2,7 +2,6 @@ import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/utils/utils.dart';
 import 'package:emos/view/HosptialListView/Widgets/clander.dart';
 import 'package:emos/view/HosptialListView/Widgets/selected_hosptial_card.dart';
 import 'package:emos/view/HosptialListView/Widgets/time_container.dart';

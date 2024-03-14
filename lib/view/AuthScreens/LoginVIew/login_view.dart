@@ -6,7 +6,6 @@ import 'package:emos/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos/components/loading_manager.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
-import 'package:emos/view/AuthScreens/LoginVIew/widgets/apple_account.dart';
 import 'package:emos/view/AuthScreens/LoginVIew/widgets/facebook_account.dart';
 import 'package:emos/view/AuthScreens/LoginVIew/widgets/google_account.dart';
 import 'package:firebase_auth/firebase_auth.dart';
