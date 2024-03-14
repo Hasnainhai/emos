@@ -156,7 +156,7 @@ class _ChosePaymentMethodViewState extends State<ChosePaymentMethodView> {
                   bgColor: AppColor.whiteColor,
                   titleColor: AppColor.bgFillColor,
                 ),
-                const VerticalSpeacing(250),
+                const Spacer(),
                 RoundedButton(
                   title: "Continue",
                   onpress: () {
@@ -168,6 +168,7 @@ class _ChosePaymentMethodViewState extends State<ChosePaymentMethodView> {
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
                 ),
+                const VerticalSpeacing(12),
               ],
             ),
           ),
