@@ -143,32 +143,6 @@ class _RadiologyTabBarState extends State<RadiologyTabBar> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "147 Hospital Founded",
-                                    style: GoogleFonts.getFont(
-                                      "Roboto",
-                                      textStyle: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        color: AppColor.textColor2,
-                                      ),
-                                    ),
-                                  ),
-                                  const VerticalSpeacing(8),
-                                  Row(
-                                    children: [
-                                      OwnerWidget(
-                                          circleColor: const Color(0xff5ABF24),
-                                          owner: "79 Government"),
-                                      OwnerWidget(
-                                          circleColor: const Color(0xffFD586B),
-                                          owner: "54 Government"),
-                                    ],
-                                  ),
-                                  const VerticalSpeacing(8),
-                                  OwnerWidget(
-                                      circleColor: const Color(0xffFEAA48),
-                                      owner: "26 Government"),
                                   const VerticalSpeacing(20),
                                   RadiologyView(
                                     fun: () {
