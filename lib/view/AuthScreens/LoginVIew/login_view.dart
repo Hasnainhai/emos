@@ -196,52 +196,53 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     const VerticalSpeacing(20.0),
                     Align(
-                        alignment: Alignment.center,
-                        child: RichText(
-                          text: TextSpan(
-                            text: "Don't have an account?  ",
-                            style: GoogleFonts.getFont(
-                              "Roboto",
-                              textStyle: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: AppColor.textColor2,
-                              ),
+                      alignment: Alignment.center,
+                      child: RichText(
+                        text: TextSpan(
+                          text: "Don't have an account?  ",
+                          style: GoogleFonts.getFont(
+                            "Roboto",
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColor.textColor2,
                             ),
-                            children: [
-                              WidgetSpan(
-                                child: Container(
-                                  padding: const EdgeInsets.only(bottom: 2.0),
-                                  decoration: const BoxDecoration(
-                                    border: Border(
-                                      bottom: BorderSide(
-                                        color: AppColor.simpleBgbuttonColor,
-                                        width: 2.0,
-                                      ),
+                          ),
+                          children: [
+                            WidgetSpan(
+                              child: Container(
+                                padding: const EdgeInsets.only(bottom: 2.0),
+                                decoration: const BoxDecoration(
+                                  border: Border(
+                                    bottom: BorderSide(
+                                      color: AppColor.simpleBgbuttonColor,
+                                      width: 2.0,
                                     ),
                                   ),
-                                  child: InkWell(
-                                    onTap: () {
-                                      Navigator.pushNamed(
-                                          context, RouteName.registerView);
-                                    },
-                                    child: Text(
-                                      'Register',
-                                      style: GoogleFonts.getFont(
-                                        "Roboto",
-                                        textStyle: const TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w800,
-                                          color: AppColor.simpleBgbuttonColor,
-                                        ),
+                                ),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.pushNamed(
+                                        context, RouteName.registerView);
+                                  },
+                                  child: Text(
+                                    'Register',
+                                    style: GoogleFonts.getFont(
+                                      "Roboto",
+                                      textStyle: const TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w800,
+                                        color: AppColor.simpleBgbuttonColor,
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
-                        )),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
