@@ -39,7 +39,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           IconButton(
-            icon: const Icon(Icons.home_rounded),
+            icon: const ImageIcon(AssetImage("images/home.png")),
             color:
                 isSelected[0] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
@@ -50,9 +50,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             },
           ),
           IconButton(
-            icon: const Icon(
-              Icons.message_rounded,
-            ),
+            icon: const ImageIcon(AssetImage("images/chat.png")),
             color:
                 isSelected[1] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
@@ -66,24 +64,24 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           Container(
             width: 60,
             height: 60,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              color: isSelected[2] ? Colors.redAccent : Colors.red,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.5),
-                  offset: const Offset(0, 3),
-                  blurRadius: 6,
-                  spreadRadius: 2,
-                ),
-              ],
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFFB81717),
+                  Color(0xffDF5353), // Center color
+                  Color(0xFFA10F0F),
+                ],
+                stops: [0.0, 0.5, 1.0], // Position of each color
+              ),
             ),
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.wb_twilight_outlined,
                 size: 36.0,
-                color:
-                    isSelected[2] ? AppColor.bgFillColor : AppColor.whiteColor,
+                color: AppColor.whiteColor,
               ),
               onPressed: () {
                 widget.onTap(2);
@@ -95,7 +93,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             ),
           ),
           IconButton(
-            icon: const Icon(Icons.notifications_outlined),
+            icon: const ImageIcon(AssetImage("images/notification.png")),
             color:
                 isSelected[3] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
@@ -107,9 +105,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.menu),
-            color:
-                isSelected[4] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            icon: const ImageIcon(AssetImage("images/menu.png")),
+            color: AppColor.bottomIconColor,
             onPressed: () {
               widget.onTap(4);
               setState(() {
