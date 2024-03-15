@@ -50,9 +50,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             },
           ),
           IconButton(
-            icon: const Icon(
-              Icons.message_rounded,
-            ),
+            icon: const ImageIcon(AssetImage("images/chat.png")),
             color:
                 isSelected[1] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
@@ -95,7 +93,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             ),
           ),
           IconButton(
-            icon: const Icon(Icons.notifications_outlined),
+            icon: const ImageIcon(AssetImage("images/notification.png")),
             color:
                 isSelected[3] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {
@@ -107,9 +105,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.menu),
-            color:
-                isSelected[4] ? AppColor.bgFillColor : AppColor.bottomIconColor,
+            icon: const ImageIcon(AssetImage("images/menu.png")),
+            color: AppColor.bottomIconColor,
             onPressed: () {
               widget.onTap(4);
               setState(() {
