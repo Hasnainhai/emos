@@ -100,7 +100,8 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                   controller: _tabController,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                      padding: const EdgeInsets.only(
+                          left: 10.0, right: 10.0, bottom: 12),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
@@ -212,12 +213,14 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
                             const RecentOrdersWidget(
                                 btnBgColor: Color(0xffFD586B),
                                 btnTxt: 'Cancel'),
+                            const VerticalSpeacing(12),
                             RoundedButton(
                               title: 'Load More',
                               onpress: () {},
                               bgColor: Colors.transparent,
                               titleColor: AppColor.linearBgTextColor,
                             ),
+                            const VerticalSpeacing(12),
                           ],
                         ),
                       ),

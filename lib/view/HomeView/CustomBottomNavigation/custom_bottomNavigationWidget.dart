@@ -35,11 +35,15 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   Widget build(BuildContext context) {
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
+      color: AppColor.whiteColor,
+      elevation: 0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           IconButton(
-            icon: const ImageIcon(AssetImage("images/home.png")),
+            icon: const ImageIcon(AssetImage(
+              "images/home.png",
+            )),
             color:
                 isSelected[0] ? AppColor.bgFillColor : AppColor.bottomIconColor,
             onPressed: () {

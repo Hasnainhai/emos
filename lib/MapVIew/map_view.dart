@@ -44,8 +44,8 @@ class MapConfigView extends StatelessWidget {
                         indicatorPadding:
                             EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                         tabs: [
-                          Tab(text: 'Hosptial'),
-                          Tab(text: 'Clinic'),
+                          Tab(text: 'Hosptial/Clinic'),
+                          Tab(text: 'Map View'),
                         ],
                       ),
                       const VerticalSpeacing(20),
@@ -66,6 +66,24 @@ class MapConfigView extends StatelessWidget {
                                     },
                                   ),
                                   const VerticalSpeacing(20),
+                                  ClinicListView(
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
+                                  ),
+                                  const VerticalSpeacing(20),
+                                  ClinicListView(
+                                    fun: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        RouteName.bookhosptialapointmentview,
+                                      );
+                                    },
+                                  ),
+                                  const VerticalSpeacing(20),
                                   HosptialDetail(
                                     fun: () {
                                       Navigator.pushNamed(
@@ -83,22 +101,6 @@ class MapConfigView extends StatelessWidget {
                                       );
                                     },
                                   ),
-                                ],
-                              ),
-                            ),
-                            SingleChildScrollView(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const VerticalSpeacing(20),
-                                  ClinicListView(
-                                    fun: () {
-                                      Navigator.pushNamed(
-                                        context,
-                                        RouteName.bookhosptialapointmentview,
-                                      );
-                                    },
-                                  ),
                                   const VerticalSpeacing(20),
                                   ClinicListView(
                                     fun: () {
@@ -120,6 +122,7 @@ class MapConfigView extends StatelessWidget {
                                 ],
                               ),
                             ),
+                            const Center(child: Text("Map Here"))
                           ],
                         ),
                       ),

@@ -17,6 +17,8 @@ class RecentOrdersWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: Colors.white,
+      shadowColor: Colors.white,
+      elevation: 0,
       shape: RoundedRectangleBorder(
         side: const BorderSide(color: AppColor.bgFillColor, width: 1),
         borderRadius: BorderRadius.circular(8),

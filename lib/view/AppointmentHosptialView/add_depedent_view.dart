@@ -24,164 +24,168 @@ class _AddDependetViewState extends State<AddDependetView> {
         elevation: 0.0,
         automaticallyImplyLeading: false,
       ),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          color: AppColor.whiteColor,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(50.0),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const VerticalSpeacing(30.0),
-                AppBarField(
-                  ontap: () {
-                    Navigator.pop(context);
-                  },
-                ),
-                const VerticalSpeacing(32.0),
-                Text(
-                  "Enter Patient information",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+      body: Stack(
+        children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              color: AppColor.whiteColor,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(50.0),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const VerticalSpeacing(30.0),
+                    AppBarField(
+                      ontap: () {
+                        Navigator.pop(context);
+                      },
                     ),
-                  ),
-                ),
-                const VerticalSpeacing(24.0),
-                CircleAvatar(
-                  radius: 36,
-                  backgroundColor: AppColor.circularAvatarColor,
-                  child: Center(
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.camera_alt_outlined,
-                          color: AppColor.bgFillColor,
-                        )),
-                  ),
-                ),
-                const VerticalSpeacing(32.0),
-                Text(
-                  "First Name*",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                    const VerticalSpeacing(32.0),
+                    Text(
+                      "Enter Patient information",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  maxLines: 1,
-                  hintText: "Enter your first name...",
-                ),
-                const VerticalSpeacing(
-                  20,
-                ),
-                Text(
-                  "Last Name*",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                    const VerticalSpeacing(24.0),
+                    CircleAvatar(
+                      radius: 36,
+                      backgroundColor: AppColor.circularAvatarColor,
+                      child: Center(
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.camera_alt_outlined,
+                              color: AppColor.bgFillColor,
+                            )),
+                      ),
                     ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  maxLines: 1,
-                  hintText: "Enter your last name...",
-                ),
-                const VerticalSpeacing(
-                  20,
-                ),
-                Text(
-                  "Date Of Birth*",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                    const VerticalSpeacing(32.0),
+                    Text(
+                      "First Name*",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                TextFieldCustom(
-                  enableSuffixIcon: true,
-                  maxLines: 1,
-                  suffixFunction: () {
-                    debugPrint("this is clander button");
-                  },
-                  suffixIcon: Icons.calendar_month_outlined,
-                  hintText: "DD/MM/YYYY",
-                ),
-                const VerticalSpeacing(
-                  20,
-                ),
-                Text(
-                  "Email*",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                    const TextFieldCustom(
+                      maxLines: 1,
+                      hintText: "Enter your first name...",
                     ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  maxLines: 1,
-                  hintText: "Enter your email address...",
-                ),
-                const VerticalSpeacing(
-                  20,
-                ),
-                Text(
-                  "Address*",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                    const VerticalSpeacing(
+                      20,
                     ),
-                  ),
+                    Text(
+                      "Last Name*",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    const TextFieldCustom(
+                      maxLines: 1,
+                      hintText: "Enter your last name...",
+                    ),
+                    const VerticalSpeacing(
+                      20,
+                    ),
+                    Text(
+                      "Date Of Birth*",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    TextFieldCustom(
+                      enableSuffixIcon: true,
+                      maxLines: 1,
+                      suffixFunction: () {
+                        debugPrint("this is clander button");
+                      },
+                      suffixIcon: Icons.calendar_month_outlined,
+                      hintText: "DD/MM/YYYY",
+                    ),
+                    const VerticalSpeacing(
+                      20,
+                    ),
+                    Text(
+                      "Email*",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    const TextFieldCustom(
+                      maxLines: 1,
+                      hintText: "Enter your email address...",
+                    ),
+                    const VerticalSpeacing(
+                      20,
+                    ),
+                    Text(
+                      "Address*",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    const TextFieldCustom(
+                      maxLines: 1,
+                      hintText: "Enter your address...",
+                    ),
+                    const VerticalSpeacing(
+                      20,
+                    ),
+                    RoundedButton(
+                      title: 'Save',
+                      onpress: () {
+                        Navigator.pushNamed(
+                          context,
+                          RouteName.chosepatiantview,
+                        );
+                      },
+                      bgColor: AppColor.simpleBgbuttonColor,
+                      titleColor: AppColor.simpleBgTextColor,
+                    ),
+                    const VerticalSpeacing(20.0),
+                  ],
                 ),
-                const TextFieldCustom(
-                  maxLines: 1,
-                  hintText: "Enter your address...",
-                ),
-                const VerticalSpeacing(
-                  20,
-                ),
-                RoundedButton(
-                  title: 'Save',
-                  onpress: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.chosepatiantview,
-                    );
-                  },
-                  bgColor: AppColor.simpleBgbuttonColor,
-                  titleColor: AppColor.simpleBgTextColor,
-                ),
-                const VerticalSpeacing(20.0),
-              ],
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }

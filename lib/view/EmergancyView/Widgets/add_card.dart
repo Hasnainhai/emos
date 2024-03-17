@@ -20,15 +20,8 @@ class AddCard extends StatelessWidget {
       height: 120,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xff000000).withOpacity(0.1),
-            blurRadius: 20,
-            offset: const Offset(0, 6),
-          ),
-        ],
         borderRadius: BorderRadius.circular(16),
-        color:  Colors.transparent,
+        color: Colors.transparent,
         border: Border.all(color: borderColor, width: 1.5),
       ),
       child: Padding(
