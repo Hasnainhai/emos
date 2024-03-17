@@ -36,6 +36,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
       color: AppColor.whiteColor,
+      elevation: 0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
