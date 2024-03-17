@@ -307,7 +307,7 @@ class _HomeViewState extends State<HomeView> {
         const SizedBox(width: 20.0),
         Text.rich(
           TextSpan(
-            text: 'Rani Singh, \n',
+            text: 'Dummy \n',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(

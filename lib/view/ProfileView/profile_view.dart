@@ -44,7 +44,7 @@ class ProfileView extends StatelessWidget {
           ),
           const VerticalSpeacing(12.0),
           Text(
-            'Rani Singh',
+            'Dummy',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
