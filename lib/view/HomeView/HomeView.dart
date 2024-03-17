@@ -280,7 +280,7 @@ class _HomeViewState extends State<HomeView> {
             const CircleAvatar(
               radius: 40,
               backgroundImage: NetworkImage(
-                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                'https://www.w3schools.com/howto/img_avatar2.png',
               ),
             ),
             Positioned(
@@ -307,7 +307,7 @@ class _HomeViewState extends State<HomeView> {
         const SizedBox(width: 20.0),
         Text.rich(
           TextSpan(
-            text: 'Hi Hiren, \n',
+            text: 'Rani Singh, \n',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
