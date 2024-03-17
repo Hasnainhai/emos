@@ -6,7 +6,7 @@ import 'routes/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp(
+  await Firebase.initializeApp(
       //     options: const FirebaseOptions(
       //   apiKey: 'AIzaSyBHShSXsCiFlV1KKOLCmTKMIao_Dkp6zDY',
       //   appId: '1:840638710221:android:db818b178dc062f5788484',
