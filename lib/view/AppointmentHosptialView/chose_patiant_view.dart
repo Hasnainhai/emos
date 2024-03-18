@@ -20,6 +20,12 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
   bool second = false;
   double progress = 0.3; // Set the progress value here
   bool showSheet = true;
+  bool isSheetVisible = true;
+  void toggleSheetVisibility() {
+    setState(() {
+      isSheetVisible = !isSheetVisible;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +48,9 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
         child: Stack(
           children: [
             AnimatedOpacity(
+              onEnd: toggleSheetVisibility,
               opacity: showSheet ? 0.6 : 0.0,
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                 child: Container(
@@ -51,138 +58,140 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                 ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const VerticalSpeacing(30.0),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Icon(
-                            Icons.arrow_back_ios_new,
-                            color: AppColor.textColor,
-                            size: 18,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 16,
-                        ),
-                        Text(
-                          "Step 1 of 3: Choose Doctor",
-                          style: GoogleFonts.getFont(
-                            "Roboto",
-                            textStyle: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: AppColor.bgFillColor,
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                decoration: const BoxDecoration(),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const VerticalSpeacing(30.0),
+                      Row(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Icon(
+                              Icons.arrow_back_ios_new,
+                              color: AppColor.textColor,
+                              size: 18,
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    const VerticalSpeacing(30.0),
-
-                    SizedBox(
-                      width: double.infinity,
-                      child: LinearProgressIndicator(
-                        value: progress,
-                        minHeight: 2,
-                        backgroundColor: AppColor.textColor2,
-                        valueColor: const AlwaysStoppedAnimation<Color>(
-                            AppColor.bgFillColor),
+                          const SizedBox(
+                            width: 16,
+                          ),
+                          Text(
+                            "Step 1 of 3: Choose Doctor",
+                            style: GoogleFonts.getFont(
+                              "Roboto",
+                              textStyle: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: AppColor.bgFillColor,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const VerticalSpeacing(30.0),
-
-                    Text(
-                      "Chose Patient",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.textColor,
-                        ),
-                      ),
-                    ),
-                    // const VerticalSpeacing(5.0),
-                    Text(
-                      "Selection of family members",
-                      style: GoogleFonts.getFont(
-                        "Roboto",
-                        textStyle: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: AppColor.bgFillColor,
+                      const VerticalSpeacing(30.0),
+                      SizedBox(
+                        width: double.infinity,
+                        child: LinearProgressIndicator(
+                          value: progress,
+                          minHeight: 2,
+                          backgroundColor: AppColor.textColor2,
+                          valueColor: const AlwaysStoppedAnimation<Color>(
+                              AppColor.bgFillColor),
                         ),
                       ),
-                    ),
-                    const VerticalSpeacing(16.0),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          first = !first;
-                          second = false;
-                        });
-                      },
-                      child: AddCard(
-                        name: 'Kaixa Pham',
-                        dob: '21-09-1995',
-                        person: 'Yourself',
-                        borderColor: first == true
-                            ? AppColor.bgFillColor
-                            : AppColor.textColor2,
+                      const VerticalSpeacing(30.0),
+                      Text(
+                        "Chose Patient",
+                        style: GoogleFonts.getFont(
+                          "Roboto",
+                          textStyle: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w600,
+                            color: AppColor.textColor,
+                          ),
+                        ),
                       ),
-                    ),
-                    const VerticalSpeacing(16.0),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          second = !second;
-                          first = false;
-                        });
-                      },
-                      child: AddCard(
-                        name: 'Stephen Chow',
-                        dob: '12-11-1990',
-                        person: 'Brother',
-                        borderColor:
-                            second ? AppColor.bgFillColor : AppColor.textColor2,
+                      // const VerticalSpeacing(5.0),
+                      Text(
+                        "Selection of family members",
+                        style: GoogleFonts.getFont(
+                          "Roboto",
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: AppColor.bgFillColor,
+                          ),
+                        ),
                       ),
-                    ),
-                    const VerticalSpeacing(16.0),
-                    RoundedButton(
-                      title: 'Add New Depedent',
-                      onpress: () {
-                        Navigator.pushNamed(
-                          context,
-                          RouteName.adddependetview,
-                        );
-                      },
-                      bgColor: Colors.transparent,
-                      titleColor: AppColor.bgFillColor,
-                    ),
-                    const VerticalSpeacing(16),
-                    RoundedButton(
-                      title: "Continue",
-                      onpress: () {
-                        Navigator.pushNamed(
-                          context,
-                          RouteName.hosptialtabbar,
-                        );
-                      },
-                      bgColor: AppColor.bgFillColor,
-                      titleColor: AppColor.simpleBgTextColor,
-                    ),
-                    const VerticalSpeacing(40),
-                  ],
+                      const VerticalSpeacing(16.0),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            first = !first;
+                            second = false;
+                          });
+                        },
+                        child: AddCard(
+                          name: 'Kaixa Pham',
+                          dob: '21-09-1995',
+                          person: 'Yourself',
+                          borderColor: first == true
+                              ? AppColor.bgFillColor
+                              : AppColor.textColor2,
+                        ),
+                      ),
+                      const VerticalSpeacing(16.0),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            second = !second;
+                            first = false;
+                          });
+                        },
+                        child: AddCard(
+                          name: 'Stephen Chow',
+                          dob: '12-11-1990',
+                          person: 'Brother',
+                          borderColor: second
+                              ? AppColor.bgFillColor
+                              : AppColor.textColor2,
+                        ),
+                      ),
+                      const VerticalSpeacing(16.0),
+                      RoundedButton(
+                        title: 'Add New Depedent',
+                        onpress: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.adddependetview,
+                          );
+                        },
+                        bgColor: Colors.transparent,
+                        titleColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(16),
+                      RoundedButton(
+                        title: "Continue",
+                        onpress: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.hosptialtabbar,
+                          );
+                        },
+                        bgColor: AppColor.bgFillColor,
+                        titleColor: AppColor.simpleBgTextColor,
+                      ),
+                      const VerticalSpeacing(80),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -192,61 +201,67 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
               maxChildSize: 0.2,
               builder:
                   (BuildContext context, ScrollController scrollController) {
-                return Container(
-                  decoration: const BoxDecoration(
-                    color: AppColor.whiteColor,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(32),
-                      topRight: Radius.circular(32),
+                return GestureDetector(
+                  onTap: () => toggleSheetVisibility,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: AppColor.whiteColor,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(32),
+                        topRight: Radius.circular(32),
+                      ),
                     ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 8,
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 40,
-                          height: 6,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: AppColor.chatRecvColor,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20,
+                        right: 20,
+                        top: 8,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 40,
+                            height: 6,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: AppColor.chatRecvColor,
+                            ),
                           ),
-                        ),
-                        const VerticalSpeacing(20),
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const ImageIcon(
-                                AssetImage("images/whatapp.png"),
-                                color: AppColor.textColor,
-                              ),
-                              const SizedBox(
-                                width: 12,
-                              ),
-                              Text(
-                                "Getting location with WhatsApp",
-                                style: GoogleFonts.getFont(
-                                  "Roboto",
-                                  textStyle: const TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: AppColor.textColor,
+                          const VerticalSpeacing(20),
+                          InkWell(
+                            onTap: () {
+                              // Navigator.pop(context);
+                              setState(() {
+                                showSheet = false;
+                              });
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const ImageIcon(
+                                  AssetImage("images/whatapp.png"),
+                                  color: AppColor.textColor,
+                                ),
+                                const SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  "Getting location with WhatsApp",
+                                  style: GoogleFonts.getFont(
+                                    "Roboto",
+                                    textStyle: const TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColor.textColor,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        const VerticalSpeacing(10),
-                      ],
+                          const VerticalSpeacing(10),
+                        ],
+                      ),
                     ),
                   ),
                 );
