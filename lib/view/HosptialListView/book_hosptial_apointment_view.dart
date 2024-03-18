@@ -602,26 +602,74 @@ class _BookHosptialApointmentViewState
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Request has been placed'),
-          content: const Text('Would you like to view your booking?'),
           actions: <Widget>[
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: RoundedButton(
-                  title: 'View Booking',
-                  onpress: () {
-                    Navigator.pushNamed(context, RouteName.recentOrdersview);
-                  },
-                  bgColor: AppColor.bgFillColor,
-                  titleColor: AppColor.whiteColor),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RoundedButton(
-                  title: 'Cancel',
-                  onpress: () {},
-                  bgColor: AppColor.bgFillColor,
-                  titleColor: AppColor.whiteColor),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        height: 50.0,
+                        width: 50.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25.0),
+                            border: Border.all(
+                                width: 1.0, color: AppColor.bgFillColor)),
+                        child: Center(
+                          child: IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: const Icon(Icons.close),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const VerticalSpeacing(20.0),
+                  const CircleAvatar(
+                      radius: 60.0,
+                      backgroundColor: Colors.amber,
+                      backgroundImage: NetworkImage(
+                        'https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-users-icon-png-image_856952.jpg',
+                      )),
+                  const VerticalSpeacing(10.0),
+                  const Text(
+                    'Waiting for confirmation',
+                    style: TextStyle(
+                      color: Colors.amber,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  const VerticalSpeacing(5.0),
+                  const Text(
+                    'Something went wrong,please turn  back',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14.0,
+                    ),
+                  ),
+                  const Text(
+                    'and check your booking again!',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14.0,
+                    ),
+                  ),
+                  const VerticalSpeacing(16.0),
+                  RoundedButton(
+                      title: 'Back to Booking',
+                      onpress: () {
+                        Navigator.pushNamed(
+                            context, RouteName.recentOrdersview);
+                      },
+                      bgColor: AppColor.bgFillColor,
+                      titleColor: AppColor.whiteColor),
+                ],
+              ),
             ),
           ],
         );
