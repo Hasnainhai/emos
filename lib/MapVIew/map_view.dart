@@ -64,8 +64,8 @@ class _MapConfigViewState extends State<MapConfigView> {
                     children: [
                       const TabBar(
                         unselectedLabelColor: AppColor.textColor2,
-                        labelColor: AppColor.bgFillColor,
-                        indicatorColor: AppColor.textColor2,
+                        labelColor: AppColor.textColor,
+                        indicatorColor: AppColor.textColor,
                         indicatorPadding: EdgeInsets.symmetric(
                             horizontal: 10.0, vertical: 5.0),
                         tabs: [

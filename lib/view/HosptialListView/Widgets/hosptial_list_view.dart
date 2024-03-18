@@ -43,9 +43,9 @@ class HosptialDetail extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       //  here goverment
                       OwnerWidget(
