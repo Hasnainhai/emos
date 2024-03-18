@@ -160,15 +160,22 @@ class _HosptialTabBarState extends State<HosptialTabBar> {
                                       OwnerWidget(
                                           circleColor: const Color(0xff5ABF24),
                                           owner: "79 Government"),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
                                       OwnerWidget(
                                           circleColor: const Color(0xffFD586B),
-                                          owner: "54 Government"),
+                                          owner: "54 Semi-Government"),
                                     ],
                                   ),
                                   const VerticalSpeacing(8),
-                                  OwnerWidget(
-                                      circleColor: const Color(0xffFEAA48),
-                                      owner: "26 Government"),
+                                  Row(
+                                    children: [
+                                      OwnerWidget(
+                                          circleColor: const Color(0xffFEAA48),
+                                          owner: "26 Public"),
+                                    ],
+                                  ),
                                   const VerticalSpeacing(20),
                                   HosptialDetail(
                                     fun: () {
