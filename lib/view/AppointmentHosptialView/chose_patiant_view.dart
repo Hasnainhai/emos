@@ -217,50 +217,53 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                         right: 20,
                         top: 8,
                       ),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 6,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: AppColor.chatRecvColor,
+                      child: SingleChildScrollView(
+                        controller: scrollController,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 6,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: AppColor.chatRecvColor,
+                              ),
                             ),
-                          ),
-                          const VerticalSpeacing(20),
-                          InkWell(
-                            onTap: () {
-                              // Navigator.pop(context);
-                              setState(() {
-                                showSheet = false;
-                              });
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const ImageIcon(
-                                  AssetImage("images/whatapp.png"),
-                                  color: AppColor.textColor,
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                Text(
-                                  "Getting location with WhatsApp",
-                                  style: GoogleFonts.getFont(
-                                    "Roboto",
-                                    textStyle: const TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      color: AppColor.textColor,
+                            const VerticalSpeacing(20),
+                            InkWell(
+                              onTap: () {
+                                // Navigator.pop(context);
+                                setState(() {
+                                  showSheet = false;
+                                });
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const ImageIcon(
+                                    AssetImage("images/whatapp.png"),
+                                    color: AppColor.textColor,
+                                  ),
+                                  const SizedBox(
+                                    width: 12,
+                                  ),
+                                  Text(
+                                    "Getting location with WhatsApp",
+                                    style: GoogleFonts.getFont(
+                                      "Roboto",
+                                      textStyle: const TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        color: AppColor.textColor,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          const VerticalSpeacing(10),
-                        ],
+                            const VerticalSpeacing(10),
+                          ],
+                        ),
                       ),
                     ),
                   ),
