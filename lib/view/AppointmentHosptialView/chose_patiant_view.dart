@@ -59,7 +59,6 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const VerticalSpeacing(30.0),
-
                     Row(
                       children: [
                         InkWell(
@@ -220,10 +219,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                         const VerticalSpeacing(20),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              RouteName.chosepatiantview,
-                            );
+                            Navigator.pop(context);
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
