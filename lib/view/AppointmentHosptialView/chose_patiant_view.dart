@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
@@ -17,6 +19,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
   bool first = true;
   bool second = false;
   double progress = 0.3; // Set the progress value here
+  bool showSheet = true;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +41,16 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
         ),
         child: Stack(
           children: [
+            AnimatedOpacity(
+              opacity: showSheet ? 0.6 : 0.0,
+              duration: Duration(milliseconds: 300),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                child: Container(
+                  color: Colors.black.withOpacity(0.5),
+                ),
+              ),
+            ),
             Container(
               decoration: BoxDecoration(),
               child: Padding(
@@ -157,7 +170,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                       bgColor: Colors.transparent,
                       titleColor: AppColor.bgFillColor,
                     ),
-                    const Spacer(),
+                    const VerticalSpeacing(16),
                     RoundedButton(
                       title: "Continue",
                       onpress: () {
@@ -175,7 +188,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
               ),
             ),
             DraggableScrollableSheet(
-              initialChildSize: 0.2,
+              initialChildSize: 0.15,
               minChildSize: 0.03,
               maxChildSize: 0.2,
               builder:
@@ -188,53 +201,32 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                       topRight: Radius.circular(32),
                     ),
                   ),
-                  child: SingleChildScrollView(
-                    controller: scrollController,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                        top: 8,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 6,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: AppColor.chatRecvColor,
-                            ),
-                          ),
-                          const VerticalSpeacing(24),
-                          Row(
-                            children: [
-                              const ImageIcon(
-                                AssetImage("images/message.png"),
-                                color: AppColor.textColor,
-                              ),
-                              const SizedBox(
-                                width: 12,
-                              ),
-                              Text(
-                                "Getting location with SMS",
-                                style: GoogleFonts.getFont(
-                                  "Roboto",
-                                  textStyle: const TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: AppColor.textColor,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          const VerticalSpeacing(10),
-                          const Divider(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                      top: 8,
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 40,
+                          height: 6,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
                             color: AppColor.chatRecvColor,
                           ),
-                          const VerticalSpeacing(10),
-                          Row(
+                        ),
+                        const VerticalSpeacing(20),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              RouteName.chosepatiantview,
+                            );
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const ImageIcon(
                                 AssetImage("images/whatapp.png"),
@@ -255,9 +247,10 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                                 ),
                               ),
                             ],
-                          )
-                        ],
-                      ),
+                          ),
+                        ),
+                        const VerticalSpeacing(10),
+                      ],
                     ),
                   ),
                 );
