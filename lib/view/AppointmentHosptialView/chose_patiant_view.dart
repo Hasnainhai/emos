@@ -198,7 +198,7 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
             DraggableScrollableSheet(
               initialChildSize: 0.15,
               minChildSize: 0.03,
-              maxChildSize: 0.2,
+              maxChildSize: 0.15,
               builder:
                   (BuildContext context, ScrollController scrollController) {
                 return GestureDetector(
