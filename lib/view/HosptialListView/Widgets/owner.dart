@@ -15,7 +15,6 @@ class OwnerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 20,
-      width: 116,
       decoration: BoxDecoration(
         color: AppColor.whiteColor,
         border: Border.all(color: AppColor.textColor2),

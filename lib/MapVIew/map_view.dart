@@ -82,13 +82,13 @@ class _MapConfigViewState extends State<MapConfigView> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "147 Hospital and Clinic Founded",
+                                    "147 Hospital and 10 Clinic Founded",
                                     style: GoogleFonts.getFont(
                                       "Roboto",
                                       textStyle: const TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
-                                        color: AppColor.textColor2,
+                                        color: AppColor.textColor,
                                       ),
                                     ),
                                   ),
@@ -98,15 +98,28 @@ class _MapConfigViewState extends State<MapConfigView> {
                                       OwnerWidget(
                                           circleColor: const Color(0xff5ABF24),
                                           owner: "79 Government"),
+                                      const SizedBox(
+                                        width: 8,
+                                      ),
                                       OwnerWidget(
                                           circleColor: const Color(0xffFD586B),
-                                          owner: "54 Government"),
+                                          owner: "54 Private"),
                                     ],
                                   ),
                                   const VerticalSpeacing(8),
-                                  OwnerWidget(
-                                      circleColor: const Color(0xffFEAA48),
-                                      owner: "26 Government"),
+                                  Row(
+                                    children: [
+                                      OwnerWidget(
+                                          circleColor: const Color(0xffFEAA48),
+                                          owner: "26 Semi-Government"),
+                                      const SizedBox(
+                                        width: 8,
+                                      ),
+                                      OwnerWidget(
+                                          circleColor: AppColor.textColor,
+                                          owner: "26 Clinics"),
+                                    ],
+                                  ),
                                   const VerticalSpeacing(20),
                                   ClinicListView(
                                     fun: () {
