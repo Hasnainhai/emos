@@ -26,8 +26,8 @@ class OwnerWidget extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                height: 16,
-                width: 16,
+                height: 10,
+                width: 10,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: circleColor,
