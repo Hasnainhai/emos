@@ -47,6 +47,7 @@ import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:emos/view/RatingView/rating_view.dart';
 import 'package:emos/view/RecentOrdersView/recent_orders.dart';
 import 'package:emos/view/SelectAllergyView/select_alergy_view.dart';
+import 'package:emos/view/loadingScreen.dart';
 import 'package:flutter/material.dart';
 import '../MapVIew/map_view.dart';
 import '../view/DoctorViews/find_doctor_view.dart';
@@ -253,6 +254,10 @@ class Routes {
       case RouteName.radiologyFilterView:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RadiologyFilter(),
+        );
+      case RouteName.loadingScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LoadingScreen(),
         );
       default:
         return MaterialPageRoute(
