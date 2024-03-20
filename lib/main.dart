@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       onGenerateRoute: Routes.generateRoute,
-      initialRoute: RouteName.loadingScreen,
+      initialRoute: RouteName.splashScreen,
     );
   }
 }
