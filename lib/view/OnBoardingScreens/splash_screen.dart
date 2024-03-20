@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:js_interop';
 
 import 'package:emos/routes/routes_name.dart';
 import 'package:firebase_auth/firebase_auth.dart';
