@@ -92,7 +92,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                 setState(() {
                   isSelected = [false, false, true, false, false];
                 });
-                Navigator.pushNamed(context, RouteName.mapView);
+                Navigator.pushNamed(context, RouteName.emergancypatientview);
               },
             ),
           ),

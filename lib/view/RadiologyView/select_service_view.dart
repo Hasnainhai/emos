@@ -59,7 +59,7 @@ class _SelectServiceViewState extends State<SelectServiceView> {
                       width: 16,
                     ),
                     Text(
-                      "Step 1 of 3: Choose Doctor",
+                      "Step 1 of 3: Choose Radiology",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
