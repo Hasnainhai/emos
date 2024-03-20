@@ -1,5 +1,6 @@
 import 'package:emos/routes/routes_name.dart';
 import 'package:emos/view/AddCardView/add_card_view.dart';
+import 'package:emos/view/AmbulanceView/ambulance_view.dart';
 import 'package:emos/view/AppointmentHosptialView/add_depedent_view.dart';
 import 'package:emos/view/AppointmentHosptialView/chose_patiant_view.dart';
 import 'package:emos/view/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
@@ -42,6 +43,7 @@ import 'package:emos/view/OnBoardingScreens/splash_screen.dart';
 import 'package:emos/view/PaymentView/chose_payment_method_view.dart';
 import 'package:emos/view/ProfileView/profile_view.dart';
 import 'package:emos/view/RadiologyView/Widgets/radiology_filter.dart';
+import 'package:emos/view/RadiologyView/chose_radiology_patient.dart';
 import 'package:emos/view/RadiologyView/radiology_tabbar.dart';
 import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:emos/view/RatingView/rating_view.dart';
@@ -258,6 +260,14 @@ class Routes {
       case RouteName.loadingScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const LoadingScreen(),
+        );
+      case RouteName.ambulanceScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceView(),
+        );
+      case RouteName.radiologypatientview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyChosePatientView(),
         );
       default:
         return MaterialPageRoute(

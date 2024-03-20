@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:emos/routes/routes_name.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,11 +14,19 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void startTimer() {
     Timer(const Duration(seconds: 6), () {
-      Navigator.pushNamedAndRemoveUntil(
-        context,
-       RouteName.onBoarding1,
-        (route) => false,
-      );
+      if (FirebaseAuth.instance.currentUser != null) {
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          RouteName.homeView,
+          (route) => false,
+        );
+      } else {
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          RouteName.onBoarding1,
+          (route) => false,
+        );
+      }
     });
   }
 

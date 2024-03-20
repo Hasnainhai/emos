@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:emos/all_loading_screen.dart';
 import 'package:emos/view/HomeView/widgets/homeFeatureWidget.dart';
 import 'package:emos/view/RadiologyView/select_service_view.dart';
 import 'package:flutter/material.dart';
@@ -63,9 +64,19 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(
+                  // Navigator.pushNamed(
+                  //   context,
+                  //   RouteName.mapView,
+                  // );
+                  Navigator.push(
                     context,
-                    RouteName.mapView,
+                    MaterialPageRoute(
+                      builder: (c) => const AllLoadingScreen(
+                        text: "Searching Ambulance ...",
+                        image: "images/ambulance.png",
+                        root: "ambulance",
+                      ),
+                    ),
                   );
                 },
                 child: Container(
@@ -238,7 +249,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   width: 108.0,
                   child: InkWell(
                     onTap: () {
-                      debugPrint("Press Radiology");
                       Navigator.push(
                           context,
                           MaterialPageRoute(

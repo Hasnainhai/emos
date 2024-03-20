@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:emos/all_loading_screen.dart';
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
@@ -182,9 +183,15 @@ class _ChoseHomeCarePatientViewState extends State<ChoseHomeCarePatientView> {
                         RoundedButton(
                           title: "Continue",
                           onpress: () {
-                            Navigator.pushNamed(
+                            Navigator.push(
                               context,
-                              RouteName.homecaretabbar,
+                              MaterialPageRoute(
+                                builder: (c) => const AllLoadingScreen(
+                                  text: "Searching HomeCare ...",
+                                  image: "images/homeCare.png",
+                                  root: "homecare",
+                                ),
+                              ),
                             );
                           },
                           bgColor: AppColor.bgFillColor,

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:emos/all_loading_screen.dart';
 import 'package:emos/components/RoundedButton/rounded_button.dart';
 import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
@@ -181,9 +182,15 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                       RoundedButton(
                         title: "Continue",
                         onpress: () {
-                          Navigator.pushNamed(
+                          Navigator.push(
                             context,
-                            RouteName.hosptialtabbar,
+                            MaterialPageRoute(
+                              builder: (c) => const AllLoadingScreen(
+                                text: "Searching Hospital ...",
+                                image: "images/hospital.png",
+                                root: "hospital",
+                              ),
+                            ),
                           );
                         },
                         bgColor: AppColor.bgFillColor,

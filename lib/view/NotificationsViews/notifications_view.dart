@@ -2,6 +2,7 @@ import 'package:emos/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos/res/GlobalColors/colors.dart';
 import 'package:emos/routes/routes_name.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'widgets/notificationsWidget.dart';
 
 class NotificationsView extends StatelessWidget {
@@ -19,8 +20,21 @@ class NotificationsView extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, RouteName.homeView);
             },
-            icon: const Icon(Icons.arrow_back_ios_new)),
-        title: const Text('Notifications'),
+            icon: const Icon(
+              Icons.arrow_back_ios_new,
+              color: AppColor.whiteColor,
+            )),
+        title: Text(
+          "Notification",
+          style: GoogleFonts.getFont(
+            "Roboto",
+            textStyle: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: AppColor.whiteColor,
+            ),
+          ),
+        ),
         centerTitle: true,
       ),
       body: Container(
