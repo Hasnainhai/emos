@@ -13,6 +13,8 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -28,7 +30,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const VerticalSpeacing(200.0),
+                SizedBox(
+                  height: height * 0.3,
+                ),
                 Image.asset(
                   "images/consult.png",
                   height: 75,
