@@ -28,13 +28,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                VerticalSpeacing(200.0),
+                const VerticalSpeacing(200.0),
                 Image.asset(
                   "images/consult.png",
                   height: 75,
                   width: 190,
                 ),
-                VerticalSpeacing(100.0),
+                const VerticalSpeacing(100.0),
                 Container(
                   height: 60.0,
                   width: 60.0,
@@ -60,7 +60,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                     ),
                   ),
                 ),
-                VerticalSpeacing(100.0),
+                const VerticalSpeacing(100.0),
                 RoundedButton(
                     title: 'Consultation Done',
                     onpress: () {},
