@@ -86,7 +86,7 @@ class _RadiologyChosePatientViewState extends State<RadiologyChosePatientView> {
                                 width: 16,
                               ),
                               Text(
-                                "Step 1 of 3: Choose Emergancy",
+                                "Step 1 of 3: Choose Radiology",
                                 style: GoogleFonts.getFont(
                                   "Roboto",
                                   textStyle: const TextStyle(
@@ -187,7 +187,7 @@ class _RadiologyChosePatientViewState extends State<RadiologyChosePatientView> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (c) => const AllLoadingScreen(
-                                    text: "Searching Emergancy ...",
+                                    text: "Searching Radiology ...",
                                     image: "images/radiology.png",
                                     root: "radiology",
                                   ),
