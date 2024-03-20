@@ -89,6 +89,11 @@ class _AllLoadingScreenState extends State<AllLoadingScreen> {
                         context,
                         RouteName.radiologytabbar,
                       );
+                    } else if (widget.root == "emergancy") {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.mapView,
+                      );
                     }
                   },
                   child: SizedBox(

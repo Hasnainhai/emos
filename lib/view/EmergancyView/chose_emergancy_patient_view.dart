@@ -9,15 +9,15 @@ import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RadiologyChosePatientView extends StatefulWidget {
-  const RadiologyChosePatientView({super.key});
+class EmergancyChosePatientView extends StatefulWidget {
+  const EmergancyChosePatientView({super.key});
 
   @override
-  State<RadiologyChosePatientView> createState() =>
-      _RadiologyChosePatientViewState();
+  State<EmergancyChosePatientView> createState() =>
+      _EmergancyChosePatientViewState();
 }
 
-class _RadiologyChosePatientViewState extends State<RadiologyChosePatientView> {
+class _EmergancyChosePatientViewState extends State<EmergancyChosePatientView> {
   bool first = true;
   bool second = false;
   double progress = 0.3; // Set the progress value here
@@ -86,7 +86,7 @@ class _RadiologyChosePatientViewState extends State<RadiologyChosePatientView> {
                                 width: 16,
                               ),
                               Text(
-                                "Step 1 of 3: Choose Emergancy",
+                                "Step 1 of 3: Choose Radiology",
                                 style: GoogleFonts.getFont(
                                   "Roboto",
                                   textStyle: const TextStyle(
@@ -188,8 +188,8 @@ class _RadiologyChosePatientViewState extends State<RadiologyChosePatientView> {
                                 MaterialPageRoute(
                                   builder: (c) => const AllLoadingScreen(
                                     text: "Searching Emergancy ...",
-                                    image: "images/radiology.png",
-                                    root: "radiology",
+                                    image: "images/emergancy.png",
+                                    root: "emergancy",
                                   ),
                                 ),
                               );

@@ -272,7 +272,7 @@ class _SelectServiceViewState extends State<SelectServiceView> {
                   onpress: () {
                     Navigator.pushNamed(
                       context,
-                      RouteName.radiologypatientview,
+                      RouteName.emergancypatientview,
                     );
                   },
                   bgColor: AppColor.bgFillColor,

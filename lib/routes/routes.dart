@@ -15,6 +15,7 @@ import 'package:emos/view/DoctorViews/detail_doctor_view.dart';
 import 'package:emos/view/DrAtHomeView/Widgets/dr-at-home-filter.dart';
 import 'package:emos/view/DrAtHomeView/dr_chose_patient_view.dart';
 import 'package:emos/view/DrAtHomeView/dr_tabbar.dart';
+import 'package:emos/view/EmergancyView/chose_emergancy_patient_view.dart';
 import 'package:emos/view/EmergancyView/emergancy_view.dart';
 import 'package:emos/view/FamilyView/cardInfo.dart';
 import 'package:emos/view/FamilyView/family_view.dart';
@@ -268,6 +269,10 @@ class Routes {
       case RouteName.radiologypatientview:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RadiologyChosePatientView(),
+        );
+      case RouteName.emergancypatientview:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const EmergancyChosePatientView(),
         );
       default:
         return MaterialPageRoute(
