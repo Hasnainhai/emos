@@ -64,6 +64,11 @@ class _AllLoadingScreenState extends State<AllLoadingScreen> {
                         context,
                         RouteName.ambulanceScreen,
                       );
+                    } else if (widget.root == "clinic") {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.clinictabbar,
+                      );
                     }
                   },
                   child: SizedBox(
