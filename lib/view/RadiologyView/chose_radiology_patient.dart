@@ -9,15 +9,15 @@ import 'package:emos/view/EmergancyView/Widgets/add_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ChoseLaboratoryTestView extends StatefulWidget {
-  const ChoseLaboratoryTestView({super.key});
+class RadiologyChosePatientView extends StatefulWidget {
+  const RadiologyChosePatientView({super.key});
 
   @override
-  State<ChoseLaboratoryTestView> createState() =>
-      _ChoseLaboratoryTestViewState();
+  State<RadiologyChosePatientView> createState() =>
+      _RadiologyChosePatientViewState();
 }
 
-class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
+class _RadiologyChosePatientViewState extends State<RadiologyChosePatientView> {
   bool first = true;
   bool second = false;
   double progress = 0.3; // Set the progress value here
@@ -86,7 +86,7 @@ class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
                                 width: 16,
                               ),
                               Text(
-                                "Step 1 of 3: Choose Laboratory",
+                                "Step 1 of 3: Choose Radiology",
                                 style: GoogleFonts.getFont(
                                   "Roboto",
                                   textStyle: const TextStyle(
@@ -187,9 +187,9 @@ class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (c) => const AllLoadingScreen(
-                                    text: "Searching laboratory ...",
-                                    image: "images/labotoryTest.png",
-                                    root: "laboratory",
+                                    text: "Searching Radiology ...",
+                                    image: "images/radiology.png",
+                                    root: "radiology",
                                   ),
                                 ),
                               );

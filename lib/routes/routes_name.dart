@@ -54,4 +54,5 @@ class RouteName {
   static const String radiologyFilterView = ('/Radiology_filter_view');
   static const String loadingScreen = ('/loading_screen');
   static const String ambulanceScreen = ('/ambulance_screen');
+  static const String radiologypatientview = ('/radiology_patient_view');
 }

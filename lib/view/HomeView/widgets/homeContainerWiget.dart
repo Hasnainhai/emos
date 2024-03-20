@@ -249,7 +249,6 @@ class _HomeContainerWidgetState extends State<HomeContainerWidget> {
                   width: 108.0,
                   child: InkWell(
                     onTap: () {
-                      debugPrint("Press Radiology");
                       Navigator.push(
                           context,
                           MaterialPageRoute(

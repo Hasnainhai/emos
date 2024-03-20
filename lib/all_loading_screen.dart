@@ -69,6 +69,26 @@ class _AllLoadingScreenState extends State<AllLoadingScreen> {
                         context,
                         RouteName.clinictabbar,
                       );
+                    } else if (widget.root == "drathome") {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.drtabbar,
+                      );
+                    } else if (widget.root == "homecare") {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.homecaretabbar,
+                      );
+                    } else if (widget.root == "laboratory") {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.laboratorytabbar,
+                      );
+                    } else if (widget.root == "radiology") {
+                      Navigator.pushNamed(
+                        context,
+                        RouteName.radiologytabbar,
+                      );
                     }
                   },
                   child: SizedBox(
