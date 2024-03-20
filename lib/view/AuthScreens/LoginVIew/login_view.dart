@@ -46,7 +46,8 @@ class _LoginViewState extends State<LoginView> {
             email: emailController.text.toLowerCase().trim(),
             password: passwordController.text.trim());
         Utils.toastMessage('SuccessFully Login');
-        Navigator.pushNamed(context, RouteName.homeView);
+        Navigator.pushNamedAndRemoveUntil(
+            context, RouteName.homeView, (route) => false);
       } on FirebaseException catch (e) {
         Utils.flushBarErrorMessage('NetWork Error $e', context);
         setState(() {
