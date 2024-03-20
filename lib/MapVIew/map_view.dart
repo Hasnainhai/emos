@@ -17,6 +17,7 @@ class MapConfigView extends StatefulWidget {
 class _MapConfigViewState extends State<MapConfigView> {
   double progress = 0.6;
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.bgFillColor,
