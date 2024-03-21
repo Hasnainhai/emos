@@ -21,8 +21,9 @@ class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
   bool first = true;
   bool second = false;
   double progress = 0.3; // Set the progress value here
-  bool showSheet = true;
+  bool showSheet = false;
   bool isSheetVisible = true;
+  bool isvisible = false;
   void toggleSheetVisibility() {
     setState(() {
       isSheetVisible = !isSheetVisible;
@@ -142,7 +143,7 @@ class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
                               });
                             },
                             child: AddCard(
-                              name: 'Kaixa Pham',
+                              name: 'Dummy',
                               dob: '21-09-1995',
                               person: 'Yourself',
                               borderColor: first == true
@@ -183,16 +184,23 @@ class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
                           RoundedButton(
                             title: "Continue",
                             onpress: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (c) => const AllLoadingScreen(
-                                    text: "Searching laboratory ...",
-                                    image: "images/labotoryTest.png",
-                                    root: "laboratory",
+                              if (second == true) {
+                                setState(() {
+                                  isvisible = true;
+                                  showSheet = true;
+                                });
+                              } else {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (c) => const AllLoadingScreen(
+                                      text: "Searching laboratory ...",
+                                      image: "images/labotoryTest.png",
+                                      root: "laboratory",
+                                    ),
                                   ),
-                                ),
-                              );
+                                );
+                              }
                             },
                             bgColor: AppColor.bgFillColor,
                             titleColor: AppColor.simpleBgTextColor,
@@ -203,80 +211,84 @@ class _ChoseLaboratoryTestViewState extends State<ChoseLaboratoryTestView> {
                     ),
                   ),
                 ),
-                DraggableScrollableSheet(
-                  initialChildSize: 0.15,
-                  minChildSize: 0.03,
-                  maxChildSize: 0.15,
-                  builder: (BuildContext context,
-                      ScrollController scrollController) {
-                    return GestureDetector(
-                      onTap: () => toggleSheetVisibility,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: AppColor.whiteColor,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(32),
-                            topRight: Radius.circular(32),
+                Visibility(
+                  visible: isvisible,
+                  child: DraggableScrollableSheet(
+                    initialChildSize: 0.15,
+                    minChildSize: 0.03,
+                    maxChildSize: 0.15,
+                    builder: (BuildContext context,
+                        ScrollController scrollController) {
+                      return GestureDetector(
+                        onTap: () => toggleSheetVisibility,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: AppColor.whiteColor,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(32),
+                              topRight: Radius.circular(32),
+                            ),
                           ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            left: 20,
-                            right: 20,
-                            top: 8,
-                          ),
-                          child: SingleChildScrollView(
-                            controller: scrollController,
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: 40,
-                                  height: 6,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: AppColor.chatRecvColor,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                              left: 20,
+                              right: 20,
+                              top: 8,
+                            ),
+                            child: SingleChildScrollView(
+                              controller: scrollController,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    width: 40,
+                                    height: 6,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: AppColor.chatRecvColor,
+                                    ),
                                   ),
-                                ),
-                                const VerticalSpeacing(20),
-                                InkWell(
-                                  onTap: () {
-                                    // Navigator.pop(context);
-                                    setState(() {
-                                      showSheet = false;
-                                    });
-                                  },
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const ImageIcon(
-                                        AssetImage("images/whatapp.png"),
-                                        color: AppColor.textColor,
-                                      ),
-                                      const SizedBox(
-                                        width: 12,
-                                      ),
-                                      Text(
-                                        "Getting location with WhatsApp",
-                                        style: GoogleFonts.getFont(
-                                          "Roboto",
-                                          textStyle: const TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w600,
-                                            color: AppColor.textColor,
+                                  const VerticalSpeacing(20),
+                                  InkWell(
+                                    onTap: () {
+                                      // Navigator.pop(context);
+                                      setState(() {
+                                        showSheet = false;
+                                      });
+                                    },
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        const ImageIcon(
+                                          AssetImage("images/whatapp.png"),
+                                          color: AppColor.textColor,
+                                        ),
+                                        const SizedBox(
+                                          width: 12,
+                                        ),
+                                        Text(
+                                          "Getting location with WhatsApp",
+                                          style: GoogleFonts.getFont(
+                                            "Roboto",
+                                            textStyle: const TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w600,
+                                              color: AppColor.textColor,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                const VerticalSpeacing(10),
-                              ],
+                                  const VerticalSpeacing(10),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ],
             )));
