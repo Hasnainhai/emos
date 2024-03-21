@@ -18,60 +18,61 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-                    "images/bg.png",
-                  ),
-                  fit: BoxFit.cover),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: height * 0.3,
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(
+                  "images/bg.png",
                 ),
-                Image.asset(
-                  "images/consult.png",
-                  height: 75,
-                  width: 190,
+                fit: BoxFit.cover),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: height * 0.3,
+              ),
+              Image.asset(
+                "images/consult.png",
+                height: 75,
+                width: 190,
+              ),
+              const VerticalSpeacing(100.0),
+              Container(
+                height: 60.0,
+                width: 60.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  color: AppColor.whiteColor,
                 ),
-                const VerticalSpeacing(100.0),
-                Container(
-                  height: 60.0,
-                  width: 60.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: AppColor.whiteColor,
-                  ),
-                  child: Center(
-                    child: Container(
-                      height: 50.0,
-                      width: 50.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25.0),
-                        border:
-                            Border.all(width: 2.0, color: AppColor.textColor2),
-                      ),
-                      child: Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Image.asset('images/clinic.png'),
-                        ),
+                child: Center(
+                  child: Container(
+                    height: 50.0,
+                    width: 50.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25.0),
+                      border:
+                          Border.all(width: 2.0, color: AppColor.textColor2),
+                    ),
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Image.asset('images/clinic.png'),
                       ),
                     ),
                   ),
                 ),
-                const VerticalSpeacing(100.0),
-                RoundedButton(
-                    title: 'Consultation Done',
-                    onpress: () {},
-                    bgColor: AppColor.bgFillColor,
-                    titleColor: AppColor.whiteColor)
-              ],
-            )),
+              ),
+              const VerticalSpeacing(100.0),
+              RoundedButton(
+                  title: 'Consultation Done',
+                  onpress: () {},
+                  bgColor: AppColor.bgFillColor,
+                  titleColor: AppColor.whiteColor)
+            ],
+          ),
+        ),
       ),
     );
   }
