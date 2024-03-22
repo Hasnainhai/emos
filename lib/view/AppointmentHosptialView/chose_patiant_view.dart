@@ -76,8 +76,8 @@ class _ChosePatiantViewState extends State<ChosePatiantView> {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: const Icon(
-                              Icons.arrow_back_ios_new,
+                            child: const ImageIcon(
+                              AssetImage("images/backicon.png"),
                               color: AppColor.textColor,
                               size: 18,
                             ),

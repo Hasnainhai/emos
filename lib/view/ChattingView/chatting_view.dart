@@ -17,10 +17,14 @@ class ChattingView extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, RouteName.homeView);
-            },
-            icon: const Icon(Icons.arrow_back_ios_new)),
+          onPressed: () {
+            Navigator.pushNamed(context, RouteName.homeView);
+          },
+          icon: const ImageIcon(
+            AssetImage("images/backicon.png"),
+            color: AppColor.whiteColor,
+          ),
+        ),
         title: Row(
           children: [
             Container(

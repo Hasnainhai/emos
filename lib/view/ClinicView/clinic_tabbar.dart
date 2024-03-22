@@ -50,8 +50,8 @@ class _ClinicTabBarState extends State<ClinicTabBar> {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: const Icon(
-                          Icons.arrow_back_ios_new,
+                        child: const ImageIcon(
+                          AssetImage("images/backicon.png"),
                           color: AppColor.textColor,
                           size: 18,
                         ),
@@ -167,9 +167,13 @@ class _ClinicTabBarState extends State<ClinicTabBar> {
                                     ],
                                   ),
                                   const VerticalSpeacing(8),
-                                  OwnerWidget(
-                                      circleColor: const Color(0xffFEAA48),
-                                      owner: "26 Private"),
+                                  Row(
+                                    children: [
+                                      OwnerWidget(
+                                          circleColor: const Color(0xffFEAA48),
+                                          owner: "26 Private"),
+                                    ],
+                                  ),
                                   const VerticalSpeacing(20),
                                   ClinicListView(
                                     fun: () {
