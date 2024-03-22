@@ -248,10 +248,18 @@ class LaboratoryListView extends StatelessWidget {
                           bottomLeft: Radius.circular(12),
                         ),
                       ),
-                      child: const Center(
-                        child: Icon(
-                          Icons.send,
-                          color: AppColor.whiteColor,
+                      child: Center(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              RouteName.ambulanceScreen,
+                            );
+                          },
+                          child: const Icon(
+                            Icons.send,
+                            color: AppColor.whiteColor,
+                          ),
                         ),
                       ),
                     ),
