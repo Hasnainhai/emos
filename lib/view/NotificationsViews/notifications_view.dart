@@ -35,7 +35,7 @@ class NotificationsView extends StatelessWidget {
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 24,
                       fontWeight: FontWeight.w600,
                       color: AppColor.whiteColor,
                     ),

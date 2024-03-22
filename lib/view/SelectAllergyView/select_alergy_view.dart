@@ -36,16 +36,16 @@ class SelectAlergyView extends StatelessWidget {
                 const VerticalSpeacing(32.0),
                 Row(
                   children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, RouteName.profileView);
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
                       },
-                      icon: const Icon(
-                        Icons.arrow_back_ios_new_rounded,
+                      child: const ImageIcon(
+                        AssetImage("images/backicon.png"),
                         color: AppColor.textColor,
                       ),
                     ),
-                    const SizedBox(width: 10.0),
+                    const SizedBox(width: 60.0),
                     Text(
                       'Select Allergy',
                       style: GoogleFonts.getFont(
