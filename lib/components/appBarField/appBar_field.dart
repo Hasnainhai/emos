@@ -14,12 +14,12 @@ class AppBarField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(
-          onPressed: () {
-            ontap();
+        InkWell(
+          onTap: () {
+            Navigator.pop(context);
           },
-          icon: const Icon(
-            Icons.arrow_back_ios_new,
+          child: const ImageIcon(
+            AssetImage("images/backicon.png"),
             color: AppColor.textColor,
           ),
         ),
