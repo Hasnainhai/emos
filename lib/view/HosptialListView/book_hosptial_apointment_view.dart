@@ -81,8 +81,8 @@ class _BookHosptialApointmentViewState
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: const Icon(
-                            Icons.arrow_back_ios_new,
+                          child: const ImageIcon(
+                            AssetImage("images/backicon.png"),
                             color: AppColor.textColor,
                             size: 18,
                           ),
@@ -602,11 +602,16 @@ class _BookHosptialApointmentViewState
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
+          backgroundColor: AppColor.whiteColor,
+          shadowColor: AppColor.whiteColor,
+          elevation: 0,
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8.0, right: 8, top: 20),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
+                  const VerticalSpeacing(12),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -614,9 +619,10 @@ class _BookHosptialApointmentViewState
                         height: 50.0,
                         width: 50.0,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(
-                                width: 1.0, color: AppColor.bgFillColor)),
+                          borderRadius: BorderRadius.circular(25.0),
+                          border: Border.all(
+                              width: 1.0, color: AppColor.bgFillColor),
+                        ),
                         child: Center(
                           child: IconButton(
                             onPressed: () {
@@ -633,7 +639,7 @@ class _BookHosptialApointmentViewState
                       radius: 60.0,
                       backgroundColor: Colors.amber,
                       backgroundImage: NetworkImage(
-                        'https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-users-icon-png-image_856952.jpg',
+                        'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png',
                       )),
                   const VerticalSpeacing(10.0),
                   const Text(
@@ -646,14 +652,7 @@ class _BookHosptialApointmentViewState
                   ),
                   const VerticalSpeacing(5.0),
                   const Text(
-                    'Something went wrong,please turn  back',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 14.0,
-                    ),
-                  ),
-                  const Text(
-                    'and check your booking again!',
+                    'Something went wrong,please turn back and check your booking again!',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 14.0,
@@ -661,13 +660,13 @@ class _BookHosptialApointmentViewState
                   ),
                   const VerticalSpeacing(16.0),
                   RoundedButton(
-                      title: 'Back to Booking',
-                      onpress: () {
-                        Navigator.pushNamed(
-                            context, RouteName.recentOrdersview);
-                      },
-                      bgColor: AppColor.bgFillColor,
-                      titleColor: AppColor.whiteColor),
+                    title: 'Back to Booking',
+                    onpress: () {
+                      Navigator.pushNamed(context, RouteName.recentOrdersview);
+                    },
+                    bgColor: AppColor.bgFillColor,
+                    titleColor: AppColor.whiteColor,
+                  ),
                 ],
               ),
             ),

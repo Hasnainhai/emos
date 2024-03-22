@@ -30,33 +30,34 @@ class MedicalHistoryView extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Icon(
-                          Icons.arrow_back_ios_new,
-                          color: AppColor.textColor,
-                          size: 20,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Text(
-                        "Medical History",
-                        style: GoogleFonts.getFont(
-                          "Roboto",
-                          textStyle: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: AppColor.textColor,
+                      Row(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: const ImageIcon(
+                              AssetImage("images/backicon.png"),
+                              color: AppColor.textColor,
+                            ),
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.4,
+                          const SizedBox(
+                            width: 60,
+                          ),
+                          Text(
+                            "Medical History",
+                            style: GoogleFonts.getFont(
+                              "Roboto",
+                              textStyle: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: AppColor.textColor,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       InkWell(
                         onTap: () {

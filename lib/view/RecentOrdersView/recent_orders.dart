@@ -46,30 +46,36 @@ class _RecentOrdersViewState extends State<RecentOrdersView>
           child: Column(
             children: [
               const VerticalSpeacing(32.0),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, RouteName.homeMenuView);
-                    },
-                    icon: const Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                  const SizedBox(width: 10.0),
-                  Text(
-                    'My Orders',
-                    style: GoogleFonts.getFont(
-                      "Poppins",
-                      textStyle: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20.0,
+                  right: 20,
+                ),
+                child: Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const ImageIcon(
+                        AssetImage("images/backicon.png"),
                         color: AppColor.textColor,
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 60.0),
+                    Text(
+                      'My Orders',
+                      style: GoogleFonts.getFont(
+                        "Poppins",
+                        textStyle: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const VerticalSpeacing(24.0),
               // TapBar Here four categories like All orders, Confirmed, Pending, Cancel

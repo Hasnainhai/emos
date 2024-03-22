@@ -49,8 +49,8 @@ class _SelectServiceViewState extends State<SelectServiceView> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: const Icon(
-                        Icons.arrow_back_ios_new,
+                      child: const ImageIcon(
+                        AssetImage("images/backicon.png"),
                         color: AppColor.textColor,
                         size: 18,
                       ),

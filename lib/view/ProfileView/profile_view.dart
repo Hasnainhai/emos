@@ -15,26 +15,32 @@ class ProfileView extends StatelessWidget {
       body: Column(
         children: [
           const VerticalSpeacing(50.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, RouteName.homeView);
-                },
-                icon: const Icon(
-                  Icons.arrow_back_ios_new,
-                  color: AppColor.whiteColor,
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 20.0,
+              right: 20,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: const ImageIcon(
+                    AssetImage("images/backicon.png"),
+                    color: AppColor.whiteColor,
+                  ),
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.edit_outlined,
-                  color: AppColor.whiteColor,
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.edit_outlined,
+                    color: AppColor.whiteColor,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           const CircleAvatar(
             radius: 60.0,

@@ -12,91 +12,100 @@ class NotificationsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.bgFillColor,
-      appBar: AppBar(
-        toolbarHeight: 80,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, RouteName.homeView);
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios_new,
-              color: AppColor.whiteColor,
-            )),
-        title: Text(
-          "Notification",
-          style: GoogleFonts.getFont(
-            "Roboto",
-            textStyle: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-              color: AppColor.whiteColor,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, RouteName.homeView);
+                  },
+                  icon: const ImageIcon(
+                    AssetImage("images/backicon.png"),
+                    color: AppColor.whiteColor,
+                  ),
+                ),
+                const SizedBox(
+                  width: 80,
+                ),
+                Text(
+                  "Notification",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.whiteColor,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ),
-        centerTitle: true,
-      ),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          color: AppColor.whiteColor,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(50.0),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: ListView(
-            children: const [
-              Column(
-                children: [
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.blackColor)
-                ],
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                color: AppColor.whiteColor,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(50.0),
+                ),
               ),
-            ],
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: ListView(
+                  children: const [
+                    Column(
+                      children: [
+                        // VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor),
+                        VerticalSpeacing(20.0),
+                        NotificationsWidget(),
+                        VerticalSpeacing(10.0),
+                        Divider(color: AppColor.bgFillColor)
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

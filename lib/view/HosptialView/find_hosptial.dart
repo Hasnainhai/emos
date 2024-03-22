@@ -17,85 +17,94 @@ class _FindHosptialViewState extends State<FindHosptialView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: const Icon(
-            Icons.arrow_back_ios_new,
-            color: AppColor.blackColor,
-            size: 18,
-          ),
-        ),
-        backgroundColor: Colors.transparent,
-        title: Text(
-          "Find Hosptial",
-          style: GoogleFonts.getFont(
-            "Roboto",
-            textStyle: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: AppColor.blackColor,
-            ),
-          ),
-        ),
-      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const ImageIcon(
+                        AssetImage("images/backicon.png"),
+                        color: AppColor.textColor,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 80,
+                    ),
+                    Text(
+                      "Find Hosptial",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.blackColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const VerticalSpeacing(20),
                 const SearchField(
                   hintText: "Search Hosptial",
                 ),
-                const VerticalSpeacing(24),
-                HosptialCard(
-                  viewFun: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.detailhosptialview,
-                    );
-                  },
-                ),
-                const VerticalSpeacing(16),
-                HosptialCard(
-                  viewFun: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.detailhosptialview,
-                    );
-                  },
-                ),
-                const VerticalSpeacing(16),
-                HosptialCard(
-                  viewFun: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.detailhosptialview,
-                    );
-                  },
-                ),
-                const VerticalSpeacing(16),
-                HosptialCard(
-                  viewFun: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.detailhosptialview,
-                    );
-                  },
-                ),
-                const VerticalSpeacing(16),
-                HosptialCard(
-                  viewFun: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteName.detailhosptialview,
-                    );
-                  },
+                SingleChildScrollView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  child: Column(
+                    children: [
+                      const VerticalSpeacing(24),
+                      HosptialCard(
+                        viewFun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                      const VerticalSpeacing(16),
+                      HosptialCard(
+                        viewFun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                      const VerticalSpeacing(16),
+                      HosptialCard(
+                        viewFun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                      const VerticalSpeacing(16),
+                      HosptialCard(
+                        viewFun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                      const VerticalSpeacing(16),
+                      HosptialCard(
+                        viewFun: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.detailhosptialview,
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
