@@ -32,16 +32,16 @@ class FamilyMembers extends StatelessWidget {
                   const VerticalSpeacing(26.0),
                   Row(
                     children: [
-                      IconButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, RouteName.homeMenuView);
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
                         },
-                        icon: const Icon(
-                          Icons.arrow_back_ios_new_rounded,
+                        child: const ImageIcon(
+                          AssetImage("images/backicon.png"),
                           color: AppColor.textColor,
                         ),
                       ),
-                      const SizedBox(width: 10.0),
+                      const SizedBox(width: 60.0),
                       Text(
                         'Family Members',
                         style: GoogleFonts.getFont(

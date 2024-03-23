@@ -47,34 +47,44 @@ class _InvoicesViewState extends State<InvoicesView>
           child: Column(
             children: [
               const VerticalSpeacing(32.0),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, RouteName.homeMenuView);
-                    },
-                    icon: const Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                  const SizedBox(width: 10.0),
-                  Text(
-                    'Invoices',
-                    style: GoogleFonts.getFont(
-                      "Poppins",
-                      textStyle: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20.0,
+                  right: 20,
+                ),
+                child: Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const ImageIcon(
+                        AssetImage("images/backicon.png"),
                         color: AppColor.textColor,
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 80.0),
+                    Text(
+                      'Invoices',
+                      style: GoogleFonts.getFont(
+                        "Poppins",
+                        textStyle: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const VerticalSpeacing(24.0),
               // TapBar Here four categories like All Invoices, Clinic, Dr at Home, Homecare
               TabBar(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
                 controller: _tabController,
 
                 tabs: const [

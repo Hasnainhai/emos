@@ -11,6 +11,9 @@ class PaymentCompletePopup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      backgroundColor: AppColor.whiteColor,
+      shadowColor: AppColor.whiteColor,
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

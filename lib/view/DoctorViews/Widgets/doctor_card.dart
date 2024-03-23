@@ -9,18 +9,7 @@ class DoctorCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.width / 3,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xff000000).withOpacity(0.1),
-            blurRadius: 40,
-            offset: const Offset(0, 0),
-          ),
-        ],
-      ),
+    return SizedBox(
       child: Container(
         height: MediaQuery.of(context).size.width / 3,
         width: MediaQuery.of(context).size.width,
